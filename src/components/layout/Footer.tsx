@@ -34,7 +34,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-300 text-sm mb-4">
-              5 pôles d'expertise : travaux en hauteur, terrasses & extérieurs,
+              5 pôles d&apos;expertise : travaux en hauteur, terrasses & extérieurs,
               traitements thermiques, photovoltaïque et assainissement.
               Interventions sur bâtiments professionnels et industriels.
             </p>
@@ -218,7 +218,7 @@ export default function Footer() {
                 <Link href="/services/couverture-toiture" className="text-gea-light-blue hover:text-white transition-colors">
                   couverture et toiture
                 </Link>
-                , l'{' '}
+                , l&apos;{' '}
                 <Link href="/services/enveloppe-batiment" className="text-gea-light-blue hover:text-white transition-colors">
                   enveloppe du bâtiment
                 </Link>{' '}

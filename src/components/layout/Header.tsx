@@ -212,16 +212,9 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Fullscreen avec animations */}
-        <div
-          className={`fixed inset-0 bg-white z-40 lg:hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen
-              ? 'opacity-100 visible'
-              : 'opacity-0 invisible pointer-events-none'
-          }`}
-        >
-          {/* Contenu du menu avec scroll */}
-          <div className="h-full overflow-y-auto pt-24 pb-8 px-4">
-            <nav className="flex flex-col gap-2 max-w-md mx-auto">
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 bg-white z-40 lg:hidden pt-24 pb-8 overflow-y-auto">
+            <nav className="flex flex-col gap-2 max-w-md mx-auto px-4">
               {/* Accueil */}
               <Link
                 href="/"
@@ -251,13 +244,9 @@ export default function Header() {
                 </button>
 
                 {/* Sous-menu services avec animation */}
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    mobileServicesOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
+                {mobileServicesOpen && (
                   <div className="mt-2 space-y-1 pl-2">
-                    {servicesData.map((category, index) => (
+                    {servicesData.map((category) => (
                       <Link
                         key={category.slug}
                         href={`/categories/${category.slug}`}
@@ -265,9 +254,6 @@ export default function Header() {
                         onClick={() => {
                           setIsMobileMenuOpen(false);
                           setMobileServicesOpen(false);
-                        }}
-                        style={{
-                          animationDelay: `${index * 50}ms`,
                         }}
                       >
                         <span className="text-3xl group-hover:scale-110 transition-transform">
@@ -302,7 +288,7 @@ export default function Header() {
                       Voir tous nos services →
                     </Link>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Actualités */}

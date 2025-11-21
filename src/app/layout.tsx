@@ -52,7 +52,7 @@ export default function RootLayout({
   const localBusinessSchema = generateLocalBusinessSchema();
 
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -61,6 +61,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${montserrat.variable} ${inter.variable} font-montserrat antialiased`}
+        suppressHydrationWarning
       >
         <LoadingScreen />
         <Header />

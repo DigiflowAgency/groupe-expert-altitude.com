@@ -7,6 +7,11 @@ export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [loadingText, setLoadingText] = useState('Initialisation');
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     // Vérifier si l'animation a déjà été vue dans cette session
@@ -275,28 +280,35 @@ export default function LoadingScreen() {
             </svg>
           </motion.button>
 
-          {/* Particules flottantes ambiantes */}
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-white/40 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -30, 0],
-                opacity: [0.2, 0.6, 0.2],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-                ease: 'easeInOut'
-              }}
-            />
-          ))}
+          {/* Particules flottantes ambiantes - uniquement côté client */}
+          {isMounted && [...Array(30)].map((_, i) => {
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            const duration = 3 + Math.random() * 2;
+            const delay = Math.random() * 2;
+
+            return (
+              <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-white/40 rounded-full"
+                style={{
+                  left: `${left}%`,
+                  top: `${top}%`,
+                }}
+                animate={{
+                  y: [0, -30, 0],
+                  opacity: [0.2, 0.6, 0.2],
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration,
+                  repeat: Infinity,
+                  delay,
+                  ease: 'easeInOut'
+                }}
+              />
+            );
+          })}
         </motion.div>
       )}
     </AnimatePresence>

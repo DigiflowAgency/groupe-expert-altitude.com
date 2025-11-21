@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Thomas D.",
+    "rating": 5,
+    "date": "Il y a 2 semaines",
+    "text": "Excellent travail réalisé par l'équipe de GEA. Intervention rapide et professionnelle pour la rénovation de notre toiture. Les cordistes sont très compétents et le suivi client impeccable. Je recommande vivement !",
+    "isLocalGuide": true
+  },
+  {
+    "id": "2",
+    "name": "Marie L.",
+    "rating": 5,
+    "date": "Il y a 1 mois",
+    "text": "Très satisfaits de la prestation ! Installation photovoltaïque réalisée dans les temps et avec un grand professionnalisme. L'équipe est à l'écoute et de bon conseil. Rapport qualité-prix excellent.",
+    "isLocalGuide": false
+  },
+  {
+    "id": "3",
+    "name": "Pierre M.",
+    "rating": 5,
+    "date": "Il y a 2 mois",
+    "text": "Intervention pour travaux en hauteur sur notre entrepôt. Équipe sérieuse, respectueuse des délais et des normes de sécurité. Travail soigné et tarifs compétitifs. Nous ferons à nouveau appel à GEA.",
+    "isLocalGuide": true
+  },
+  {
+    "id": "4",
+    "name": "Sophie B.",
+    "rating": 5,
+    "date": "Il y a 3 mois",
+    "text": "Pose de terrasse en bois composite magnifiquement réalisée. Les artisans sont très professionnels et le résultat dépasse nos attentes. Merci à toute l'équipe pour ce beau travail !",
+    "isLocalGuide": false
+  },
+  {
+    "id": "5",
+    "name": "Laurent F.",
+    "rating": 5,
+    "date": "Il y a 3 mois",
+    "text": "Excellent service d'assainissement. Diagnostic précis, intervention rapide et efficace. L'équipe technique est compétente et le service client très réactif. Je recommande sans hésitation.",
+    "isLocalGuide": true
+  },
+  {
+    "id": "6",
+    "name": "Christine R.",
+    "rating": 5,
+    "date": "Il y a 4 mois",
+    "text": "Travaux de rénovation énergétique parfaitement exécutés. GEA nous a accompagnés de A à Z avec professionnalisme. Économies d'énergie au rendez-vous. Entreprise sérieuse à conseiller !",
+    "isLocalGuide": false
+  }
+]

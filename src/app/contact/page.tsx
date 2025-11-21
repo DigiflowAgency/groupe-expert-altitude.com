@@ -1,0 +1,414 @@
+'use client';
+
+import { useState } from 'react';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import servicesData from '@/data/services.json';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    serviceType: '',
+    subject: '',
+    message: '',
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Placeholder - À connecter avec votre serveur
+    setTimeout(() => {
+      setSubmitMessage(
+        'Merci pour votre message ! Nous vous recontacterons dans les plus brefs délais.'
+      );
+      setIsSubmitting(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        serviceType: '',
+        subject: '',
+        message: '',
+      });
+    }, 1500);
+  };
+
+  const breadcrumbItems = [{ label: 'Contact', href: '/contact' }];
+
+  return (
+    <>
+      <Breadcrumb items={breadcrumbItems} />
+
+      {/* Hero */}
+      <section className="py-20 bg-gradient-to-br from-gea-black to-gea-blue/20 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-bold mb-6">Contactez-nous</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Une question ? Un projet ? Notre équipe d'experts est à votre écoute pour vous accompagner dans tous vos travaux en hauteur.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Info + Form */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <div>
+              <h2 className="text-3xl font-bold text-gea-black mb-8">
+                Nos coordonnées
+              </h2>
+
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-7 h-7 text-gea-blue"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1 text-gea-black">Adresse</h3>
+                    <p className="text-gray-700">
+                      229 rue Saint-Honoré<br />
+                      75001 Paris<br />
+                      France
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-7 h-7 text-gea-blue"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1 text-gea-black">Téléphone</h3>
+                    <a
+                      href="tel:0972143065"
+                      className="text-gea-blue text-2xl font-bold hover:underline block"
+                    >
+                      09 72 14 30 65
+                    </a>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Disponible 7j/7 pour urgences
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-7 h-7 text-gea-blue"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1 text-gea-black">Email</h3>
+                    <a
+                      href="mailto:contact@groupe-expert-altitude.fr"
+                      className="text-gea-blue hover:underline text-lg"
+                    >
+                      contact@groupe-expert-altitude.fr
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-7 h-7 text-gea-blue"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1 text-gea-black">Horaires</h3>
+                    <p className="text-gray-700">
+                      <strong>Lundi - Vendredi</strong><br />
+                      8h00 - 18h00<br />
+                      <span className="text-sm text-gray-600">
+                        Service &apos;urgence disponible 7j/7
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Images Gallery */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="h-48 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
+                  [IMAGE ÉQUIPE 1]
+                </div>
+                <div className="h-48 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
+                  [IMAGE ÉQUIPE 2]
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
+                <h2 className="text-3xl font-bold text-gea-black mb-6">
+                  Demander un devis gratuit
+                </h2>
+
+                {submitMessage && (
+                  <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                    {submitMessage}
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Nom complet *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent"
+                        placeholder="Votre nom"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent"
+                        placeholder="votre@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Téléphone *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent"
+                        placeholder="06 12 34 56 78"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="company"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Entreprise
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent"
+                        placeholder="Nom de votre entreprise"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="serviceType"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
+                      Type de service *
+                    </label>
+                    <select
+                      id="serviceType"
+                      name="serviceType"
+                      value={formData.serviceType}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent text-gray-900 bg-white"
+                    >
+                      <option value="" className="text-gray-500">Sélectionnez un service</option>
+                      {servicesData.flatMap((category) =>
+                        category.services.map((service) => (
+                          <option key={service.slug} value={service.slug} className="text-gray-900">
+                            {category.category} - {service.title}
+                          </option>
+                        ))
+                      )}
+                      <option value="autre" className="text-gray-900">Autre / Demande générale</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
+                      Objet *
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent"
+                      placeholder="Objet de votre demande"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent resize-none"
+                      placeholder="Décrivez votre projet ou votre besoin..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gea-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gea-blue/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
+                  </button>
+
+                  <p className="text-sm text-gray-600 text-center">
+                    * Champs obligatoires<br />
+                    <span className="text-xs">
+                      Note : Le formulaire sera connecté à votre serveur lors de la mise en production
+                    </span>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gea-black text-center mb-12">
+            Où nous trouver
+          </h2>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="h-[500px] rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.5906758951937!2d2.3245471976101446!3d48.8660152974182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2e1a161985%3A0x262161d5a23b4d6c!2s229%20Rue%20Saint-Honor%C3%A9%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1763545286862!5m2!1sfr!2sfr"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </>
+  );
+}

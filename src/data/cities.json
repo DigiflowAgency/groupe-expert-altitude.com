@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "paris",
+    "name": "Paris",
+    "region": "Île-de-France",
+    "department": "75",
+    "description": "Groupe Expert Altitude intervient à Paris et dans toute la région parisienne avec 5 pôles d'expertise : travaux en hauteur, terrasses & extérieurs, traitements thermiques, photovoltaïque et assainissement. Notre proximité permet des interventions rapides sur tous types de bâtiments professionnels.",
+    "metaTitle": "GEA Paris | Solutions complètes bâtiments professionnels | 5 pôles d'expertise",
+    "metaDescription": "GEA Paris : travaux en hauteur, terrasses, énergie, photovoltaïque, assainissement pour professionnels. Devis gratuit ☎ 09 72 14 30 65"
+  },
+  {
+    "slug": "ile-de-france",
+    "name": "Île-de-France",
+    "region": "Île-de-France",
+    "department": "75, 77, 78, 91, 92, 93, 94, 95",
+    "description": "Nos équipes interviennent dans toute l'Île-de-France avec 5 domaines d'expertise. De Paris à la grande couronne, nous sommes le partenaire privilégié des professionnels pour tous leurs besoins en bâtiment.",
+    "metaTitle": "GEA Île-de-France | 5 pôles d'expertise bâtiment | Intervention rapide",
+    "metaDescription": "GEA en Île-de-France : travaux hauteur, terrasses, énergie, photovoltaïque, assainissement. Tous départements 75-95."
+  },
+  {
+    "slug": "lyon",
+    "name": "Lyon",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "69",
+    "description": "À Lyon et dans la métropole lyonnaise, Groupe Expert Altitude met ses 5 pôles d'expertise au service des professionnels et copropriétés. Solutions complètes pour tous vos besoins en bâtiment.",
+    "metaTitle": "GEA Lyon | Solutions professionnelles bâtiment | 5 expertises",
+    "metaDescription": "GEA Lyon : travaux hauteur, terrasses, traitements thermiques, photovoltaïque, assainissement. Intervention métropole."
+  },
+  {
+    "slug": "marseille",
+    "name": "Marseille",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "13",
+    "description": "Groupe Expert Altitude intervient à Marseille et dans les Bouches-du-Rhône avec une gamme complète de services. Notre expertise s'adapte aux spécificités des bâtiments marseillais, anciens comme modernes.",
+    "metaTitle": "GEA Marseille | Expert bâtiment multi-services | Intervention rapide",
+    "metaDescription": "GEA Marseille : 5 pôles d'expertise pour professionnels. Travaux hauteur, énergie, assainissement. Bouches-du-Rhône."
+  },
+  {
+    "slug": "toulouse",
+    "name": "Toulouse",
+    "region": "Occitanie",
+    "department": "31",
+    "description": "À Toulouse et dans la Haute-Garonne, nous intervenons avec 5 domaines de compétences. Entrepôts, bâtiments industriels, immeubles : solutions complètes pour tous vos projets.",
+    "metaTitle": "GEA Toulouse | Solutions bâtiment professionnels | 5 expertises",
+    "metaDescription": "GEA Toulouse : travaux hauteur, terrasses, énergie, photovoltaïque, assainissement. Intervention 7j/7."
+  },
+  {
+    "slug": "bordeaux",
+    "name": "Bordeaux",
+    "region": "Nouvelle-Aquitaine",
+    "department": "33",
+    "description": "Groupe Expert Altitude intervient à Bordeaux et en Gironde avec 5 pôles d'expertise. Notre savoir-faire s'applique aux bâtiments historiques comme aux structures contemporaines.",
+    "metaTitle": "GEA Bordeaux | Multi-services bâtiment | 5 domaines d'expertise",
+    "metaDescription": "GEA Bordeaux : solutions complètes professionnels. Travaux hauteur, terrasses, énergie, assainissement. Gironde."
+  },
+  {
+    "slug": "lille",
+    "name": "Lille",
+    "region": "Hauts-de-France",
+    "department": "59",
+    "description": "À Lille et dans les Hauts-de-France, nous sommes le partenaire des professionnels avec 5 pôles d'expertise. Intervention sur tous types de bâtiments : industriels, entrepôts, immeubles.",
+    "metaTitle": "GEA Lille | Solutions bâtiment professionnels | Hauts-de-France",
+    "metaDescription": "GEA Lille : 5 expertises pour professionnels. Travaux hauteur, terrasses, énergie, photovoltaïque, assainissement."
+  },
+  {
+    "slug": "strasbourg",
+    "name": "Strasbourg",
+    "region": "Grand Est",
+    "department": "67",
+    "description": "Groupe Expert Altitude intervient à Strasbourg et dans le Bas-Rhin avec une gamme complète de services. Notre expertise technique s'adapte aux contraintes climatiques et architecturales du Grand Est.",
+    "metaTitle": "GEA Strasbourg | Expert bâtiment Grand Est | 5 pôles",
+    "metaDescription": "GEA Strasbourg : solutions professionnelles complètes. Travaux hauteur, énergie, assainissement. Bas-Rhin."
+  },
+  {
+    "slug": "nantes",
+    "name": "Nantes",
+    "region": "Pays de la Loire",
+    "department": "44",
+    "description": "À Nantes et en Loire-Atlantique, Groupe Expert Altitude assure vos projets avec 5 domaines d'expertise. Entrepôts, immeubles, bâtiments industriels : solutions adaptées à tous vos besoins.",
+    "metaTitle": "GEA Nantes | Solutions bâtiment Pays de la Loire | 5 expertises",
+    "metaDescription": "GEA Nantes : travaux hauteur, terrasses, traitements thermiques, photovoltaïque, assainissement. Loire-Atlantique."
+  },
+  {
+    "slug": "montpellier",
+    "name": "Montpellier",
+    "region": "Occitanie",
+    "department": "34",
+    "description": "Groupe Expert Altitude intervient à Montpellier et dans l'Hérault avec 5 pôles d'expertise. De la maintenance préventive aux réparations, solutions complètes pour la pérennité de vos bâtiments professionnels.",
+    "metaTitle": "GEA Montpellier | Expert bâtiment Hérault | 5 domaines",
+    "metaDescription": "GEA Montpellier : 5 pôles d'expertise pour professionnels. Travaux hauteur, énergie, assainissement. Hérault."
+  },
+  {
+    "slug": "nice",
+    "name": "Nice",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "06",
+    "description": "À Nice et dans les Alpes-Maritimes, nous intervenons avec 5 domaines de compétences. Notre expertise s'adapte aux spécificités des bâtiments azuréens pour tous types de projets professionnels.",
+    "metaTitle": "GEA Nice | Solutions bâtiment Côte d'Azur | 5 expertises",
+    "metaDescription": "GEA Nice : travaux hauteur, terrasses, énergie, photovoltaïque, assainissement. Alpes-Maritimes, Côte d'Azur."
+  },
+  {
+    "slug": "rennes",
+    "name": "Rennes",
+    "region": "Bretagne",
+    "department": "35",
+    "description": "Groupe Expert Altitude intervient à Rennes et en Ille-et-Vilaine avec 5 pôles d'expertise. Maintenance de bâtiments professionnels, solutions complètes : nous garantissons sécurité et qualité.",
+    "metaTitle": "GEA Rennes | Expert bâtiment Bretagne | 5 domaines",
+    "metaDescription": "GEA Rennes : 5 expertises pour professionnels. Travaux hauteur, terrasses, énergie, assainissement. Bretagne."
+  }
+]

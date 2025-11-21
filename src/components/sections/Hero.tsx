@@ -76,13 +76,13 @@ export default function Hero({
             </div>
           )}
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up px-4">
             {title}
           </h1>
 
           {description && (
             <div className="mb-8 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              <p className="text-xl md:text-2xl lg:text-3xl text-white font-semibold leading-relaxed bg-gea-black/40 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/10">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-semibold leading-relaxed bg-gea-black/40 backdrop-blur-sm px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-white/10">
                 {description}
               </p>
             </div>
@@ -108,30 +108,32 @@ export default function Hero({
             )}
           </div>
 
-          {/* Phone CTA */}
-          <div className="mt-8 flex items-center justify-center gap-2 text-white animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30">
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              <span className="text-sm">Appelez-nous :</span>
-              <a
-                href="tel:0972143065"
-                className="text-white font-bold text-xl hover:text-white/90 transition-colors"
-              >
+          {/* Phone CTA - Responsive */}
+          <div className="mt-8 flex items-center justify-center gap-2 text-white animate-slide-up px-4" style={{ animationDelay: '0.3s' }}>
+            <a
+              href="tel:0972143065"
+              className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-white/30 hover:bg-white/20 transition-all"
+            >
+              <div className="flex items-center gap-2">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span className="text-xs sm:text-sm">Appelez-nous :</span>
+              </div>
+              <span className="text-white font-bold text-lg sm:text-xl hover:text-white/90 transition-colors">
                 09 72 14 30 65
-              </a>
-            </div>
+              </span>
+            </a>
           </div>
         </div>
 

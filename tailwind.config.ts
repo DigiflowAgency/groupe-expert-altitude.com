@@ -41,6 +41,7 @@ const config: Config = {
         'float-up': 'float-up 3s ease-in-out infinite',
         'slide-up': 'slide-up 0.6s ease-out',
         'fade-in': 'fade-in 0.8s ease-in',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       }
     },
   },

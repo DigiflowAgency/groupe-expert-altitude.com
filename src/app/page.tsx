@@ -51,8 +51,8 @@ export default function Home() {
               </div>
               <div className="h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img
-                  src="https://image-flow.fr/uploads/gea-img-5c77a0e3-29f1-48b2-b700-4c62ad66cfdb.webp"
-                  alt="Équipe cordistes GEA"
+                  src="https://image-flow.fr/uploads/firefly-vue-du-dessus-mettre-en-avant-les-panneaux-e80b17f9-24e4-4e76-8f95-966bbb6318f7.webp"
+                  alt="Panneaux photovoltaïques GEA"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -137,8 +137,12 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Bâtiments industriels */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-green-300 rounded-lg mb-4 flex items-center justify-center text-sm font-mono text-green-800">
-                [IMAGE BATIMENT INDUSTRIEL]
+              <div className="h-48 rounded-lg mb-4 overflow-hidden">
+                <img
+                  src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
+                  alt="Bâtiments industriels"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <h3 className="text-xl font-bold text-gea-black mb-3">Bâtiments industriels</h3>
               <p className="text-gray-700 mb-4">
@@ -165,8 +169,12 @@ export default function Home() {
 
             {/* Entrepôts & Dépôts */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-green-300 rounded-lg mb-4 flex items-center justify-center text-sm font-mono text-green-800">
-                [IMAGE ENTREPOT]
+              <div className="h-48 rounded-lg mb-4 overflow-hidden">
+                <img
+                  src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
+                  alt="Entrepôts & Dépôts"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <h3 className="text-xl font-bold text-gea-black mb-3">Entrepôts & Dépôts</h3>
               <p className="text-gray-700 mb-4">
@@ -193,8 +201,12 @@ export default function Home() {
 
             {/* Immeubles & Copropriétés */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-green-300 rounded-lg mb-4 flex items-center justify-center text-sm font-mono text-green-800">
-                [IMAGE IMMEUBLE]
+              <div className="h-48 rounded-lg mb-4 overflow-hidden">
+                <img
+                  src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
+                  alt="Immeubles & Copropriétés"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <h3 className="text-xl font-bold text-gea-black mb-3">Immeubles & Copropriétés</h3>
               <p className="text-gray-700 mb-4">

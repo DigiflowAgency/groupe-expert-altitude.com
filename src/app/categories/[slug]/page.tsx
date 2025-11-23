@@ -68,7 +68,7 @@ export default function CategoryPage({ params }: { params: Params }) {
 
       {/* Choix Particuliers / Professionnels - Photovoltaïque uniquement */}
       {category.slug === 'energie-photovoltaique' && (
-        <section className="py-16 bg-gradient-to-br from-gea-blue/5 to-gea-blue/10">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-gea-black mb-4 text-center">
@@ -82,41 +82,56 @@ export default function CategoryPage({ params }: { params: Params }) {
                 {/* Particuliers */}
                 <Link
                   href="/panneaux-photovoltaiques/particuliers"
-                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all p-8 border-2 border-transparent hover:border-gea-blue"
+                  className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-gea-blue"
                 >
-                  <div className="text-center">
-                    <div className="text-6xl mb-6">🏠</div>
-                    <h3 className="text-2xl font-bold text-gea-black mb-4 group-hover:text-gea-blue transition-colors">
-                      Particuliers
-                    </h3>
-                    <p className="text-gray-700 mb-6">
-                      Installations résidentielles de 3 à 12 kW avec financement bancaire disponible
-                    </p>
-                    <div className="space-y-2 mb-8">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Tarifs tout compris dès 7 900€</span>
+                  {/* Decorative blob */}
+                  <div className="absolute -top-12 -right-12 w-32 h-32 bg-gea-blue/10 rounded-full blur-3xl group-hover:bg-gea-blue/20 transition-colors" />
+
+                  <div className="relative p-8">
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-gea-blue to-gea-light-blue rounded-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <span className="text-4xl">🏠</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Financement bancaire facilité</span>
+                      <h3 className="text-2xl font-bold text-gea-black mb-3 group-hover:text-gea-blue transition-colors">
+                        Particuliers
+                      </h3>
+                      <p className="text-gray-600 mb-6 text-sm">
+                        Installations résidentielles de 3 à 12 kW avec financement bancaire disponible
+                      </p>
+
+                      <div className="space-y-3 mb-8 bg-white rounded-xl p-4 border border-gray-100">
+                        <div className="flex items-start gap-3 text-sm text-gray-700">
+                          <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span>Tarifs tout compris dès <strong className="text-gea-blue">7 900€</strong></span>
+                        </div>
+                        <div className="flex items-start gap-3 text-sm text-gray-700">
+                          <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span>Financement bancaire facilité</span>
+                        </div>
+                        <div className="flex items-start gap-3 text-sm text-gray-700">
+                          <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span>Aides de l'État disponibles</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+
+                      <div className="inline-flex items-center gap-2 text-gea-blue font-semibold group-hover:gap-3 transition-all">
+                        Voir les tarifs particuliers
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                        <span>Aides de l'État disponibles</span>
                       </div>
-                    </div>
-                    <div className="inline-flex items-center gap-2 text-gea-blue font-semibold group-hover:gap-3 transition-all">
-                      Voir les tarifs particuliers
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
                     </div>
                   </div>
                 </Link>
@@ -124,41 +139,56 @@ export default function CategoryPage({ params }: { params: Params }) {
                 {/* Professionnels */}
                 <Link
                   href="/panneaux-photovoltaiques/professionnels"
-                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all p-8 border-2 border-transparent hover:border-gea-blue"
+                  className="group relative bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-gea-blue"
                 >
-                  <div className="text-center">
-                    <div className="text-6xl mb-6">🏭</div>
-                    <h3 className="text-2xl font-bold text-gea-black mb-4 group-hover:text-gea-blue transition-colors">
-                      Professionnels
-                    </h3>
-                    <p className="text-gray-700 mb-6">
-                      Solutions sur mesure sans limites : fermes solaires, toitures industrielles, hangars
-                    </p>
-                    <div className="space-y-2 mb-8">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Pas de limites de puissance</span>
+                  {/* Decorative blob */}
+                  <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-gea-blue/10 rounded-full blur-3xl group-hover:bg-gea-blue/20 transition-colors" />
+
+                  <div className="relative p-8">
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-gea-black to-gea-blue rounded-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <span className="text-4xl">🏭</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Étude de rentabilité gratuite</span>
+                      <h3 className="text-2xl font-bold text-gea-black mb-3 group-hover:text-gea-blue transition-colors">
+                        Professionnels
+                      </h3>
+                      <p className="text-gray-600 mb-6 text-sm">
+                        Solutions sur mesure sans limites : fermes solaires, toitures industrielles, hangars
+                      </p>
+
+                      <div className="space-y-3 mb-8 bg-white rounded-xl p-4 border border-gray-100">
+                        <div className="flex items-start gap-3 text-sm text-gray-700">
+                          <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span>Pas de limites de puissance</span>
+                        </div>
+                        <div className="flex items-start gap-3 text-sm text-gray-700">
+                          <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span>Étude de rentabilité <strong className="text-gea-blue">gratuite</strong></span>
+                        </div>
+                        <div className="flex items-start gap-3 text-sm text-gray-700">
+                          <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg className="w-3 h-3 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span>Projets de toutes envergures</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+
+                      <div className="inline-flex items-center gap-2 text-gea-blue font-semibold group-hover:gap-3 transition-all">
+                        Découvrir nos solutions pro
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                        <span>Projets de toutes envergures</span>
                       </div>
-                    </div>
-                    <div className="inline-flex items-center gap-2 text-gea-blue font-semibold group-hover:gap-3 transition-all">
-                      Découvrir nos solutions pro
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
                     </div>
                   </div>
                 </Link>

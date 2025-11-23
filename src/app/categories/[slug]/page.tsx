@@ -66,6 +66,108 @@ export default function CategoryPage({ params }: { params: Params }) {
 
       <Breadcrumb items={breadcrumbItems} />
 
+      {/* Choix Particuliers / Professionnels - Photovoltaïque uniquement */}
+      {category.slug === 'energie-photovoltaique' && (
+        <section className="py-16 bg-gradient-to-br from-gea-blue/5 to-gea-blue/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gea-black mb-4 text-center">
+                Quelle est votre situation ?
+              </h2>
+              <p className="text-xl text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+                Choisissez votre profil pour découvrir nos solutions adaptées à vos besoins
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Particuliers */}
+                <Link
+                  href="/panneaux-photovoltaiques/particuliers"
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all p-8 border-2 border-transparent hover:border-gea-blue"
+                >
+                  <div className="text-center">
+                    <div className="text-6xl mb-6">🏠</div>
+                    <h3 className="text-2xl font-bold text-gea-black mb-4 group-hover:text-gea-blue transition-colors">
+                      Particuliers
+                    </h3>
+                    <p className="text-gray-700 mb-6">
+                      Installations résidentielles de 3 à 12 kW avec financement bancaire disponible
+                    </p>
+                    <div className="space-y-2 mb-8">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Tarifs tout compris dès 7 900€</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Financement bancaire facilité</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Aides de l'État disponibles</span>
+                      </div>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-gea-blue font-semibold group-hover:gap-3 transition-all">
+                      Voir les tarifs particuliers
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Professionnels */}
+                <Link
+                  href="/panneaux-photovoltaiques/professionnels"
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all p-8 border-2 border-transparent hover:border-gea-blue"
+                >
+                  <div className="text-center">
+                    <div className="text-6xl mb-6">🏭</div>
+                    <h3 className="text-2xl font-bold text-gea-black mb-4 group-hover:text-gea-blue transition-colors">
+                      Professionnels
+                    </h3>
+                    <p className="text-gray-700 mb-6">
+                      Solutions sur mesure sans limites : fermes solaires, toitures industrielles, hangars
+                    </p>
+                    <div className="space-y-2 mb-8">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Pas de limites de puissance</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Étude de rentabilité gratuite</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-5 h-5 text-gea-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Projets de toutes envergures</span>
+                      </div>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-gea-blue font-semibold group-hover:gap-3 transition-all">
+                      Découvrir nos solutions pro
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -152,6 +254,9 @@ export default function CategoryPage({ params }: { params: Params }) {
             {category.slug === 'energie-photovoltaique' && (
               <div className="mt-16 bg-gradient-to-br from-gea-blue to-gea-blue/90 rounded-2xl p-8 md:p-12 text-white">
                 <div className="text-center mb-10">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
+                    🏠 Tarifs Particuliers
+                  </div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">
                     Nos Tarifs Panneaux Photovoltaïques
                   </h3>
@@ -215,11 +320,24 @@ export default function CategoryPage({ params }: { params: Params }) {
                     ✓ Étude de rentabilité gratuite • ✓ Démarches administratives incluses • ✓ Garantie 25 ans
                   </p>
                   <Link
-                    href="/contact"
+                    href="/panneaux-photovoltaiques/particuliers"
                     className="inline-block bg-white text-gea-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl"
                   >
-                    Demander votre devis personnalisé
+                    Voir tous les détails et financement
                   </Link>
+
+                  <div className="mt-8 pt-6 border-t border-white/20">
+                    <p className="text-white/90 mb-3">Vous êtes un professionnel ?</p>
+                    <Link
+                      href="/panneaux-photovoltaiques/professionnels"
+                      className="inline-flex items-center gap-2 text-white hover:text-white/80 font-semibold text-lg"
+                    >
+                      Découvrir nos solutions sur mesure (fermes solaires, toitures industrielles...)
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}

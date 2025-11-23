@@ -212,9 +212,16 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Fullscreen avec animations */}
-        {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-white z-[60] lg:hidden pt-24 pb-8 overflow-y-auto">
-            <nav className="flex flex-col gap-2 max-w-md mx-auto px-4">
+        <div
+          className={`fixed inset-0 bg-white z-[60] lg:hidden pt-24 pb-8 overflow-y-auto transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 translate-x-full pointer-events-none'
+          }`}
+        >
+          <nav className={`flex flex-col gap-2 max-w-md mx-auto px-4 transition-all duration-500 ease-out ${
+            isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
               {/* Accueil */}
               <Link
                 href="/"
@@ -342,8 +349,7 @@ export default function Header() {
                 Demander un devis gratuit
               </Link>
             </nav>
-          </div>
-        )}
+        </div>
       </div>
     </header>
   );

@@ -148,6 +148,82 @@ export default function CategoryPage({ params }: { params: Params }) {
               ))}
             </div>
 
+            {/* Pricing Section - Photovoltaïque uniquement */}
+            {category.slug === 'energie-photovoltaique' && (
+              <div className="mt-16 bg-gradient-to-br from-gea-blue to-gea-blue/90 rounded-2xl p-8 md:p-12 text-white">
+                <div className="text-center mb-10">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                    Nos Tarifs Panneaux Photovoltaïques
+                  </h3>
+                  <p className="text-xl text-white/90">
+                    Prix fourniture et pose - Installation clés en main
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                  {/* 3 kW */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105 border border-white/20">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold mb-2">3 kW</div>
+                      <div className="text-3xl font-bold mb-4">7 900€</div>
+                      <div className="text-sm text-white/80">Installation complète</div>
+                    </div>
+                  </div>
+
+                  {/* 4,5 kW */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105 border border-white/20">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold mb-2">4,5 kW</div>
+                      <div className="text-3xl font-bold mb-4">9 800€</div>
+                      <div className="text-sm text-white/80">Installation complète</div>
+                    </div>
+                  </div>
+
+                  {/* 6 kW - Populaire */}
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/30 transition-all hover:scale-105 border-2 border-white/40 relative">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-gea-blue px-4 py-1 rounded-full text-sm font-bold">
+                      Populaire
+                    </div>
+                    <div className="text-center">
+                      <div className="text-5xl font-bold mb-2">6 kW</div>
+                      <div className="text-3xl font-bold mb-4">12 900€</div>
+                      <div className="text-sm text-white/90">Installation complète</div>
+                    </div>
+                  </div>
+
+                  {/* 9 kW */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105 border border-white/20">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold mb-2">9 kW</div>
+                      <div className="text-3xl font-bold mb-4">14 900€</div>
+                      <div className="text-sm text-white/80">Installation complète</div>
+                    </div>
+                  </div>
+
+                  {/* 12 kW */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105 border border-white/20 md:col-span-2 lg:col-span-1">
+                    <div className="text-center">
+                      <div className="text-5xl font-bold mb-2">12 kW</div>
+                      <div className="text-3xl font-bold mb-4">16 900€</div>
+                      <div className="text-sm text-white/80">Installation complète</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 text-center">
+                  <p className="text-white/90 mb-4">
+                    ✓ Étude de rentabilité gratuite • ✓ Démarches administratives incluses • ✓ Garantie 25 ans
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-white text-gea-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl"
+                  >
+                    Demander votre devis personnalisé
+                  </Link>
+                </div>
+              </div>
+            )}
+
             {/* Bottom CTA */}
             <div className="mt-16 text-center bg-gradient-to-br from-gea-blue/10 to-gea-blue/5 rounded-2xl p-12">
               <h3 className="text-3xl font-bold text-gea-black mb-4">

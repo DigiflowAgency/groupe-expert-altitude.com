@@ -4,6 +4,7 @@
     "slug": "travaux-en-hauteur",
     "description": "Spécialistes des interventions en hauteur pour tous types de bâtiments professionnels",
     "icon": "🏔️",
+    "backgroundImage": "https://image-flow.fr/uploads/gea-teh-5da2cf97-2cf7-42d4-9d0a-b93987ea07ae.webp",
     "services": [
       {
         "title": "Travaux en hauteur",
@@ -157,6 +158,7 @@
     "slug": "terrasses-exterieurs",
     "description": "Création et rénovation de terrasses en bois et composite pour professionnels",
     "icon": "🏗️",
+    "backgroundImage": "https://image-flow.fr/uploads/gea-terrasses-9de323ec-7913-4369-8b33-d22dedc6096b.webp",
     "services": [
       {
         "title": "Terrassement bois sur plots",
@@ -215,6 +217,7 @@
     "slug": "traitements-thermiques",
     "description": "Solutions innovantes pour l'optimisation thermique des bâtiments",
     "icon": "🌡️",
+    "backgroundImage": "https://image-flow.fr/uploads/thermo-reflect-1eeba632-3e1e-4497-8142-67bdb89d0744.webp",
     "services": [
       {
         "title": "Thermo Reflect - Revêtement toiture",
@@ -323,6 +326,7 @@
     "slug": "energie-photovoltaique",
     "description": "Installation et maintenance de solutions photovoltaïques pour professionnels",
     "icon": "☀️",
+    "backgroundImage": "https://image-flow.fr/uploads/gea-photovoltaiques-df5d0655-fe4b-47e1-bab0-6ec2363b17ed.webp",
     "services": [
       {
         "title": "Installation panneaux photovoltaïques",
@@ -406,6 +410,7 @@
     "slug": "assainissement-eaux-pluviales",
     "description": "Installation et maintenance de systèmes d'évacuation verticaux",
     "icon": "💧",
+    "backgroundImage": "https://image-flow.fr/uploads/assainissement-36b530d4-6352-4ffa-a8cd-3f733977b024.webp",
     "services": [
       {
         "title": "Descentes eaux pluviales",

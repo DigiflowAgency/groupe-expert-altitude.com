@@ -13,6 +13,7 @@ interface HeroProps {
     href: string;
   };
   backgroundVideo?: boolean;
+  backgroundImage?: string;
   height?: 'small' | 'medium' | 'large';
 }
 
@@ -23,6 +24,7 @@ export default function Hero({
   ctaPrimary,
   ctaSecondary,
   backgroundVideo = false,
+  backgroundImage,
   height = 'large',
 }: HeroProps) {
   const heightClasses = {
@@ -50,6 +52,12 @@ export default function Hero({
               type="video/mp4"
             />
           </video>
+        ) : backgroundImage ? (
+          <img
+            src={backgroundImage}
+            alt="Hero background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         ) : (
           <div className="absolute inset-0 bg-green-300 opacity-10">
             {/* Placeholder pour image background */}

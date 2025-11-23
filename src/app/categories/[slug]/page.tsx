@@ -60,6 +60,7 @@ export default function CategoryPage({ params }: { params: Params }) {
           text: 'Tous nos services',
           href: '/services',
         }}
+        backgroundImage={category.backgroundImage}
         height="medium"
       />
 

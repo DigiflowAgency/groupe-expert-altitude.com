@@ -188,7 +188,7 @@ export default function Header() {
           {/* Mobile Menu Button - Hamburger animé */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 z-50 relative rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 z-[70] relative rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
@@ -213,7 +213,7 @@ export default function Header() {
 
         {/* Mobile Menu Fullscreen avec animations */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-white z-40 lg:hidden pt-24 pb-8 overflow-y-auto">
+          <div className="fixed inset-0 bg-white z-[60] lg:hidden pt-24 pb-8 overflow-y-auto">
             <nav className="flex flex-col gap-2 max-w-md mx-auto px-4">
               {/* Accueil */}
               <Link

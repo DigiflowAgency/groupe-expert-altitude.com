@@ -35,6 +35,7 @@ export default function Home() {
                   alt="Cordiste GEA en action"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -45,6 +46,7 @@ export default function Home() {
                   alt="Travaux en hauteur GEA"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -55,6 +57,7 @@ export default function Home() {
                   alt="Intervention façade GEA"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -65,6 +68,7 @@ export default function Home() {
                   alt="Panneaux photovoltaïques GEA"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -156,6 +160,7 @@ export default function Home() {
                   alt="Bâtiments industriels"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -191,6 +196,7 @@ export default function Home() {
                   alt="Entrepôts & Dépôts"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -226,6 +232,7 @@ export default function Home() {
                   alt="Immeubles & Copropriétés"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />

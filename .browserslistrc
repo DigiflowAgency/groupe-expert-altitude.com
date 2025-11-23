@@ -1,0 +1,21 @@
+# Browsers that we support
+
+# Modern browsers (last 2 versions)
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+
+# No IE support to reduce polyfills
+not IE 11
+not IE_Mob 11
+
+# Mobile browsers
+last 2 iOS versions
+last 2 Android versions
+
+# Support browsers with >0.5% market share
+> 0.5%
+
+# Exclude dead browsers
+not dead

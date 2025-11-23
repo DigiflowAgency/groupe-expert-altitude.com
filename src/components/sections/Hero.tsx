@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface HeroProps {
   title: string;
@@ -28,11 +31,27 @@ export default function Hero({
   backgroundImage,
   height = 'large',
 }: HeroProps) {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   const heightClasses = {
     small: 'min-h-[40vh]',
     medium: 'min-h-[60vh]',
     large: 'min-h-[85vh]',
   };
+
+  // Lazy load video after page load
+  useEffect(() => {
+    if (backgroundVideo) {
+      // Wait for page to be fully loaded before loading video
+      if (document.readyState === 'complete') {
+        setTimeout(() => setVideoLoaded(true), 1000);
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(() => setVideoLoaded(true), 1000);
+        });
+      }
+    }
+  }, [backgroundVideo]);
 
   return (
     <section
@@ -41,19 +60,27 @@ export default function Hero({
       {/* Background - Video or Image */}
       <div className="absolute inset-0 bg-gradient-to-br from-gea-black/70 via-gea-black/60 to-gea-blue/30">
         {backgroundVideo ? (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source
-              src="https://image-flow.fr/uploads/43f9bf81-6b66-4d84-ac17-27d874b77ff3-a01e4c3c-9aab-414d-b164-85e7f5362d95.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <>
+            {/* Fallback image shown before video loads */}
+            {!videoLoaded && (
+              <div className="absolute inset-0 bg-gea-black/80" />
+            )}
+            {/* Video lazy loaded after page load */}
+            {videoLoaded && (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source
+                  src="https://image-flow.fr/uploads/43f9bf81-6b66-4d84-ac17-27d874b77ff3-a01e4c3c-9aab-414d-b164-85e7f5362d95.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            )}
+          </>
         ) : backgroundImage ? (
           <Image
             src={backgroundImage}

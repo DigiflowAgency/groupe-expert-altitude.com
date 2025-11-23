@@ -73,9 +73,13 @@ export default function ServicesPage() {
                   key={service.slug}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all group overflow-hidden"
                 >
-                  {/* Image placeholder */}
-                  <div className="h-56 bg-green-300 flex items-center justify-center text-sm font-mono text-green-800">
-                    [IMAGE {service.title.toUpperCase().substring(0, 25)}...]
+                  {/* Image service */}
+                  <div className="h-56 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
 
                   {/* Contenu */}

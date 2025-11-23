@@ -99,6 +99,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           text: 'Nous appeler',
           href: 'tel:0972143065',
         }}
+        backgroundImage={service.image}
         height="medium"
       />
 
@@ -106,18 +107,14 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Image Gallery */}
-            <div className="space-y-4">
-              <div className="h-96 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
-                [IMAGE PRINCIPALE {service.title.toUpperCase()}]
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="h-48 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
-                  [IMAGE 2]
-                </div>
-                <div className="h-48 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
-                  [IMAGE 3]
-                </div>
+            {/* Image principale */}
+            <div className="sticky top-24">
+              <div className="h-96 rounded-xl overflow-hidden shadow-2xl">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
@@ -392,8 +389,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   key={relatedService.slug}
                   className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group"
                 >
-                  <div className="h-48 bg-green-300 rounded-lg mb-4 flex items-center justify-center text-sm font-mono text-green-800">
-                    [IMAGE {relatedService.title.toUpperCase()}]
+                  <div className="h-48 rounded-lg mb-4 overflow-hidden">
+                    <img
+                      src={relatedService.image}
+                      alt={relatedService.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-gea-black mb-3 group-hover:text-gea-blue transition-colors">
                     {relatedService.title}

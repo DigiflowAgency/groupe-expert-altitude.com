@@ -9,6 +9,7 @@
       {
         "title": "Travaux en hauteur",
         "slug": "travaux-en-hauteur",
+        "image": "https://image-flow.fr/uploads/gea-teh-5da2cf97-2cf7-42d4-9d0a-b93987ea07ae.webp",
         "excerpt": "Interventions sécurisées sur tous types de structures en hauteur. Cordistes certifiés, normes EN 795.",
         "description": "Nos équipes de cordistes professionnels interviennent sur toutes les structures en hauteur : immeubles, entrepôts, bâtiments industriels, châteaux d'eau, pylônes. Nous réalisons tous types de travaux : inspection, maintenance, réparation, nettoyage. Nos techniciens sont certifiés et formés aux dernières normes de sécurité.",
         "features": [
@@ -34,6 +35,7 @@
       {
         "title": "Enveloppe du bâtiment",
         "slug": "enveloppe-batiment",
+        "image": "https://image-flow.fr/uploads/enveloppe-du-batiment-61c62151-40e7-40a2-8583-7c307bccd637.webp",
         "excerpt": "Rénovation et maintenance complète de l'enveloppe de vos bâtiments professionnels.",
         "description": "L'enveloppe du bâtiment est essentielle pour la protection, l'isolation et l'esthétique de vos structures. Nous intervenons sur tous les éléments : façades, bardages, étanchéité, menuiseries extérieures. Nos cordistes accèdent à toutes les zones, même les plus complexes.",
         "features": [
@@ -58,6 +60,7 @@
       {
         "title": "Couverture & toiture",
         "slug": "couverture-toiture",
+        "image": "https://image-flow.fr/uploads/couverture-et-toiture-1e56e141-f150-49e4-b3c5-14becadc07fc.webp",
         "excerpt": "Spécialistes de la couverture industrielle : réparation, étanchéité, maintenance préventive.",
         "description": "La toiture est l'élément le plus exposé de votre bâtiment. Nous assurons l'étanchéité, la réparation et la maintenance de tous types de couvertures : toitures plates, bac acier, membrane EPDM, zinc, ardoise. Interventions rapides en cas de fuite.",
         "features": [
@@ -82,6 +85,7 @@
       {
         "title": "Cordistes professionnels",
         "slug": "cordistes",
+        "image": "https://image-flow.fr/uploads/cordistes-professionnels-93d28b42-49f6-4570-84ca-46952bf9f6ea.webp",
         "excerpt": "Équipe de cordistes certifiés CQP pour toutes interventions techniques en hauteur.",
         "description": "Nos cordistes sont des professionnels hautement qualifiés, certifiés CQP Cordiste, formés aux techniques d'accès par corde. Ils interviennent sur tous types de chantiers en hauteur avec un matériel de pointe régulièrement contrôlé.",
         "features": [
@@ -106,6 +110,7 @@
       {
         "title": "Sécurisation",
         "slug": "securisation",
+        "image": "https://image-flow.fr/uploads/securisation-18464899-b48c-45c2-8b0e-2b7486ad24ae.webp",
         "excerpt": "Installation de dispositifs de sécurité : lignes de vie, garde-corps, points d'ancrage.",
         "description": "La sécurisation de vos installations en hauteur est une obligation légale. Nous installons tous les dispositifs de protection collective et individuelle : lignes de vie permanentes et temporaires, garde-corps, points d'ancrage certifiés.",
         "features": [
@@ -130,6 +135,7 @@
       {
         "title": "Maintenance technique",
         "slug": "maintenance-technique",
+        "image": "https://image-flow.fr/uploads/maintenance-technique-6beb53de-54c6-4fcb-ba23-05f996ae74d1.webp",
         "excerpt": "Contrats de maintenance préventive pour vos installations en hauteur.",
         "description": "La maintenance préventive permet d'éviter les pannes coûteuses et de prolonger la durée de vie de vos installations. Nous proposons des contrats sur mesure incluant inspections régulières, entretien, petites réparations et interventions d'urgence.",
         "features": [
@@ -163,6 +169,7 @@
       {
         "title": "Terrassement bois sur plots",
         "slug": "terrassement-bois-plots",
+        "image": "https://image-flow.fr/uploads/terrasses-sur-plot-b5621c49-8528-4981-a54e-c01150dddbc2.webp",
         "excerpt": "Installation de terrasses bois sur plots réglables. Solution durable pour toits-terrasses et espaces extérieurs.",
         "description": "Le terrassement sur plots est la solution idéale pour créer des espaces extérieurs fonctionnels sur vos toits-terrasses, cours intérieures ou zones techniques. Cette technique permet de préserver l'étanchéité existante tout en créant une surface plane et stable. Nos équipes maîtrisent parfaitement les techniques de pose sur plots réglables, garantissant un drainage optimal et une parfaite horizontalité.",
         "features": [
@@ -188,6 +195,7 @@
       {
         "title": "Construction terrasses bois & composite",
         "slug": "construction-terrasses-bois-composite",
+        "image": "https://image-flow.fr/uploads/terasse-bois-composite-0d0f5f3c-ba5d-46c9-a5fd-6e0478ea0239.webp",
         "excerpt": "Réalisation de terrasses en bois exotique ou composite pour espaces professionnels.",
         "description": "Nous concevons et réalisons des terrasses sur mesure adaptées à vos besoins professionnels : terrasses accessibles au public, zones de pause pour employés, espaces d'accueil clients. Nous travaillons avec les meilleurs matériaux : bois exotiques durables (Ipé, Cumaru, Teck) ou composites haut de gamme résistants aux UV et intempéries. Nos réalisations sont conçues pour durer et nécessiter un minimum d'entretien.",
         "features": [
@@ -222,6 +230,7 @@
       {
         "title": "Thermo Reflect - Revêtement toiture",
         "slug": "thermo-reflect-toiture",
+        "image": "https://image-flow.fr/uploads/thermo-reflect-862193c1-84ae-4142-bf5c-ecbaaed9fabd.webp",
         "excerpt": "Application de revêtement réfléchissant sur toitures. Réduit jusqu'à 70% la température intérieure.",
         "description": "Thermo Reflect est un revêtement réflectif haute performance appliqué sur les toitures pour réduire drastiquement l'absorption de chaleur. Cette solution innovante reflète jusqu'à 90% des rayons solaires, permettant de réduire la température intérieure de 10 à 15°C en été. Particulièrement adapté aux entrepôts, bâtiments industriels et commerces, ce traitement permet des économies d'énergie considérables sur la climatisation tout en prolongeant la durée de vie de votre toiture.",
         "features": [
@@ -247,6 +256,7 @@
       {
         "title": "Vitro Reflect - Film vitrage",
         "slug": "vitro-reflect-vitrage",
+        "image": "https://image-flow.fr/uploads/vitro-reflect-53d6022a-06e7-4450-8a2f-f40919ec0fec.webp",
         "excerpt": "Pose de films thermiques transparents sur vitrages. Confort thermique et économies d'énergie.",
         "description": "Vitro Reflect est un film transparent haute technologie appliqué sur vos vitrages existants. Il bloque jusqu'à 80% de la chaleur solaire tout en laissant passer 70% de la lumière naturelle. Cette solution est idéale pour les bureaux, salles de réunion, showrooms et espaces commerciaux souffrant de surchauffe. Nos cordistes peuvent intervenir sur tous les vitrages, même en hauteur ou difficiles d'accès.",
         "features": [
@@ -272,6 +282,7 @@
       {
         "title": "Optimisation énergétique bâtiments",
         "slug": "optimisation-energetique-batiments",
+        "image": "https://image-flow.fr/uploads/optimisation-energetique-des-batiments-21166519-d6a8-46db-afd6-5c2fabfe0c71.webp",
         "excerpt": "Audit et solutions globales pour réduire la consommation énergétique de vos bâtiments.",
         "description": "Notre approche globale d'optimisation énergétique combine diagnostic thermographique, analyse des déperditions et mise en œuvre de solutions adaptées. Nous intervenons sur l'enveloppe du bâtiment (toiture, façades, vitrages) pour réduire significativement votre facture énergétique tout en améliorant le confort de vos occupants. Nos solutions s'appliquent à tous types de bâtiments professionnels.",
         "features": [
@@ -297,6 +308,7 @@
       {
         "title": "Application vitrages difficiles accès",
         "slug": "application-vitrages-acces-difficile",
+        "image": "https://image-flow.fr/uploads/vitrage-acces-difficile-10270c74-3b38-4e2f-9ba6-8c0ba5311dc8.webp",
         "excerpt": "Pose de films sur vitrages en hauteur par cordistes. Aucune zone inaccessible.",
         "description": "Grâce à nos cordistes professionnels, nous pouvons poser des films thermiques ou décoratifs sur tous les vitrages, quelle que soit leur hauteur ou leur accessibilité. Verrières, façades vitrées, atriums, puits de lumière : aucune surface n'est hors de portée. Cette spécialité unique nous permet d'intervenir sans nacelle, réduisant les coûts et les contraintes logistiques.",
         "features": [
@@ -331,6 +343,7 @@
       {
         "title": "Installation panneaux photovoltaïques",
         "slug": "installation-panneaux-photovoltaiques",
+        "image": "https://image-flow.fr/uploads/installation-panneaux-photovoltaique-4f039083-2c8f-4932-8bca-ffb550e2ee4f.webp",
         "excerpt": "Pose de centrales photovoltaïques sur toitures industrielles et commerciales.",
         "description": "Nous installons des centrales photovoltaïques clés en main sur vos toitures professionnelles. Notre expertise en travaux en hauteur nous permet d'intervenir sur tous types de toitures : plates, inclinées, bac acier, membrane. Nous gérons l'intégralité du projet : étude de faisabilité, démarches administratives, installation, raccordement et mise en service. Nos installations sont garanties et éligibles aux aides de l'État.",
         "features": [
@@ -356,6 +369,7 @@
       {
         "title": "Maintenance & nettoyage panneaux",
         "slug": "maintenance-nettoyage-panneaux-solaires",
+        "image": "https://image-flow.fr/uploads/maintenance-et-nettoyage-des-panneaux-f2c3b4e4-a608-4cc5-a112-8fe5b1c66a14.webp",
         "excerpt": "Entretien régulier de vos installations photovoltaïques pour performance optimale.",
         "description": "La maintenance de vos panneaux photovoltaïques est essentielle pour garantir une production optimale. La poussière, pollution, fientes d'oiseaux peuvent réduire le rendement jusqu'à 30%. Nos équipes de cordistes interviennent pour nettoyer et contrôler vos installations sans échafaudage. Nous proposons des contrats de maintenance préventive incluant nettoyage bi-annuel et vérifications techniques complètes.",
         "features": [
@@ -381,6 +395,7 @@
       {
         "title": "Études techniques & sécurisation",
         "slug": "etudes-techniques-securisation-photovoltaique",
+        "image": "https://image-flow.fr/uploads/etude-technique-et-securisation-27a98840-2a22-4a11-a1c5-307d3432c5e2.webp",
         "excerpt": "Audits techniques et mise en sécurité des installations photovoltaïques existantes.",
         "description": "Avant toute installation photovoltaïque, une étude technique approfondie est indispensable pour garantir la viabilité et la sécurité du projet. Nous réalisons des audits complets de vos toitures : capacité portante, état de l'étanchéité, orientation, masques solaires. Nous sécurisons également les installations existantes : lignes de vie pour maintenance, garde-corps, cheminements sécurisés.",
         "features": [
@@ -415,6 +430,7 @@
       {
         "title": "Descentes eaux pluviales",
         "slug": "descentes-eaux-pluviales",
+        "image": "https://image-flow.fr/uploads/descente-d-eaux-pluviales-524b262a-bfc3-45e3-9fd9-7b1646b47d23.webp",
         "excerpt": "Installation et rénovation de descentes EP en façade. Intervention par cordistes sans échafaudage.",
         "description": "Les descentes d'eaux pluviales sont essentielles pour protéger votre bâtiment des infiltrations. Nous installons et rénovons tous types de descentes EP : zinc, aluminium, PVC, cuivre, inox. Grâce à nos cordistes, nous intervenons sur toutes les hauteurs sans nacelle ni échafaudage, réduisant les coûts et les nuisances. Nous assurons également le remplacement de sections détériorées et la mise aux normes de réseaux anciens.",
         "features": [
@@ -440,6 +456,7 @@
       {
         "title": "Colonnes d'assainissement",
         "slug": "colonnes-assainissement",
+        "image": "https://image-flow.fr/uploads/colonnes-d-assainissement-bf1c4c98-8c14-4732-9d99-147f90193357.webp",
         "excerpt": "Rénovation et remplacement de colonnes EU/EV en façade et gaines techniques.",
         "description": "Les colonnes d'assainissement verticales (eaux usées et eaux vannes) nécessitent une expertise spécifique pour leur installation ou rénovation. Nous intervenons sur les immeubles d'habitation, bureaux et bâtiments industriels pour remplacer les colonnes vétustes, créer de nouvelles gaines techniques ou mettre aux normes les installations existantes. Nos cordistes accèdent facilement aux façades et gaines techniques les plus complexes.",
         "features": [
@@ -465,6 +482,7 @@
       {
         "title": "Réseaux d'assainissement",
         "slug": "reseaux-assainissement",
+        "image": "https://image-flow.fr/uploads/reseau-d-assainissement-5613cd1d-1498-41e9-92a0-a41d2d99b157.webp",
         "excerpt": "Installation et réhabilitation de réseaux EP/EU complets sur bâtiments professionnels.",
         "description": "Nous concevons et installons des réseaux d'assainissement complets pour bâtiments professionnels : collecte des eaux pluviales en toiture, descentes verticales, réseaux horizontaux enterrés, séparatifs ou unitaires. Notre expertise couvre également la réhabilitation de réseaux existants : chemisage, remplacement de tronçons, création de regards de visite.",
         "features": [
@@ -490,6 +508,7 @@
       {
         "title": "Interventions hauteur systèmes EP",
         "slug": "interventions-hauteur-systemes-ep",
+        "image": "https://image-flow.fr/uploads/intervention-en-hauteur-systeme-ep-1710e427-d927-4bbd-aa1a-44738c9c3e88.webp",
         "excerpt": "Diagnostic et réparation de systèmes d'évacuation pluviale en toiture par cordistes.",
         "description": "Les systèmes d'évacuation des eaux pluviales en toiture nécessitent un entretien régulier pour éviter les engorgements et débordements. Nos cordistes interviennent pour le nettoyage des avaloirs, le débouchage de chéneaux, le curage de canalisations horizontales en toiture-terrasse. Nous détectons et réparons également les fuites sur siphons et raccords.",
         "features": [
@@ -515,6 +534,7 @@
       {
         "title": "Détection & réparation fuites verticales",
         "slug": "detection-reparation-fuites-verticales",
+        "image": "https://image-flow.fr/uploads/detection-et-reparation-de-fuites-verticales-d59f5a57-f80c-4540-ae2c-497ea90441a6.webp",
         "excerpt": "Recherche de fuites sur descentes EP et colonnes EU. Réparations ciblées sans casse.",
         "description": "Les fuites sur descentes verticales et colonnes d'assainissement peuvent causer des dégâts importants sur les façades et structures. Nous utilisons des techniques avancées de détection (fumigène, traceur coloré, caméra thermique) pour localiser précisément les fuites. Nos cordistes interviennent ensuite pour réparer de manière ciblée, sans démolition excessive.",
         "features": [

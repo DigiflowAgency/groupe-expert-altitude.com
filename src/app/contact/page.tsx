@@ -198,11 +198,19 @@ export default function ContactPage() {
 
               {/* Images Gallery */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="h-48 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
-                  [IMAGE ÉQUIPE 1]
+                <div className="h-48 rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://image-flow.fr/uploads/generated-image-november-19-2025-12-30pm-b0bf4e97-3bc3-41f3-b7ff-04f0a733283b.webp"
+                    alt="Équipe Groupe Expert Altitude"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <div className="h-48 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800">
-                  [IMAGE ÉQUIPE 2]
+                <div className="h-48 rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://image-flow.fr/uploads/firefly-vue-du-dessus-mettre-en-avant-les-panneaux-e80b17f9-24e4-4e76-8f95-966bbb6318f7.webp"
+                    alt="Panneaux photovoltaïques GEA"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
               </div>
             </div>

@@ -375,8 +375,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Instagram Widget Placeholder */}
-      <section className="py-20 bg-gray-50">
+      {/* Instagram Widget Placeholder - Temporairement masqué */}
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gea-black mb-4">Suivez-nous</h2>
@@ -394,7 +394,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Reviews Section */}
       <Reviews />

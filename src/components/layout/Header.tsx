@@ -35,15 +35,16 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-lg py-2'
-          : 'bg-white/95 backdrop-blur-sm py-4'
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white shadow-lg py-2'
+            : 'bg-white/95 backdrop-blur-sm py-4'
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center z-50 relative">
             {/* Desktop: Ultrawide logo */}
@@ -195,7 +196,7 @@ export default function Header() {
           {/* Mobile Menu Button - Hamburger animé */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 z-[70] relative rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 z-[100] relative rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
@@ -217,15 +218,17 @@ export default function Header() {
             </div>
           </button>
         </div>
+      </div>
+    </header>
 
-        {/* Mobile Menu Fullscreen avec animations */}
-        <div
-          className={`fixed inset-0 bg-white z-[60] lg:hidden pt-24 pb-8 overflow-y-auto transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen
-              ? 'opacity-100 translate-x-0'
-              : 'opacity-0 translate-x-full pointer-events-none'
-          }`}
-        >
+      {/* Mobile Menu Fullscreen avec animations - En dehors du header */}
+      <div
+        className={`fixed inset-0 bg-white z-[60] lg:hidden pt-24 pb-8 overflow-y-auto transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-full pointer-events-none'
+        }`}
+      >
           <nav className={`flex flex-col gap-2 max-w-md mx-auto px-4 transition-all duration-500 ease-out ${
             isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
@@ -356,8 +359,7 @@ export default function Header() {
                 Demander un devis gratuit
               </Link>
             </nav>
-        </div>
       </div>
-    </header>
+    </>
   );
 }

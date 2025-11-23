@@ -1,6 +1,7 @@
 import Hero from '@/components/sections/Hero';
 import Reviews from '@/components/sections/Reviews';
 import Link from 'next/link';
+import Image from 'next/image';
 import servicesData from '@/data/services.json';
 
 export default function Home() {
@@ -28,32 +29,44 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Images Gallery */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <Image
                   src="https://image-flow.fr/uploads/gea-cordiste-38c987c6-8d4b-40e7-85c0-d166c72d773a.webp"
                   alt="Cordiste GEA en action"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
-              <div className="h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow mt-8">
-                <img
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow mt-8">
+                <Image
                   src="https://image-flow.fr/uploads/gea-img-2-00001365-d4e6-4b75-8dcd-5edf7784ad00.webp"
                   alt="Travaux en hauteur GEA"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
-              <div className="h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow -mt-8">
-                <img
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow -mt-8">
+                <Image
                   src="https://image-flow.fr/uploads/gea-img-3-2c017981-51c9-40a6-843b-585158d82244.webp"
                   alt="Intervention façade GEA"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
-              <div className="h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <Image
                   src="https://image-flow.fr/uploads/firefly-vue-du-dessus-mettre-en-avant-les-panneaux-e80b17f9-24e4-4e76-8f95-966bbb6318f7.webp"
                   alt="Panneaux photovoltaïques GEA"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -137,11 +150,14 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Bâtiments industriels */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 rounded-lg mb-4 overflow-hidden">
-                <img
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+                <Image
                   src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
                   alt="Bâtiments industriels"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-bold text-gea-black mb-3">Bâtiments industriels</h3>
@@ -169,11 +185,14 @@ export default function Home() {
 
             {/* Entrepôts & Dépôts */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 rounded-lg mb-4 overflow-hidden">
-                <img
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+                <Image
                   src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
                   alt="Entrepôts & Dépôts"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-bold text-gea-black mb-3">Entrepôts & Dépôts</h3>
@@ -201,11 +220,14 @@ export default function Home() {
 
             {/* Immeubles & Copropriétés */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-48 rounded-lg mb-4 overflow-hidden">
-                <img
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+                <Image
                   src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
                   alt="Immeubles & Copropriétés"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-bold text-gea-black mb-3">Immeubles & Copropriétés</h3>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HeroProps {
   title: string;
@@ -45,6 +46,7 @@ export default function Hero({
             loop
             muted
             playsInline
+            preload="metadata"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source
@@ -53,10 +55,13 @@ export default function Hero({
             />
           </video>
         ) : backgroundImage ? (
-          <img
+          <Image
             src={backgroundImage}
             alt="Hero background"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
           />
         ) : (
           <div className="absolute inset-0 bg-green-300 opacity-10">

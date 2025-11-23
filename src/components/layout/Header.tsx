@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import servicesData from '@/data/services.json';
 
@@ -46,15 +47,21 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center z-50 relative">
             {/* Desktop: Ultrawide logo */}
-            <img
+            <Image
               src="/logo-gea-ultrawide-transparent.png"
               alt="Groupe Expert Altitude"
+              width={300}
+              height={96}
+              priority
               className="hidden md:block h-24 w-auto object-contain transition-all duration-300"
             />
             {/* Mobile: Square simple logo - plus compact */}
-            <img
+            <Image
               src="/logo-gea-carre-simple-transparent.png"
               alt="Groupe Expert Altitude"
+              width={98}
+              height={98}
+              priority
               className={`md:hidden w-auto object-contain transition-all duration-300 ${
                 isScrolled ? 'h-12' : 'h-14'
               }`}

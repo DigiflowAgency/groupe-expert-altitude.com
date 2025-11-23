@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const services = [
@@ -27,9 +28,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <img
+              <Image
                 src="/logo-gea-carre-simple-transparent.png"
                 alt="Groupe Expert Altitude"
+                width={128}
+                height={128}
                 className="h-32 w-auto"
               />
             </div>

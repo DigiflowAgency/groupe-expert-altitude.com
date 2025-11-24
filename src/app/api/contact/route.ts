@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // Mail Hub Configuration
-const MAIL_HUB_URL = 'https://jarvishealth.fr/webhook/email';
+const MAIL_HUB_URL = 'https://jarvis-health.fr/api/mail-hub';
 const MAIL_HUB_KEY = process.env.MAIL_HUB_KEY;
 const SITE_ID = process.env.SITE_ID;
 const SITE_SECRET = process.env.SITE_SECRET;

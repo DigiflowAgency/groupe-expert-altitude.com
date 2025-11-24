@@ -106,7 +106,7 @@ export default function CategoryPage({ params }: { params: Params }) {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span>Tarifs tout compris dès <strong className="text-gea-blue">7 900€</strong></span>
+                          <span>Tarifs tout compris à partir de <strong className="text-gea-blue">7 900€</strong></span>
                         </div>
                         <div className="flex items-start gap-3 text-sm text-gray-700">
                           <div className="w-5 h-5 bg-gea-blue/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -122,7 +122,7 @@ export default function CategoryPage({ params }: { params: Params }) {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span>Aides de l'État disponibles</span>
+                          <span>Autorisations mairie (démarches GEA)</span>
                         </div>
                       </div>
 

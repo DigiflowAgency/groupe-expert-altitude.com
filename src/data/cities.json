@@ -18,6 +18,15 @@
     "metaDescription": "GEA en Île-de-France : travaux hauteur, terrasses, énergie, photovoltaïque, assainissement. Tous départements 75-95."
   },
   {
+    "slug": "nice",
+    "name": "Nice",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "06",
+    "description": "À Nice et dans les Alpes-Maritimes, nous intervenons avec 5 domaines de compétences. Notre expertise s'adapte aux spécificités des bâtiments azuréens pour tous types de projets professionnels.",
+    "metaTitle": "GEA Nice | Solutions bâtiment Côte d'Azur | 5 expertises",
+    "metaDescription": "GEA Nice : travaux hauteur, terrasses, énergie, photovoltaïque, assainissement. Alpes-Maritimes, Côte d'Azur."
+  },
+  {
     "slug": "lyon",
     "name": "Lyon",
     "region": "Auvergne-Rhône-Alpes",
@@ -88,15 +97,6 @@
     "description": "Groupe Expert Altitude intervient à Montpellier et dans l'Hérault avec 5 pôles d'expertise. De la maintenance préventive aux réparations, solutions complètes pour la pérennité de vos bâtiments professionnels.",
     "metaTitle": "GEA Montpellier | Expert bâtiment Hérault | 5 domaines",
     "metaDescription": "GEA Montpellier : 5 pôles d'expertise pour professionnels. Travaux hauteur, énergie, assainissement. Hérault."
-  },
-  {
-    "slug": "nice",
-    "name": "Nice",
-    "region": "Provence-Alpes-Côte d'Azur",
-    "department": "06",
-    "description": "À Nice et dans les Alpes-Maritimes, nous intervenons avec 5 domaines de compétences. Notre expertise s'adapte aux spécificités des bâtiments azuréens pour tous types de projets professionnels.",
-    "metaTitle": "GEA Nice | Solutions bâtiment Côte d'Azur | 5 expertises",
-    "metaDescription": "GEA Nice : travaux hauteur, terrasses, énergie, photovoltaïque, assainissement. Alpes-Maritimes, Côte d'Azur."
   },
   {
     "slug": "rennes",

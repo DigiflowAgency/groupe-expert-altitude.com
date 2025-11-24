@@ -133,45 +133,46 @@
         "metaDescription": "Installation lignes de vie et dispositifs sécurité. Conformité assurée ☎ 09 72 14 30 65"
       },
       {
-        "title": "Maintenance technique",
+        "title": "Accompagnement de mainteneur technique",
         "slug": "maintenance-technique",
         "image": "https://image-flow.fr/uploads/maintenance-technique-6beb53de-54c6-4fcb-ba23-05f996ae74d1.webp",
-        "excerpt": "Contrats de maintenance préventive pour vos installations en hauteur.",
-        "description": "La maintenance préventive permet d'éviter les pannes coûteuses et de prolonger la durée de vie de vos installations. Nous proposons des contrats sur mesure incluant inspections régulières, entretien, petites réparations et interventions d'urgence.",
+        "excerpt": "Accompagnement de vos équipes techniques pour interventions en hauteur sécurisées.",
+        "description": "Nous accompagnons vos mainteneurs techniques lors de leurs interventions en hauteur. Nos cordistes professionnels assurent la sécurisation et l'accès aux zones difficiles, permettant à vos techniciens d'effectuer leur travail dans les meilleures conditions de sécurité. Nous proposons des contrats sur mesure incluant inspections régulières, entretien, petites réparations et interventions d'urgence.",
         "features": [
+          "Accompagnement cordistes certifiés",
           "Inspections trimestrielles",
           "Entretien toitures et façades",
           "Nettoyage installations",
           "Vérification dispositifs sécurité",
-          "Interventions urgentes prioritaires",
-          "Rapports détaillés"
+          "Interventions urgentes prioritaires"
         ],
         "benefits": [
+          "Sécurité maximale de vos équipes",
           "Réduction 60% coûts réparations",
           "Prolongation durée de vie +30%",
           "Priorité interventions urgentes",
           "Budget prévisible"
         ],
         "relatedServices": ["travaux-en-hauteur", "couverture-toiture", "enveloppe-batiment"],
-        "keywords": "maintenance, entretien, contrat, prévention",
-        "metaTitle": "Maintenance technique bâtiments professionnels | GEA",
-        "metaDescription": "Contrats maintenance préventive bâtiments. Inspections régulières ☎ 09 72 14 30 65"
+        "keywords": "accompagnement mainteneur, maintenance, entretien, contrat, prévention",
+        "metaTitle": "Accompagnement mainteneur technique en hauteur | GEA",
+        "metaDescription": "Accompagnement mainteneurs techniques en hauteur. Sécurité assurée ☎ 09 72 14 30 65"
       }
     ]
   },
   {
     "category": "Terrasses & Extérieurs",
     "slug": "terrasses-exterieurs",
-    "description": "Création et rénovation de terrasses en bois et composite pour professionnels",
+    "description": "Création et rénovation de terrasses en hauteur et au sol, en bois et composite",
     "icon": "🏗️",
     "backgroundImage": "https://image-flow.fr/uploads/gea-terrasses-9de323ec-7913-4369-8b33-d22dedc6096b.webp",
     "services": [
       {
-        "title": "Terrassement bois sur plots",
+        "title": "Terrasses en hauteur sur plots",
         "slug": "terrassement-bois-plots",
         "image": "https://image-flow.fr/uploads/terrasses-sur-plot-b5621c49-8528-4981-a54e-c01150dddbc2.webp",
-        "excerpt": "Installation de terrasses bois sur plots réglables. Solution durable pour toits-terrasses et espaces extérieurs.",
-        "description": "Le terrassement sur plots est la solution idéale pour créer des espaces extérieurs fonctionnels sur vos toits-terrasses, cours intérieures ou zones techniques. Cette technique permet de préserver l'étanchéité existante tout en créant une surface plane et stable. Nos équipes maîtrisent parfaitement les techniques de pose sur plots réglables, garantissant un drainage optimal et une parfaite horizontalité.",
+        "excerpt": "Installation de terrasses en hauteur sur plots réglables. Toits-terrasses et espaces surélevés.",
+        "description": "Nos terrasses en hauteur sur plots sont la solution idéale pour créer des espaces extérieurs fonctionnels sur vos toits-terrasses, balcons ou zones surélevées. Cette technique permet de préserver l'étanchéité existante tout en créant une surface plane et stable. Nos équipes maîtrisent parfaitement les techniques de pose sur plots réglables en hauteur, garantissant un drainage optimal et une parfaite horizontalité avec sécurisation adaptée.",
         "features": [
           "Plots réglables hauteur 20 à 500mm",
           "Préservation étanchéité existante",
@@ -193,11 +194,11 @@
         "metaDescription": "Installation terrasses bois sur plots réglables. Toits-terrasses professionnels ☎ 09 72 14 30 65"
       },
       {
-        "title": "Construction terrasses bois & composite",
+        "title": "Terrasses bois & composite au sol",
         "slug": "construction-terrasses-bois-composite",
         "image": "https://image-flow.fr/uploads/terasse-bois-composite-0d0f5f3c-ba5d-46c9-a5fd-6e0478ea0239.webp",
-        "excerpt": "Réalisation de terrasses en bois exotique ou composite pour espaces professionnels.",
-        "description": "Nous concevons et réalisons des terrasses sur mesure adaptées à vos besoins professionnels : terrasses accessibles au public, zones de pause pour employés, espaces d'accueil clients. Nous travaillons avec les meilleurs matériaux : bois exotiques durables (Ipé, Cumaru, Teck) ou composites haut de gamme résistants aux UV et intempéries. Nos réalisations sont conçues pour durer et nécessiter un minimum d'entretien.",
+        "excerpt": "Construction de terrasses au sol en bois exotique ou composite pour maisons et espaces professionnels.",
+        "description": "Nous concevons et réalisons des terrasses au sol sur mesure pour particuliers et professionnels : terrasses de maison, zones de pause pour employés, espaces d'accueil clients, aménagements extérieurs. Nous travaillons avec les meilleurs matériaux : bois exotiques durables (Ipé, Cumaru, Teck) ou composites haut de gamme résistants aux UV et intempéries. Nos réalisations sont conçues pour durer et nécessiter un minimum d'entretien.",
         "features": [
           "Bois exotiques certifiés FSC",
           "Composite haute densité",
@@ -228,18 +229,18 @@
     "backgroundImage": "https://image-flow.fr/uploads/thermo-reflect-1eeba632-3e1e-4497-8142-67bdb89d0744.webp",
     "services": [
       {
-        "title": "Thermo Reflect - Revêtement toiture",
+        "title": "Peinture réflective et isolante",
         "slug": "thermo-reflect-toiture",
         "image": "https://image-flow.fr/uploads/thermo-reflect-862193c1-84ae-4142-bf5c-ecbaaed9fabd.webp",
-        "excerpt": "Application de revêtement réfléchissant sur toitures. Réduit jusqu'à 70% la température intérieure.",
-        "description": "Thermo Reflect est un revêtement réflectif haute performance appliqué sur les toitures pour réduire drastiquement l'absorption de chaleur. Cette solution innovante reflète jusqu'à 90% des rayons solaires, permettant de réduire la température intérieure de 10 à 15°C en été. Particulièrement adapté aux entrepôts, bâtiments industriels et commerces, ce traitement permet des économies d'énergie considérables sur la climatisation tout en prolongeant la durée de vie de votre toiture.",
+        "excerpt": "Application de peinture réflective sur toitures. Étanche, isolante, garantie fabricant 15 ans.",
+        "description": "Notre peinture réflective est un revêtement haute performance appliqué sur les toitures pour réduire drastiquement l'absorption de chaleur. Cette solution innovante reflète jusqu'à 90% des rayons solaires, permettant de réduire la température intérieure de 10 à 15°C en été. Particulièrement adapté aux entrepôts, bâtiments industriels, commerces et maisons individuelles, ce traitement permet des économies d'énergie considérables sur la climatisation tout en prolongeant la durée de vie de votre toiture. Garantie fabricant 15 ans de fonctionnement étanche.",
         "features": [
+          "Étanche : protection totale de la toiture",
+          "Isolante : réduction température -10 à -15°C",
+          "Garantie 15 ans fabricant de fonctionnement étanche",
           "Réflectivité 90% rayons solaires",
-          "Réduction température -10 à -15°C",
           "Application tous types toitures",
-          "Résistance UV extrême",
-          "Étanchéité renforcée",
-          "Garantie 10 ans"
+          "Résistance UV extrême"
         ],
         "benefits": [
           "Économies climatisation 30-50%",
@@ -249,35 +250,37 @@
           "Éligible aides CEE"
         ],
         "relatedServices": ["vitro-reflect-vitrage", "optimisation-energetique-batiments"],
-        "keywords": "thermo reflect, cool roof, revêtement réfléchissant, isolation thermique",
-        "metaTitle": "Thermo Reflect : Revêtement toiture réfléchissant | GEA",
-        "metaDescription": "Thermo Reflect : revêtement réfléchissant toiture. Économies énergie garanties ☎ 09 72 14 30 65"
+        "keywords": "peinture réflective, cool roof, revêtement réfléchissant, isolation thermique toiture",
+        "metaTitle": "Peinture réflective et isolante toiture | Garantie 15 ans | GEA",
+        "metaDescription": "Peinture réflective toiture. Étanche, isolante, garantie 15 ans fabricant ☎ 09 72 14 30 65",
+        "videoUrl": "https://www.youtube.com/watch?v=uIRIPE5QMjQ"
       },
       {
-        "title": "Vitro Reflect - Film vitrage",
+        "title": "Vernis réflectif et isolant",
         "slug": "vitro-reflect-vitrage",
         "image": "https://image-flow.fr/uploads/vitro-reflect-53d6022a-06e7-4450-8a2f-f40919ec0fec.webp",
-        "excerpt": "Pose de films thermiques transparents sur vitrages. Confort thermique et économies d'énergie.",
-        "description": "Vitro Reflect est un film transparent haute technologie appliqué sur vos vitrages existants. Il bloque jusqu'à 80% de la chaleur solaire tout en laissant passer 70% de la lumière naturelle. Cette solution est idéale pour les bureaux, salles de réunion, showrooms et espaces commerciaux souffrant de surchauffe. Nos cordistes peuvent intervenir sur tous les vitrages, même en hauteur ou difficiles d'accès.",
+        "excerpt": "Application de vernis transparent sur vitrages. Confort thermique, économies d'énergie, garantie 15 ans.",
+        "description": "Notre vernis réflectif est une peinture transparente haute technologie appliquée directement sur vos vitrages existants. Il bloque jusqu'à 80% de la chaleur solaire tout en laissant passer 70% de la lumière naturelle. Cette solution est idéale pour les bureaux, salles de réunion, showrooms, espaces commerciaux et maisons individuelles souffrant de surchauffe. Nos cordistes peuvent intervenir sur tous les vitrages, même en hauteur ou difficiles d'accès. Garantie fabricant 15 ans.",
         "features": [
-          "Film transparent haute performance",
+          "Vernis transparent haute performance",
           "Blocage 80% chaleur solaire",
           "Transmission lumière 70%",
           "Protection UV 99%",
           "Anti-éblouissement",
-          "Application sans bulles garantie"
+          "Garantie 15 ans fabricant"
         ],
         "benefits": [
           "Réduction climatisation 40%",
           "Confort visuel amélioré",
           "Protection mobilier décoloration",
-          "Installation rapide sans casse",
-          "Réversible si besoin"
+          "Application professionnelle durable",
+          "Lavage et entretien sur vitrage difficile d'accès"
         ],
         "relatedServices": ["thermo-reflect-toiture", "application-vitrages-acces-difficile"],
-        "keywords": "vitro reflect, film solaire, vitrage thermique, film fenêtre",
-        "metaTitle": "Vitro Reflect : Films thermiques vitrages professionnels | GEA",
-        "metaDescription": "Vitro Reflect : films thermiques vitrages. Confort et économies assurés ☎ 09 72 14 30 65"
+        "keywords": "vernis réflectif, vitrage thermique, peinture transparente vitrage",
+        "metaTitle": "Vernis réflectif et isolant vitrage | Garantie 15 ans | GEA",
+        "metaDescription": "Vernis réflectif vitrage. Confort et économies, garantie 15 ans ☎ 09 72 14 30 65",
+        "videoUrl": "https://www.youtube.com/watch?v=FJ0_QuiW6xc"
       },
       {
         "title": "Optimisation énergétique bâtiments",
@@ -423,7 +426,7 @@
   {
     "category": "Assainissement & Eaux Pluviales",
     "slug": "assainissement-eaux-pluviales",
-    "description": "Installation et maintenance de systèmes d'évacuation verticaux",
+    "description": "Installation et maintenance de systèmes d'évacuation pour particuliers et professionnels",
     "icon": "💧",
     "backgroundImage": "https://image-flow.fr/uploads/assainissement-36b530d4-6352-4ffa-a8cd-3f733977b024.webp",
     "services": [
@@ -431,8 +434,8 @@
         "title": "Descentes eaux pluviales",
         "slug": "descentes-eaux-pluviales",
         "image": "https://image-flow.fr/uploads/descente-d-eaux-pluviales-524b262a-bfc3-45e3-9fd9-7b1646b47d23.webp",
-        "excerpt": "Installation et rénovation de descentes EP en façade. Intervention par cordistes sans échafaudage.",
-        "description": "Les descentes d'eaux pluviales sont essentielles pour protéger votre bâtiment des infiltrations. Nous installons et rénovons tous types de descentes EP : zinc, aluminium, PVC, cuivre, inox. Grâce à nos cordistes, nous intervenons sur toutes les hauteurs sans nacelle ni échafaudage, réduisant les coûts et les nuisances. Nous assurons également le remplacement de sections détériorées et la mise aux normes de réseaux anciens.",
+        "excerpt": "Installation et rénovation de descentes EP pour maisons et bâtiments professionnels.",
+        "description": "Les descentes d'eaux pluviales sont essentielles pour protéger votre habitation ou bâtiment des infiltrations. Nous installons et rénovons tous types de descentes EP pour particuliers et professionnels : zinc, aluminium, PVC, cuivre, inox. Grâce à nos cordistes, nous intervenons sur toutes les hauteurs sans nacelle ni échafaudage, réduisant les coûts et les nuisances. Nous assurons également le remplacement de sections détériorées et la mise aux normes de réseaux anciens.",
         "features": [
           "Tous matériaux : zinc, alu, inox, PVC",
           "Remplacement complet ou partiel",
@@ -457,8 +460,8 @@
         "title": "Colonnes d'assainissement",
         "slug": "colonnes-assainissement",
         "image": "https://image-flow.fr/uploads/colonnes-d-assainissement-bf1c4c98-8c14-4732-9d99-147f90193357.webp",
-        "excerpt": "Rénovation et remplacement de colonnes EU/EV en façade et gaines techniques.",
-        "description": "Les colonnes d'assainissement verticales (eaux usées et eaux vannes) nécessitent une expertise spécifique pour leur installation ou rénovation. Nous intervenons sur les immeubles d'habitation, bureaux et bâtiments industriels pour remplacer les colonnes vétustes, créer de nouvelles gaines techniques ou mettre aux normes les installations existantes. Nos cordistes accèdent facilement aux façades et gaines techniques les plus complexes.",
+        "excerpt": "Rénovation et remplacement de colonnes EU/EV pour maisons, immeubles et bâtiments professionnels.",
+        "description": "Les colonnes d'assainissement verticales (eaux usées et eaux vannes) nécessitent une expertise spécifique pour leur installation ou rénovation. Nous intervenons chez les particuliers (maisons individuelles), les immeubles d'habitation, les copropriétés, les bureaux et les bâtiments industriels pour remplacer les colonnes vétustes, créer de nouvelles gaines techniques ou mettre aux normes les installations existantes. Nos cordistes accèdent facilement aux façades et gaines techniques les plus complexes.",
         "features": [
           "Colonnes PVC haute densité",
           "Té de curage amovibles",
@@ -483,8 +486,8 @@
         "title": "Réseaux d'assainissement",
         "slug": "reseaux-assainissement",
         "image": "https://image-flow.fr/uploads/reseau-d-assainissement-5613cd1d-1498-41e9-92a0-a41d2d99b157.webp",
-        "excerpt": "Installation et réhabilitation de réseaux EP/EU complets sur bâtiments professionnels.",
-        "description": "Nous concevons et installons des réseaux d'assainissement complets pour bâtiments professionnels : collecte des eaux pluviales en toiture, descentes verticales, réseaux horizontaux enterrés, séparatifs ou unitaires. Notre expertise couvre également la réhabilitation de réseaux existants : chemisage, remplacement de tronçons, création de regards de visite.",
+        "excerpt": "Installation et réhabilitation de réseaux EP/EU pour maisons individuelles et bâtiments professionnels.",
+        "description": "Nous concevons et installons des réseaux d'assainissement complets pour particuliers et professionnels : maisons individuelles, copropriétés, bâtiments tertiaires et industriels. Collecte des eaux pluviales en toiture, descentes verticales, réseaux horizontaux enterrés, séparatifs ou unitaires. Notre expertise couvre également la réhabilitation de réseaux existants : chemisage, remplacement de tronçons, création de regards de visite.",
         "features": [
           "Étude hydraulique complète",
           "Réseaux séparatifs EP/EU",

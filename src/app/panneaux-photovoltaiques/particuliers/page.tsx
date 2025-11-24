@@ -194,12 +194,12 @@ export default function ParticuliersPage() {
               </div>
 
               <div className="bg-gradient-to-br from-gea-blue/10 to-gea-blue/5 rounded-xl p-8 text-center">
-                <div className="text-4xl mb-4">💰</div>
+                <div className="text-4xl mb-4">📋</div>
                 <h3 className="text-xl font-bold text-gea-black mb-3">
-                  Aides de l'État
+                  Autorisations Administratives
                 </h3>
                 <p className="text-gray-700">
-                  Prime à l'autoconsommation et TVA réduite à 10% pour alléger votre investissement
+                  GEA s'occupe de toutes les démarches auprès de votre mairie pour vous simplifier la vie
                 </p>
               </div>
             </div>

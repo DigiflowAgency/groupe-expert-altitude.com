@@ -32,23 +32,43 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
 
-    // Placeholder - À connecter avec votre serveur
-    setTimeout(() => {
-      setSubmitMessage(
-        'Merci pour votre message ! Nous vous recontacterons dans les plus brefs délais.'
-      );
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        serviceType: '',
-        subject: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage(data.message);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          serviceType: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setSubmitMessage(
+          `Erreur : ${data.error || 'Une erreur est survenue. Veuillez réessayer.'}`
+        );
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitMessage(
+        'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous contacter directement par téléphone au 09 72 14 30 65.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const breadcrumbItems = [{ label: 'Contact', href: '/contact' }];
@@ -223,7 +243,13 @@ export default function ContactPage() {
                 </h2>
 
                 {submitMessage && (
-                  <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                  <div
+                    className={`px-4 py-3 rounded mb-6 ${
+                      submitMessage.startsWith('Erreur')
+                        ? 'bg-red-100 border border-red-400 text-red-700'
+                        : 'bg-green-100 border border-green-400 text-green-700'
+                    }`}
+                  >
                     {submitMessage}
                   </div>
                 )}
@@ -384,7 +410,7 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-600 text-center">
                     * Champs obligatoires<br />
                     <span className="text-xs">
-                      Note : Le formulaire sera connecté à votre serveur lors de la mise en production
+                      Vos données sont sécurisées et ne seront utilisées que pour répondre à votre demande.
                     </span>
                   </p>
                 </form>

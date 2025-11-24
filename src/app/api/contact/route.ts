@@ -1,18 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Mail Hub Configuration
-const MAIL_HUB_URL = 'https://jarvis-health.fr/api/mail-hub';
-const MAIL_HUB_KEY = process.env.MAIL_HUB_KEY;
-const SITE_ID = process.env.SITE_ID;
-const SITE_SECRET = process.env.SITE_SECRET;
-
-export async function POST(request: NextRequest) {
+export async function POST(req: NextRequest) {
   try {
-    // Parse request body
-    const body = await request.json();
-    const { name, email, phone, company, serviceType, subject, message } = body;
+    // 1. Récupérer les données du formulaire
+    const { name, email, phone, company, serviceType, subject, message } = await req.json();
 
-    // Validate required fields
+    // 2. Validation basique
     if (!name || !email || !phone || !serviceType || !subject || !message) {
       return NextResponse.json(
         { success: false, error: 'Tous les champs obligatoires doivent être remplis.' },
@@ -20,8 +13,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate environment variables
-    if (!MAIL_HUB_KEY || !SITE_ID || !SITE_SECRET) {
+    // 3. Validation des variables d'environnement
+    if (!process.env.MAIL_HUB_KEY || !process.env.SITE_ID || !process.env.SITE_SECRET) {
       console.error('Mail Hub credentials missing in environment variables');
       return NextResponse.json(
         { success: false, error: 'Configuration serveur manquante.' },
@@ -29,98 +22,73 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Format email content
-    const emailBody = `
-Nouvelle demande de contact depuis le site GEA
+    // 4. Formater le message HTML
+    const htmlMessage = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px;">
+        <h2 style="color: #1a365d;">Nouvelle demande de contact - GEA</h2>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-INFORMATIONS CLIENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #2d3748; margin-top: 0;">Informations client</h3>
+          <p><strong>Nom :</strong> ${name}</p>
+          <p><strong>Email :</strong> ${email}</p>
+          <p><strong>Téléphone :</strong> ${phone}</p>
+          ${company ? `<p><strong>Entreprise :</strong> ${company}</p>` : ''}
+        </div>
 
-👤 Nom : ${name}
-📧 Email : ${email}
-📞 Téléphone : ${phone}
-${company ? `🏢 Entreprise : ${company}` : ''}
+        <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #2d3748; margin-top: 0;">Détails de la demande</h3>
+          <p><strong>Type de service :</strong> ${serviceType}</p>
+          <p><strong>Objet :</strong> ${subject}</p>
+        </div>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DÉTAILS DE LA DEMANDE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        <div style="background: #edf2f7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #2d3748; margin-top: 0;">Message</h3>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+        </div>
 
-🔧 Type de service : ${serviceType}
-📝 Objet : ${subject}
+        <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+        <p style="color: #718096; font-size: 12px;">
+          Date : ${new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'full', timeStyle: 'short' })}
+        </p>
+      </div>
+    `;
 
-💬 Message :
-${message}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📅 Date : ${new Date().toLocaleString('fr-FR', {
-  timeZone: 'Europe/Paris',
-  dateStyle: 'full',
-  timeStyle: 'short'
-})}
-`;
-
-    // Prepare Mail Hub payload
-    const mailHubPayload = {
-      siteId: SITE_ID,
-      siteSecret: SITE_SECRET,
-      to: 'contact@groupe-expert-altitude.fr',
-      subject: `[GEA] Nouvelle demande : ${subject}`,
-      body: emailBody,
-      from: email,
-      replyTo: email,
-      tags: ['contact-form', serviceType],
-      metadata: {
-        customerName: name,
-        customerEmail: email,
-        customerPhone: phone,
-        company: company || '',
-        serviceType,
-        source: 'website-contact-form',
-        timestamp: new Date().toISOString(),
-      },
-    };
-
-    // Send to Mail Hub
-    const mailHubResponse = await fetch(MAIL_HUB_URL, {
+    // 5. Appeler le Mail Hub avec les headers corrects
+    const response = await fetch('https://jarvis-health.fr/api/mail-hub', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'X-Mail-Hub-Key': MAIL_HUB_KEY,
+        'X-MAIL-HUB-KEY': process.env.MAIL_HUB_KEY,
+        'X-SITE-ID': process.env.SITE_ID,
+        'X-SITE-SECRET': process.env.SITE_SECRET,
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(mailHubPayload),
+      body: JSON.stringify({
+        subject: `[GEA] Nouvelle demande : ${subject}`,
+        message: htmlMessage,
+        replyTo: email
+      })
     });
 
-    if (!mailHubResponse.ok) {
-      const errorText = await mailHubResponse.text();
-      console.error('Mail Hub error:', errorText);
+    const data = await response.json();
 
+    // 6. Retourner le résultat
+    if (response.ok) {
+      return NextResponse.json({
+        success: true,
+        message: 'Votre demande a été envoyée avec succès. Nous vous recontacterons dans les plus brefs délais.'
+      });
+    } else {
+      console.error('Mail Hub error:', data);
       return NextResponse.json(
-        {
-          success: false,
-          error: 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler directement.'
-        },
-        { status: 500 }
+        { success: false, error: data.error || 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler directement.' },
+        { status: response.status }
       );
     }
 
-    const result = await mailHubResponse.json();
-
-    return NextResponse.json({
-      success: true,
-      message: 'Votre demande a été envoyée avec succès. Nous vous recontacterons dans les plus brefs délais.',
-      mailHubId: result.id,
-    });
-
   } catch (error) {
     console.error('Contact form error:', error);
-
     return NextResponse.json(
-      {
-        success: false,
-        error: 'Une erreur est survenue. Veuillez réessayer plus tard.'
-      },
+      { success: false, error: 'Une erreur est survenue. Veuillez réessayer plus tard.' },
       { status: 500 }
     );
   }

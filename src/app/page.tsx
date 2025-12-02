@@ -151,25 +151,100 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Bâtiments industriels */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Copropriétés & Immeubles */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
                 <Image
-                  src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
-                  alt="Bâtiments industriels"
+                  src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
+                  alt="Copropriétés & Immeubles"
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                   quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gea-black mb-3">Bâtiments industriels</h3>
-              <p className="text-gray-700 mb-4">
-                Maintenance et réparation de toitures, façades et structures industrielles. Solutions{' '}
+              <h3 className="text-lg font-bold text-gea-black mb-2">Copropriétés & Immeubles</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Ravalement de{' '}
+                <Link href="/services/enveloppe-batiment" className="text-gea-blue hover:underline">
+                  façades
+                </Link>
+                ,{' '}
+                <Link href="/services/vitro-reflect-vitrage" className="text-gea-blue hover:underline">
+                  traitement des vitrages
+                </Link>{' '}
+                et{' '}
+                <Link href="/services/colonnes-assainissement" className="text-gea-blue hover:underline">
+                  colonnes d&apos;assainissement
+                </Link>
+                .
+              </p>
+              <Link
+                href="/contact"
+                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
+              >
+                Nous contacter
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Hôtels & Tertiaire */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
+                  alt="Hôtels & Tertiaire"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  quality={80}
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-lg font-bold text-gea-black mb-2">Hôtels & Tertiaire</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Solutions{' '}
                 <Link href="/services/thermo-reflect-toiture" className="text-gea-blue hover:underline">
-                  d&apos;optimisation énergétique
+                  thermiques
+                </Link>{' '}
+                et{' '}
+                <Link href="/services/vitro-reflect-vitrage" className="text-gea-blue hover:underline">
+                  traitement des vitrages
+                </Link>{' '}
+                pour le confort de vos clients.
+              </p>
+              <Link
+                href="/contact"
+                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
+              >
+                Demander un devis
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Bâtiments industriels */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
+                  alt="Bâtiments industriels"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  quality={80}
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-lg font-bold text-gea-black mb-2">Bâtiments industriels</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                <Link href="/services/thermo-reflect-toiture" className="text-gea-blue hover:underline">
+                  Peinture réflective
                 </Link>{' '}
                 et{' '}
                 <Link href="/services/installation-panneaux-photovoltaiques" className="text-gea-blue hover:underline">
@@ -179,7 +254,7 @@ export default function Home() {
               </p>
               <Link
                 href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold inline-flex items-center gap-2"
+                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
               >
                 Nous contacter
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,76 +263,39 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Entrepôts & Dépôts */}
+            {/* Particuliers */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
+              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
                 <Image
-                  src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
-                  alt="Entrepôts & Dépôts"
+                  src="https://image-flow.fr/uploads/firefly-vue-du-dessus-mettre-en-avant-les-panneaux-e80b17f9-24e4-4e76-8f95-966bbb6318f7.webp"
+                  alt="Maisons individuelles"
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                   quality={80}
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gea-black mb-3">Entrepôts & Dépôts</h3>
-              <p className="text-gray-700 mb-4">
-                Spécialistes des grandes surfaces de stockage.{' '}
-                <Link href="/services/couverture-toiture" className="text-gea-blue hover:underline">
-                  Réparation de toitures plates
+              <h3 className="text-lg font-bold text-gea-black mb-2">Particuliers</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                <Link href="/panneaux-photovoltaiques/particuliers" className="text-gea-blue hover:underline">
+                  Panneaux photovoltaïques
                 </Link>
                 ,{' '}
-                <Link href="/services/reseaux-assainissement" className="text-gea-blue hover:underline">
-                  réseaux d&apos;assainissement
-                </Link>{' '}
-                et maintenance préventive.
-              </p>
-              <Link
-                href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold inline-flex items-center gap-2"
-              >
-                Demander une visite technique
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Immeubles & Copropriétés */}
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-48 rounded-lg mb-4 overflow-hidden">
-                <Image
-                  src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
-                  alt="Immeubles & Copropriétés"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gea-black mb-3">Immeubles & Copropriétés</h3>
-              <p className="text-gray-700 mb-4">
-                Ravalement de{' '}
-                <Link href="/services/enveloppe-batiment" className="text-gea-blue hover:underline">
-                  façades
-                </Link>
-                , nettoyage,{' '}
-                <Link href="/services/vitro-reflect-vitrage" className="text-gea-blue hover:underline">
-                  traitement thermique des vitrages
+                <Link href="/services/construction-terrasses-bois-composite" className="text-gea-blue hover:underline">
+                  terrasses
                 </Link>{' '}
                 et{' '}
-                <Link href="/services/colonnes-assainissement" className="text-gea-blue hover:underline">
-                  colonnes d&apos;assainissement
+                <Link href="/services/descentes-eaux-pluviales" className="text-gea-blue hover:underline">
+                  assainissement
                 </Link>
-                . Interventions cordistes pour accès difficiles.
+                .
               </p>
               <Link
                 href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold inline-flex items-center gap-2"
+                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
               >
-                Nous contacter
+                Demander un devis
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

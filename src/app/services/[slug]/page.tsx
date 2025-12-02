@@ -157,6 +157,40 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {/* Vidéos de présentation */}
+      {service.videoUrls && service.videoUrls.length > 0 && (
+        <section className="py-20 bg-gradient-to-br from-gea-blue/5 to-gea-blue/10">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-gea-black text-center mb-4">
+              Découvrez notre solution en vidéo
+            </h2>
+            <p className="text-xl text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+              Visualisez les résultats et l&apos;efficacité de nos traitements
+            </p>
+
+            <div className={`grid gap-8 max-w-5xl mx-auto ${service.videoUrls.length > 1 ? 'md:grid-cols-2' : 'md:grid-cols-1 max-w-3xl'}`}>
+              {service.videoUrls.map((videoUrl: string, index: number) => {
+                const videoId = videoUrl.split('v=')[1]?.split('&')[0];
+                return (
+                  <div key={index} className="aspect-video rounded-xl overflow-hidden shadow-xl">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      title={`Vidéo ${service.title} ${index + 1}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Avantages */}
       {service.benefits && service.benefits.length > 0 && (
         <section className="py-20 bg-gray-50">

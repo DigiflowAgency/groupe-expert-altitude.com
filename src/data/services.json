@@ -253,7 +253,7 @@
         "keywords": "peinture réflective, cool roof, revêtement réfléchissant, isolation thermique toiture",
         "metaTitle": "Peinture réflective et isolante toiture | Garantie 15 ans | GEA",
         "metaDescription": "Peinture réflective toiture. Étanche, isolante, garantie 15 ans fabricant ☎ 09 72 14 30 65",
-        "videoUrl": "https://www.youtube.com/watch?v=uIRIPE5QMjQ"
+        "videoUrls": ["https://www.youtube.com/watch?v=uIRIPE5QMjQ", "https://www.youtube.com/watch?v=wtVnpmY8mm0"]
       },
       {
         "title": "Vernis réflectif et isolant",
@@ -280,7 +280,7 @@
         "keywords": "vernis réflectif, vitrage thermique, peinture transparente vitrage",
         "metaTitle": "Vernis réflectif et isolant vitrage | Garantie 15 ans | GEA",
         "metaDescription": "Vernis réflectif vitrage. Confort et économies, garantie 15 ans ☎ 09 72 14 30 65",
-        "videoUrl": "https://www.youtube.com/watch?v=FJ0_QuiW6xc"
+        "videoUrls": ["https://www.youtube.com/watch?v=FJ0_QuiW6xc"]
       },
       {
         "title": "Optimisation énergétique bâtiments",
@@ -348,7 +348,7 @@
         "slug": "installation-panneaux-photovoltaiques",
         "image": "https://image-flow.fr/uploads/installation-panneaux-photovoltaique-4f039083-2c8f-4932-8bca-ffb550e2ee4f.webp",
         "excerpt": "Pose de centrales photovoltaïques sur toitures industrielles et commerciales.",
-        "description": "Nous installons des centrales photovoltaïques clés en main sur vos toitures professionnelles. Notre expertise en travaux en hauteur nous permet d'intervenir sur tous types de toitures : plates, inclinées, bac acier, membrane. Nous gérons l'intégralité du projet : étude de faisabilité, démarches administratives, installation, raccordement et mise en service. Nos installations sont garanties et éligibles aux aides de l'État.",
+        "description": "Nous installons des centrales photovoltaïques clés en main sur vos toitures professionnelles. Notre expertise en travaux en hauteur nous permet d'intervenir sur tous types de toitures : plates, inclinées, bac acier, membrane. Nous gérons l'intégralité du projet : étude de faisabilité, démarches administratives auprès de la mairie, installation, raccordement et mise en service. Nos installations sont garanties 25 ans.",
         "features": [
           "Étude de rentabilité gratuite",
           "Panneaux haute performance",
@@ -362,7 +362,7 @@
           "ROI 7-10 ans",
           "Valorisation du bâtiment",
           "Image éco-responsable",
-          "Aides État + CEE"
+          "Éligible primes CEE"
         ],
         "relatedServices": ["maintenance-nettoyage-panneaux-solaires", "etudes-techniques-securisation-photovoltaique"],
         "keywords": "panneaux solaires, photovoltaïque, installation solaire, énergie renouvelable",

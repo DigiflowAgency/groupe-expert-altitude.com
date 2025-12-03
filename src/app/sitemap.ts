@@ -64,7 +64,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Pages villes SEO
   const cityPages = citiesData.map((city) => ({
-    url: `${baseUrl}/seo/${city.slug}`,
+    url: `${baseUrl}/gea-${city.slug}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.8,

@@ -45,8 +45,8 @@ export default function CityPage({ params }: { params: { ville: string } }) {
   }
 
   const breadcrumbItems = [
-    { label: 'Zones d\'intervention', href: '/seo/paris' },
-    { label: city.name, href: `/seo/${city.slug}` },
+    { label: 'Accueil', href: '/' },
+    { label: `GEA ${city.name}`, href: `/gea-${city.slug}` },
   ];
 
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
@@ -75,7 +75,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
       <Breadcrumb items={breadcrumbItems} />
 
       <Hero
-        title={`GEA à ${city.name}`}
+        title={`GEA ${city.name}`}
         subtitle={city.region}
         description="Solutions complètes pour vos bâtiments : travaux en hauteur, terrasses, énergie, photovoltaïque, assainissement"
         ctaPrimary={{
@@ -103,7 +103,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
               </p>
 
               <p>
-                <strong>Groupe Expert Altitude</strong> est le partenaire privilégié des professionnels à {city.name} avec <strong>5 pôles d'expertise</strong> : des{' '}
+                <strong>Groupe Expert Altitude</strong> est le partenaire privilégié des professionnels à {city.name} avec <strong>5 pôles d&apos;expertise</strong> : des{' '}
                 <Link href="/services/travaux-en-hauteur" className="text-gea-blue hover:underline">
                   travaux en hauteur
                 </Link>{' '}
@@ -127,7 +127,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
               </p>
 
               <p>
-                Nous comprenons les enjeux spécifiques des professionnels de {city.name}. Qu'il s'agisse de{' '}
+                Nous comprenons les enjeux spécifiques des professionnels de {city.name}. Qu&apos;il s&apos;agisse de{' '}
                 <Link href="/services/couverture-toiture" className="text-gea-blue hover:underline">
                   réparation de toiture
                 </Link>
@@ -143,7 +143,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
                 <Link href="/services/descentes-eaux-pluviales" className="text-gea-blue hover:underline">
                   systèmes d&apos;eaux pluviales
                 </Link>
-                , nos interventions sont pensées pour minimiser les interruptions d'activité et maximiser la sécurité.
+                , nos interventions sont pensées pour minimiser les interruptions d&apos;activité et maximiser la sécurité.
               </p>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
                 Bâtiments industriels & entrepôts
               </h3>
               <p className="text-gray-700 mb-4">
-                Maintenance et réparation de toitures plates, inspection de structures, nettoyage de façades industrielles. Nos cordistes interviennent sur tous types d'entrepôts et dépôts à {city.name}.
+                Maintenance et réparation de toitures plates, inspection de structures, nettoyage de façades industrielles. Nos cordistes interviennent sur tous types d&apos;entrepôts et dépôts à {city.name}.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
@@ -224,7 +224,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
                 Immeubles & copropriétés
               </h3>
               <p className="text-gray-700 mb-4">
-                Ravalement de façades, nettoyage de vitres, réparation de toitures d'immeubles. Interventions cordistes pour accès difficiles sans échafaudage à {city.name}.
+                Ravalement de façades, nettoyage de vitres, réparation de toitures d&apos;immeubles. Interventions cordistes pour accès difficiles sans échafaudage à {city.name}.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
@@ -247,26 +247,6 @@ export default function CityPage({ params }: { params: { ville: string } }) {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Images Gallery */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gea-black text-center mb-12">
-            Nos réalisations à {city.name}
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div
-                key={i}
-                className="h-64 bg-green-300 rounded-xl flex items-center justify-center text-sm font-mono text-green-800 hover:scale-105 transition-transform"
-              >
-                [IMAGE RÉALISATION {i} - {city.name.toUpperCase()}]
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -341,7 +321,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
               </div>
               <h3 className="text-xl font-bold mb-2">Expertise</h3>
               <p className="text-gray-300">
-                Plus de 15 ans d'expérience en travaux complexes
+                Plus de 15 ans d&apos;expérience en travaux complexes
               </p>
             </div>
 
@@ -437,24 +417,24 @@ export default function CityPage({ params }: { params: { ville: string } }) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gea-black mb-6">
-              Zone d'intervention : {city.name} ({city.department})
+              Zone d&apos;intervention : {city.name} ({city.department})
             </h2>
 
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
-                Basés en Île-de-France, nous intervenons régulièrement à <strong>{city.name}</strong> et dans toute la région <strong>{city.region}</strong>. Notre proximité nous permet d'assurer des interventions rapides et efficaces, que ce soit pour des opérations de maintenance programmées ou des interventions d'urgence.
+                Basés en Île-de-France, nous intervenons régulièrement à <strong>{city.name}</strong> et dans toute la région <strong>{city.region}</strong>. Notre proximité nous permet d&apos;assurer des interventions rapides et efficaces, que ce soit pour des opérations de maintenance programmées ou des interventions d&apos;urgence.
               </p>
 
               <p>
-                Nos équipes connaissent parfaitement les spécificités architecturales et réglementaires de {city.name}. Nous adaptons nos méthodes d'intervention aux contraintes locales pour garantir des travaux de qualité dans le respect des normes en vigueur.
+                Nos équipes connaissent parfaitement les spécificités architecturales et réglementaires de {city.name}. Nous adaptons nos méthodes d&apos;intervention aux contraintes locales pour garantir des travaux de qualité dans le respect des normes en vigueur.
               </p>
 
               <div className="bg-gea-blue/10 p-6 rounded-xl my-6">
                 <h3 className="text-xl font-bold text-gea-black mb-4">
-                  Besoin d'une intervention à {city.name} ?
+                  Besoin d&apos;une intervention à {city.name} ?
                 </h3>
                 <p className="mb-4">
-                  Contactez-nous pour un devis gratuit ou une intervention d'urgence.
+                  Contactez-nous pour un devis gratuit ou une intervention d&apos;urgence.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -487,7 +467,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
             {otherCities.map((otherCity) => (
               <Link
                 key={otherCity.slug}
-                href={`/seo/${otherCity.slug}`}
+                href={`/gea-${otherCity.slug}`}
                 className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group"
               >
                 <h3 className="text-xl font-bold text-gea-black mb-2 group-hover:text-gea-blue transition-colors">
@@ -519,7 +499,7 @@ export default function CityPage({ params }: { params: { ville: string } }) {
               href="/#services"
               className="text-gea-blue hover:underline font-semibold"
             >
-              Voir toutes nos zones d'intervention →
+              Voir toutes nos zones d&apos;intervention →
             </Link>
           </div>
         </div>

@@ -383,23 +383,23 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               </h3>
               <p>
                 Nous intervenons principalement en{' '}
-                <Link href="/seo/ile-de-france" className="text-gea-blue hover:underline">
+                <Link href="/gea-ile-de-france" className="text-gea-blue hover:underline">
                   Île-de-France
                 </Link>
                 , notamment à{' '}
-                <Link href="/seo/paris" className="text-gea-blue hover:underline">
+                <Link href="/gea-paris" className="text-gea-blue hover:underline">
                   Paris
                 </Link>{' '}
                 et dans toute la région parisienne. Nous pouvons également nous déplacer dans d&apos;autres régions pour des projets d&apos;envergure à{' '}
-                <Link href="/seo/lyon" className="text-gea-blue hover:underline">
+                <Link href="/gea-lyon" className="text-gea-blue hover:underline">
                   Lyon
                 </Link>
                 ,{' '}
-                <Link href="/seo/marseille" className="text-gea-blue hover:underline">
+                <Link href="/gea-marseille" className="text-gea-blue hover:underline">
                   Marseille
                 </Link>
                 ,{' '}
-                <Link href="/seo/toulouse" className="text-gea-blue hover:underline">
+                <Link href="/gea-toulouse" className="text-gea-blue hover:underline">
                   Toulouse
                 </Link>{' '}
                 et dans toute la France.

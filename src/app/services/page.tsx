@@ -274,14 +274,14 @@ export default function ServicesPage() {
                 Nous intervenons sur toute la France, avec une présence renforcée en Île-de-France
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <Link href="/seo/paris" className="text-gea-blue hover:underline">Paris</Link>
-                <Link href="/seo/ile-de-france" className="text-gea-blue hover:underline">Île-de-France</Link>
-                <Link href="/seo/lyon" className="text-gea-blue hover:underline">Lyon</Link>
-                <Link href="/seo/marseille" className="text-gea-blue hover:underline">Marseille</Link>
-                <Link href="/seo/toulouse" className="text-gea-blue hover:underline">Toulouse</Link>
-                <Link href="/seo/bordeaux" className="text-gea-blue hover:underline">Bordeaux</Link>
-                <Link href="/seo/lille" className="text-gea-blue hover:underline">Lille</Link>
-                <Link href="/seo/nantes" className="text-gea-blue hover:underline">Nantes</Link>
+                <Link href="/gea-paris" className="text-gea-blue hover:underline">Paris</Link>
+                <Link href="/gea-ile-de-france" className="text-gea-blue hover:underline">Île-de-France</Link>
+                <Link href="/gea-lyon" className="text-gea-blue hover:underline">Lyon</Link>
+                <Link href="/gea-marseille" className="text-gea-blue hover:underline">Marseille</Link>
+                <Link href="/gea-toulouse" className="text-gea-blue hover:underline">Toulouse</Link>
+                <Link href="/gea-bordeaux" className="text-gea-blue hover:underline">Bordeaux</Link>
+                <Link href="/gea-lille" className="text-gea-blue hover:underline">Lille</Link>
+                <Link href="/gea-nantes" className="text-gea-blue hover:underline">Nantes</Link>
               </div>
             </div>
           </div>

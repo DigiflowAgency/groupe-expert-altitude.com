@@ -12,12 +12,12 @@ export default function Footer() {
   ];
 
   const cities = [
-    { name: 'Paris', href: '/seo/paris' },
-    { name: 'Île-de-France', href: '/seo/ile-de-france' },
-    { name: 'Lyon', href: '/seo/lyon' },
-    { name: 'Marseille', href: '/seo/marseille' },
-    { name: 'Toulouse', href: '/seo/toulouse' },
-    { name: 'Bordeaux', href: '/seo/bordeaux' },
+    { name: 'Paris', href: '/gea-paris' },
+    { name: 'Île-de-France', href: '/gea-ile-de-france' },
+    { name: 'Lyon', href: '/gea-lyon' },
+    { name: 'Marseille', href: '/gea-marseille' },
+    { name: 'Toulouse', href: '/gea-toulouse' },
+    { name: 'Bordeaux', href: '/gea-bordeaux' },
   ];
 
   return (
@@ -142,7 +142,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link
-                  href="/seo/lille"
+                  href="/gea-lille"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   GEA Lille
@@ -150,7 +150,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/seo/strasbourg"
+                  href="/gea-strasbourg"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   GEA Strasbourg
@@ -158,7 +158,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/seo/nantes"
+                  href="/gea-nantes"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   GEA Nantes
@@ -244,27 +244,27 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-3">Interventions géographiques</h4>
               <p className="leading-relaxed">
                 Nous intervenons à{' '}
-                <Link href="/seo/paris" className="text-gea-light-blue hover:text-white transition-colors">
+                <Link href="/gea-paris" className="text-gea-light-blue hover:text-white transition-colors">
                   Paris
                 </Link>
                 , en{' '}
-                <Link href="/seo/ile-de-france" className="text-gea-light-blue hover:text-white transition-colors">
+                <Link href="/gea-ile-de-france" className="text-gea-light-blue hover:text-white transition-colors">
                   Île-de-France
                 </Link>
                 , à{' '}
-                <Link href="/seo/lyon" className="text-gea-light-blue hover:text-white transition-colors">
+                <Link href="/gea-lyon" className="text-gea-light-blue hover:text-white transition-colors">
                   Lyon
                 </Link>
                 ,{' '}
-                <Link href="/seo/marseille" className="text-gea-light-blue hover:text-white transition-colors">
+                <Link href="/gea-marseille" className="text-gea-light-blue hover:text-white transition-colors">
                   Marseille
                 </Link>
                 ,{' '}
-                <Link href="/seo/toulouse" className="text-gea-light-blue hover:text-white transition-colors">
+                <Link href="/gea-toulouse" className="text-gea-light-blue hover:text-white transition-colors">
                   Toulouse
                 </Link>
                 ,{' '}
-                <Link href="/seo/bordeaux" className="text-gea-light-blue hover:text-white transition-colors">
+                <Link href="/gea-bordeaux" className="text-gea-light-blue hover:text-white transition-colors">
                   Bordeaux
                 </Link>{' '}
                 et dans toute la France pour vos travaux en hauteur sur bâtiments professionnels, entrepôts et immeubles.

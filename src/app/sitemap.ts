@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import servicesData from '@/data/services.json';
 import citiesData from '@/data/cities.json';
+import serviceKeywordsData from '@/data/service-keywords.json';
 import { getAllBlogPosts } from '@/lib/googleSheets/blog';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -79,5 +80,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...servicePages, ...cityPages, ...blogPages];
+  // Pages SEO service + ville (1100 pages)
+  const serviceVillePages: MetadataRoute.Sitemap = [];
+  for (const service of serviceKeywordsData.services) {
+    for (const city of citiesData) {
+      serviceVillePages.push({
+        url: `${baseUrl}/${service.slug}-${city.slug}`,
+        lastModified: currentDate,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      });
+    }
+  }
+
+  return [...staticPages, ...servicePages, ...cityPages, ...blogPages, ...serviceVillePages];
 }

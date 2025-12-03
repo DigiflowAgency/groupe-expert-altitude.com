@@ -272,6 +272,117 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        {/* SEO Links Section - Services par ville */}
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <h4 className="text-white font-semibold mb-6 text-center">Nos services dans les principales villes</h4>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-xs">
+            {/* Cordistes */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Cordistes</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/cordiste-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cordiste Paris</Link></li>
+                <li><Link href="/cordiste-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cordiste Lyon</Link></li>
+                <li><Link href="/cordiste-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cordiste Marseille</Link></li>
+                <li><Link href="/cordiste-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cordiste Nice</Link></li>
+                <li><Link href="/cordiste-toulouse" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cordiste Toulouse</Link></li>
+                <li><Link href="/cordiste-bordeaux" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cordiste Bordeaux</Link></li>
+              </ul>
+            </div>
+
+            {/* Ravalement façade */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Ravalement façade</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/ravalement-facade-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ravalement Paris</Link></li>
+                <li><Link href="/ravalement-facade-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ravalement Lyon</Link></li>
+                <li><Link href="/ravalement-facade-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ravalement Marseille</Link></li>
+                <li><Link href="/ravalement-facade-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ravalement Nice</Link></li>
+                <li><Link href="/ravalement-facade-bordeaux" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ravalement Bordeaux</Link></li>
+                <li><Link href="/ravalement-facade-lille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ravalement Lille</Link></li>
+              </ul>
+            </div>
+
+            {/* Étanchéité toiture */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Étanchéité toiture</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/etancheite-toiture-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Étanchéité Paris</Link></li>
+                <li><Link href="/etancheite-toiture-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Étanchéité Lyon</Link></li>
+                <li><Link href="/etancheite-toiture-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Étanchéité Marseille</Link></li>
+                <li><Link href="/etancheite-toiture-toulouse" className="text-gray-400 hover:text-gea-light-blue transition-colors">Étanchéité Toulouse</Link></li>
+                <li><Link href="/etancheite-toiture-nantes" className="text-gray-400 hover:text-gea-light-blue transition-colors">Étanchéité Nantes</Link></li>
+                <li><Link href="/etancheite-toiture-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Étanchéité Nice</Link></li>
+              </ul>
+            </div>
+
+            {/* Panneaux photovoltaïques */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Photovoltaïque</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/panneaux-photovoltaiques-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Solaire Paris</Link></li>
+                <li><Link href="/panneaux-photovoltaiques-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Solaire Lyon</Link></li>
+                <li><Link href="/panneaux-photovoltaiques-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Solaire Marseille</Link></li>
+                <li><Link href="/panneaux-photovoltaiques-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Solaire Nice</Link></li>
+                <li><Link href="/panneaux-photovoltaiques-bordeaux" className="text-gray-400 hover:text-gea-light-blue transition-colors">Solaire Bordeaux</Link></li>
+                <li><Link href="/panneaux-photovoltaiques-toulouse" className="text-gray-400 hover:text-gea-light-blue transition-colors">Solaire Toulouse</Link></li>
+              </ul>
+            </div>
+
+            {/* Cool Roof */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Cool Roof</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/cool-roof-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cool Roof Paris</Link></li>
+                <li><Link href="/cool-roof-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cool Roof Lyon</Link></li>
+                <li><Link href="/cool-roof-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cool Roof Marseille</Link></li>
+                <li><Link href="/cool-roof-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cool Roof Nice</Link></li>
+                <li><Link href="/cool-roof-toulouse" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cool Roof Toulouse</Link></li>
+                <li><Link href="/cool-roof-bordeaux" className="text-gray-400 hover:text-gea-light-blue transition-colors">Cool Roof Bordeaux</Link></li>
+              </ul>
+            </div>
+
+            {/* Terrasses bois */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Terrasse bois</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/terrasse-bois-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Terrasse Paris</Link></li>
+                <li><Link href="/terrasse-bois-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Terrasse Lyon</Link></li>
+                <li><Link href="/terrasse-bois-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Terrasse Marseille</Link></li>
+                <li><Link href="/terrasse-bois-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Terrasse Nice</Link></li>
+                <li><Link href="/terrasse-bois-bordeaux" className="text-gray-400 hover:text-gea-light-blue transition-colors">Terrasse Bordeaux</Link></li>
+                <li><Link href="/terrasse-bois-nantes" className="text-gray-400 hover:text-gea-light-blue transition-colors">Terrasse Nantes</Link></li>
+              </ul>
+            </div>
+
+            {/* Ligne de vie */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Ligne de vie</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/ligne-de-vie-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ligne de vie Paris</Link></li>
+                <li><Link href="/ligne-de-vie-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ligne de vie Lyon</Link></li>
+                <li><Link href="/ligne-de-vie-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ligne de vie Marseille</Link></li>
+                <li><Link href="/ligne-de-vie-lille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ligne de vie Lille</Link></li>
+                <li><Link href="/ligne-de-vie-toulouse" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ligne de vie Toulouse</Link></li>
+                <li><Link href="/ligne-de-vie-nantes" className="text-gray-400 hover:text-gea-light-blue transition-colors">Ligne de vie Nantes</Link></li>
+              </ul>
+            </div>
+
+            {/* Gouttières */}
+            <div>
+              <h5 className="text-white font-semibold mb-3">Gouttières</h5>
+              <ul className="space-y-1.5">
+                <li><Link href="/gouttiere-paris" className="text-gray-400 hover:text-gea-light-blue transition-colors">Gouttière Paris</Link></li>
+                <li><Link href="/gouttiere-lyon" className="text-gray-400 hover:text-gea-light-blue transition-colors">Gouttière Lyon</Link></li>
+                <li><Link href="/gouttiere-marseille" className="text-gray-400 hover:text-gea-light-blue transition-colors">Gouttière Marseille</Link></li>
+                <li><Link href="/gouttiere-bordeaux" className="text-gray-400 hover:text-gea-light-blue transition-colors">Gouttière Bordeaux</Link></li>
+                <li><Link href="/gouttiere-nice" className="text-gray-400 hover:text-gea-light-blue transition-colors">Gouttière Nice</Link></li>
+                <li><Link href="/gouttiere-toulouse" className="text-gray-400 hover:text-gea-light-blue transition-colors">Gouttière Toulouse</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Footer */}

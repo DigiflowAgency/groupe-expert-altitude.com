@@ -1,0 +1,537 @@
+{
+  "services": [
+    {
+      "keyword": "travaux en hauteur",
+      "slug": "travaux-en-hauteur",
+      "relatedServiceSlug": "travaux-en-hauteur",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Travaux en hauteur",
+      "metaTemplate": "Travaux en hauteur {ville} | Cordistes certifiés | GEA",
+      "h1Template": "Travaux en hauteur à {ville}",
+      "descriptionTemplate": "Groupe Expert Altitude réalise vos travaux en hauteur à {ville} et dans toute la région {region}. Cordistes certifiés CQP, intervention sans échafaudage sur tous types de bâtiments. Devis gratuit.",
+      "features": [
+        "Cordistes certifiés CQP",
+        "Interventions jusqu'à 100m de hauteur",
+        "Sans échafaudage ni nacelle",
+        "Disponibilité 7j/7 pour urgences"
+      ],
+      "benefits": [
+        "Coût réduit de 40% vs nacelle",
+        "Rapidité d'intervention",
+        "Accès aux zones impossibles",
+        "Impact minimal sur l'activité"
+      ]
+    },
+    {
+      "keyword": "cordiste",
+      "slug": "cordiste",
+      "relatedServiceSlug": "cordistes",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Cordiste",
+      "metaTemplate": "Cordiste {ville} | Travaux acrobatiques professionnels | GEA",
+      "h1Template": "Cordiste à {ville}",
+      "descriptionTemplate": "Cordistes professionnels certifiés CQP à {ville}. Interventions sur tous bâtiments en hauteur sans nacelle : immeubles, entrepôts, sites industriels. Équipe expérimentée, matériel certifié EN 795.",
+      "features": [
+        "Certification CQP Cordiste",
+        "Formation continue annuelle",
+        "Matériel certifié EN 795",
+        "Assurance RC Pro 10M€"
+      ],
+      "benefits": [
+        "Sécurité maximale garantie",
+        "Expertise technique reconnue",
+        "Polyvalence des interventions",
+        "Rapidité d'exécution"
+      ]
+    },
+    {
+      "keyword": "ravalement façade",
+      "slug": "ravalement-facade",
+      "relatedServiceSlug": "enveloppe-batiment",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Ravalement de façade",
+      "metaTemplate": "Ravalement façade {ville} | Rénovation par cordistes | GEA",
+      "h1Template": "Ravalement de façade à {ville}",
+      "descriptionTemplate": "Ravalement de façade à {ville} par cordistes professionnels. Rénovation, nettoyage, traitement des fissures sur immeubles et bâtiments. Intervention sans échafaudage, coût optimisé.",
+      "features": [
+        "Ravalement complet ou partiel",
+        "Traitement des fissures",
+        "Nettoyage haute pression",
+        "Peinture et finitions"
+      ],
+      "benefits": [
+        "Valorisation du patrimoine",
+        "Économies vs échafaudage",
+        "Protection durable",
+        "Conformité réglementaire"
+      ]
+    },
+    {
+      "keyword": "couverture toiture",
+      "slug": "couverture-toiture",
+      "relatedServiceSlug": "couverture-toiture",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Couverture et toiture",
+      "metaTemplate": "Couverture toiture {ville} | Réparation & Étanchéité | GEA",
+      "h1Template": "Couverture et toiture à {ville}",
+      "descriptionTemplate": "Spécialiste couverture et toiture à {ville}. Réparation, étanchéité, maintenance de toitures plates et inclinées. Intervention rapide sur fuites et dégâts. Cordistes certifiés.",
+      "features": [
+        "Réparation toitures plates",
+        "Étanchéité membrane EPDM/PVC",
+        "Couverture bac acier",
+        "Démoussage et nettoyage"
+      ],
+      "benefits": [
+        "Intervention d'urgence 24h",
+        "Garantie décennale",
+        "Détection fuites thermographie",
+        "Prolongation durée de vie"
+      ]
+    },
+    {
+      "keyword": "étanchéité toiture",
+      "slug": "etancheite-toiture",
+      "relatedServiceSlug": "couverture-toiture",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Étanchéité toiture",
+      "metaTemplate": "Étanchéité toiture {ville} | Membrane & Réparation | GEA",
+      "h1Template": "Étanchéité toiture à {ville}",
+      "descriptionTemplate": "Expert étanchéité toiture à {ville}. Pose et réparation membranes EPDM, PVC, bitume. Traitement des infiltrations sur toitures plates et terrasses. Garantie décennale.",
+      "features": [
+        "Membrane EPDM haute qualité",
+        "Étanchéité PVC et bitume",
+        "Réparation infiltrations",
+        "Diagnostic thermographique"
+      ],
+      "benefits": [
+        "Étanchéité garantie 10 ans",
+        "Intervention sans démolition",
+        "Détection précise des fuites",
+        "Solutions durables"
+      ]
+    },
+    {
+      "keyword": "ligne de vie",
+      "slug": "ligne-de-vie",
+      "relatedServiceSlug": "securisation",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Ligne de vie",
+      "metaTemplate": "Ligne de vie {ville} | Installation & Vérification | GEA",
+      "h1Template": "Installation ligne de vie à {ville}",
+      "descriptionTemplate": "Installation et vérification de lignes de vie à {ville}. Systèmes horizontaux et verticaux conformes EN 795. Points d'ancrage certifiés. Mise en conformité de vos installations.",
+      "features": [
+        "Lignes de vie horizontales EN 795",
+        "Points d'ancrage individuels",
+        "Garde-corps permanents",
+        "Vérifications annuelles"
+      ],
+      "benefits": [
+        "Conformité Code du Travail",
+        "Protection des intervenants",
+        "Certification officielle",
+        "Service vérification inclus"
+      ]
+    },
+    {
+      "keyword": "maintenance bâtiment",
+      "slug": "maintenance-batiment",
+      "relatedServiceSlug": "maintenance-technique",
+      "category": "Travaux en Hauteur",
+      "categoryIcon": "🏔️",
+      "title": "Maintenance bâtiment",
+      "metaTemplate": "Maintenance bâtiment {ville} | Contrat & Entretien | GEA",
+      "h1Template": "Maintenance bâtiment à {ville}",
+      "descriptionTemplate": "Maintenance de bâtiments professionnels à {ville}. Contrats d'entretien préventif, inspections régulières, réparations. Accompagnement de vos mainteneurs techniques en hauteur.",
+      "features": [
+        "Contrats de maintenance",
+        "Inspections trimestrielles",
+        "Entretien toitures et façades",
+        "Interventions urgentes prioritaires"
+      ],
+      "benefits": [
+        "Réduction 60% coûts réparations",
+        "Prolongation durée de vie +30%",
+        "Priorité interventions urgentes",
+        "Budget prévisible"
+      ]
+    },
+    {
+      "keyword": "terrasse bois",
+      "slug": "terrasse-bois",
+      "relatedServiceSlug": "construction-terrasses-bois-composite",
+      "category": "Terrasses & Extérieurs",
+      "categoryIcon": "🏗️",
+      "title": "Terrasse bois",
+      "metaTemplate": "Terrasse bois {ville} | Construction & Pose | GEA",
+      "h1Template": "Terrasse bois à {ville}",
+      "descriptionTemplate": "Construction de terrasse bois à {ville}. Bois exotiques (Ipé, Cumaru, Teck) certifiés FSC. Pose professionnelle pour particuliers et professionnels. Garantie 10 ans.",
+      "features": [
+        "Bois exotiques certifiés FSC",
+        "Structure aluminium ou bois",
+        "Garde-corps assortis",
+        "Éclairage LED intégré"
+      ],
+      "benefits": [
+        "Esthétique haut de gamme",
+        "Résistance aux intempéries",
+        "Entretien minimal",
+        "Valorisation de l'espace"
+      ]
+    },
+    {
+      "keyword": "terrasse composite",
+      "slug": "terrasse-composite",
+      "relatedServiceSlug": "construction-terrasses-bois-composite",
+      "category": "Terrasses & Extérieurs",
+      "categoryIcon": "🏗️",
+      "title": "Terrasse composite",
+      "metaTemplate": "Terrasse composite {ville} | Pose professionnelle | GEA",
+      "h1Template": "Terrasse composite à {ville}",
+      "descriptionTemplate": "Installation terrasse composite à {ville}. Lames haute densité résistantes UV et intempéries. Solution durable sans entretien pour maisons et espaces professionnels.",
+      "features": [
+        "Composite haute densité",
+        "Résistance UV extrême",
+        "Sans entretien",
+        "Large choix de coloris"
+      ],
+      "benefits": [
+        "Durabilité exceptionnelle",
+        "Aspect bois naturel",
+        "Zéro entretien annuel",
+        "Garantie 25 ans"
+      ]
+    },
+    {
+      "keyword": "terrasse sur plots",
+      "slug": "terrasse-sur-plots",
+      "relatedServiceSlug": "terrassement-bois-plots",
+      "category": "Terrasses & Extérieurs",
+      "categoryIcon": "🏗️",
+      "title": "Terrasse sur plots",
+      "metaTemplate": "Terrasse sur plots {ville} | Toit-terrasse & Balcon | GEA",
+      "h1Template": "Terrasse sur plots à {ville}",
+      "descriptionTemplate": "Installation terrasse sur plots à {ville}. Solution idéale pour toits-terrasses, balcons et zones surélevées. Préservation de l'étanchéité, drainage optimal, pose réversible.",
+      "features": [
+        "Plots réglables 20 à 500mm",
+        "Préservation étanchéité",
+        "Drainage optimal intégré",
+        "Démontable et réutilisable"
+      ],
+      "benefits": [
+        "Pas de percement étanchéité",
+        "Accès facilité aux réseaux",
+        "Compensation des dénivelés",
+        "Ventilation naturelle"
+      ]
+    },
+    {
+      "keyword": "peinture réflective",
+      "slug": "peinture-reflective",
+      "relatedServiceSlug": "thermo-reflect-toiture",
+      "category": "Traitements Thermiques & Réflectifs",
+      "categoryIcon": "🌡️",
+      "title": "Peinture réflective",
+      "metaTemplate": "Peinture réflective {ville} | Cool Roof Garanti 15 ans | GEA",
+      "h1Template": "Peinture réflective à {ville}",
+      "descriptionTemplate": "Application peinture réflective à {ville}. Réduction température intérieure de 10 à 15°C. Étanche, isolante, garantie fabricant 15 ans. Solution cool roof pour tous types de toitures.",
+      "features": [
+        "Étanche : protection totale",
+        "Isolante : -10 à -15°C",
+        "Garantie 15 ans fabricant",
+        "Réflectivité 90%"
+      ],
+      "benefits": [
+        "Économies climatisation 30-50%",
+        "Confort thermique amélioré",
+        "Protection toiture prolongée",
+        "ROI moyen 3-5 ans"
+      ]
+    },
+    {
+      "keyword": "cool roof",
+      "slug": "cool-roof",
+      "relatedServiceSlug": "thermo-reflect-toiture",
+      "category": "Traitements Thermiques & Réflectifs",
+      "categoryIcon": "🌡️",
+      "title": "Cool Roof",
+      "metaTemplate": "Cool Roof {ville} | Toiture fraîche garantie | GEA",
+      "h1Template": "Cool Roof à {ville}",
+      "descriptionTemplate": "Solution Cool Roof à {ville}. Revêtement réfléchissant haute performance pour toitures. Réduction chaleur jusqu'à 90%, économies d'énergie garanties. Application professionnelle.",
+      "features": [
+        "Réflectivité solaire 90%",
+        "Application tous supports",
+        "Résistance UV extrême",
+        "Certification ISO"
+      ],
+      "benefits": [
+        "Baisse température -15°C",
+        "Réduction climatisation 50%",
+        "Durée de vie toiture +10 ans",
+        "Éligible primes CEE"
+      ]
+    },
+    {
+      "keyword": "vernis réflectif vitrage",
+      "slug": "vernis-reflectif-vitrage",
+      "relatedServiceSlug": "vitro-reflect-vitrage",
+      "category": "Traitements Thermiques & Réflectifs",
+      "categoryIcon": "🌡️",
+      "title": "Vernis réflectif vitrage",
+      "metaTemplate": "Vernis réflectif vitrage {ville} | Garantie 15 ans | GEA",
+      "h1Template": "Vernis réflectif vitrage à {ville}",
+      "descriptionTemplate": "Application vernis réflectif sur vitrages à {ville}. Bloque 80% de la chaleur, laisse passer 70% de lumière. Garantie 15 ans. Intervention cordistes pour accès difficiles.",
+      "features": [
+        "Vernis transparent",
+        "Blocage 80% chaleur solaire",
+        "Transmission lumière 70%",
+        "Garantie 15 ans fabricant"
+      ],
+      "benefits": [
+        "Réduction climatisation 40%",
+        "Confort visuel amélioré",
+        "Protection mobilier UV",
+        "Application sans travaux"
+      ]
+    },
+    {
+      "keyword": "film solaire vitrage",
+      "slug": "film-solaire-vitrage",
+      "relatedServiceSlug": "vitro-reflect-vitrage",
+      "category": "Traitements Thermiques & Réflectifs",
+      "categoryIcon": "🌡️",
+      "title": "Film solaire vitrage",
+      "metaTemplate": "Film solaire vitrage {ville} | Protection thermique | GEA",
+      "h1Template": "Film solaire vitrage à {ville}",
+      "descriptionTemplate": "Pose film solaire sur vitrage à {ville}. Protection thermique et anti-UV pour bureaux, commerces et habitations. Intervention cordistes sur vitrages en hauteur.",
+      "features": [
+        "Film anti-chaleur",
+        "Protection UV 99%",
+        "Anti-éblouissement",
+        "Pose sans démontage"
+      ],
+      "benefits": [
+        "Confort immédiat",
+        "Économies d'énergie",
+        "Protection mobilier",
+        "Installation rapide"
+      ]
+    },
+    {
+      "keyword": "nettoyage vitrage hauteur",
+      "slug": "nettoyage-vitrage-hauteur",
+      "relatedServiceSlug": "application-vitrages-acces-difficile",
+      "category": "Traitements Thermiques & Réflectifs",
+      "categoryIcon": "🌡️",
+      "title": "Nettoyage vitrage en hauteur",
+      "metaTemplate": "Nettoyage vitrage hauteur {ville} | Cordistes | GEA",
+      "h1Template": "Nettoyage vitrage en hauteur à {ville}",
+      "descriptionTemplate": "Nettoyage de vitrages en hauteur à {ville} par cordistes professionnels. Verrières, façades vitrées, atriums : aucune zone inaccessible. Sans nacelle, coût optimisé.",
+      "features": [
+        "Intervention cordistes",
+        "Tous vitrages accessibles",
+        "Sans nacelle",
+        "Eau osmosée pure"
+      ],
+      "benefits": [
+        "Accès zones impossibles",
+        "Coût réduit 50%",
+        "Pas d'occupation sol",
+        "Résultat impeccable"
+      ]
+    },
+    {
+      "keyword": "panneaux photovoltaïques",
+      "slug": "panneaux-photovoltaiques",
+      "relatedServiceSlug": "installation-panneaux-photovoltaiques",
+      "category": "Énergie & Photovoltaïque",
+      "categoryIcon": "☀️",
+      "title": "Panneaux photovoltaïques",
+      "metaTemplate": "Panneaux photovoltaïques {ville} | Installation pro | GEA",
+      "h1Template": "Panneaux photovoltaïques à {ville}",
+      "descriptionTemplate": "Installation panneaux photovoltaïques à {ville}. Solutions pour particuliers et professionnels. Démarches administratives incluses, garantie 25 ans. Autoconsommation ou revente.",
+      "features": [
+        "Panneaux haute performance",
+        "Installation certifiée QualiPV",
+        "Garantie 25 ans",
+        "Onduleurs dernière génération"
+      ],
+      "benefits": [
+        "Autoconsommation ou revente",
+        "ROI 7-10 ans",
+        "Valorisation du bâtiment",
+        "Image éco-responsable"
+      ]
+    },
+    {
+      "keyword": "installation panneaux solaires",
+      "slug": "installation-panneaux-solaires",
+      "relatedServiceSlug": "installation-panneaux-photovoltaiques",
+      "category": "Énergie & Photovoltaïque",
+      "categoryIcon": "☀️",
+      "title": "Installation panneaux solaires",
+      "metaTemplate": "Installation panneaux solaires {ville} | Devis gratuit | GEA",
+      "h1Template": "Installation panneaux solaires à {ville}",
+      "descriptionTemplate": "Installation panneaux solaires à {ville}. Étude de rentabilité gratuite, démarches mairie incluses. Pour particuliers (3 à 12 kW) et professionnels (sans limite). Financement possible.",
+      "features": [
+        "Étude rentabilité gratuite",
+        "Démarches mairie incluses",
+        "Raccordement complet",
+        "Suivi production temps réel"
+      ],
+      "benefits": [
+        "Économies dès le 1er mois",
+        "Indépendance énergétique",
+        "Aides financières",
+        "Revente surplus possible"
+      ]
+    },
+    {
+      "keyword": "nettoyage panneaux solaires",
+      "slug": "nettoyage-panneaux-solaires",
+      "relatedServiceSlug": "maintenance-nettoyage-panneaux-solaires",
+      "category": "Énergie & Photovoltaïque",
+      "categoryIcon": "☀️",
+      "title": "Nettoyage panneaux solaires",
+      "metaTemplate": "Nettoyage panneaux solaires {ville} | Maintenance | GEA",
+      "h1Template": "Nettoyage panneaux solaires à {ville}",
+      "descriptionTemplate": "Nettoyage et maintenance panneaux solaires à {ville}. Récupérez jusqu'à 30% de rendement perdu. Eau osmosée, contrôle connexions, rapport détaillé. Contrats annuels disponibles.",
+      "features": [
+        "Nettoyage sans rayures",
+        "Eau osmosée pure",
+        "Vérification connexions",
+        "Test thermographique"
+      ],
+      "benefits": [
+        "Maintien rendement 100%",
+        "Détection pannes précoce",
+        "Garantie constructeur préservée",
+        "Contrats avantageux"
+      ]
+    },
+    {
+      "keyword": "descente eaux pluviales",
+      "slug": "descente-eaux-pluviales",
+      "relatedServiceSlug": "descentes-eaux-pluviales",
+      "category": "Assainissement & Eaux Pluviales",
+      "categoryIcon": "💧",
+      "title": "Descente eaux pluviales",
+      "metaTemplate": "Descente eaux pluviales {ville} | Installation & Réparation | GEA",
+      "h1Template": "Descente eaux pluviales à {ville}",
+      "descriptionTemplate": "Installation et réparation descentes eaux pluviales à {ville}. Zinc, aluminium, PVC, inox. Intervention cordistes sur toutes hauteurs. Remplacement complet ou partiel.",
+      "features": [
+        "Tous matériaux : zinc, alu, inox",
+        "Remplacement complet ou partiel",
+        "Soudure zinc traditionnelle",
+        "Raccordement réseau"
+      ],
+      "benefits": [
+        "Protection durable façades",
+        "Évacuation optimale",
+        "Intervention rapide",
+        "Esthétique préservée"
+      ]
+    },
+    {
+      "keyword": "colonne assainissement",
+      "slug": "colonne-assainissement",
+      "relatedServiceSlug": "colonnes-assainissement",
+      "category": "Assainissement & Eaux Pluviales",
+      "categoryIcon": "💧",
+      "title": "Colonne assainissement",
+      "metaTemplate": "Colonne assainissement {ville} | Rénovation immeuble | GEA",
+      "h1Template": "Colonne assainissement à {ville}",
+      "descriptionTemplate": "Rénovation colonnes assainissement à {ville}. Remplacement colonnes EU/EV pour immeubles et copropriétés. Intervention cordistes, sans démolition. Conformité DTU garantie.",
+      "features": [
+        "Colonnes PVC haute densité",
+        "Ventilation primaire/secondaire",
+        "Colliers insonorisés",
+        "Test étanchéité garanti"
+      ],
+      "benefits": [
+        "Conformité DTU 60.11",
+        "Suppression odeurs",
+        "Réduction bruit",
+        "Durabilité 50 ans"
+      ]
+    },
+    {
+      "keyword": "gouttière",
+      "slug": "gouttiere",
+      "relatedServiceSlug": "descentes-eaux-pluviales",
+      "category": "Assainissement & Eaux Pluviales",
+      "categoryIcon": "💧",
+      "title": "Gouttière",
+      "metaTemplate": "Gouttière {ville} | Pose & Réparation | GEA",
+      "h1Template": "Installation gouttière à {ville}",
+      "descriptionTemplate": "Installation et réparation de gouttières à {ville}. Zinc, aluminium, PVC, cuivre. Nettoyage, débouchage, remplacement. Intervention par cordistes sur toutes hauteurs.",
+      "features": [
+        "Tous matériaux disponibles",
+        "Nettoyage et débouchage",
+        "Réparation ou remplacement",
+        "Crapaudines anti-feuilles"
+      ],
+      "benefits": [
+        "Protection façade garantie",
+        "Évacuation efficace",
+        "Intervention hauteur",
+        "Devis gratuit"
+      ]
+    },
+    {
+      "keyword": "zinguerie",
+      "slug": "zinguerie",
+      "relatedServiceSlug": "descentes-eaux-pluviales",
+      "category": "Assainissement & Eaux Pluviales",
+      "categoryIcon": "💧",
+      "title": "Zinguerie",
+      "metaTemplate": "Zinguerie {ville} | Travaux zinc par cordistes | GEA",
+      "h1Template": "Zinguerie à {ville}",
+      "descriptionTemplate": "Travaux de zinguerie à {ville}. Gouttières, chéneaux, descentes EP, habillages zinc. Soudure traditionnelle, finitions soignées. Intervention cordistes sans échafaudage.",
+      "features": [
+        "Soudure zinc traditionnelle",
+        "Gouttières et chéneaux",
+        "Habillages et finitions",
+        "Réparations ponctuelles"
+      ],
+      "benefits": [
+        "Savoir-faire artisanal",
+        "Durabilité exceptionnelle",
+        "Esthétique préservée",
+        "Sans échafaudage"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Travaux en Hauteur",
+      "icon": "🏔️",
+      "services": ["travaux-en-hauteur", "cordiste", "ravalement-facade", "couverture-toiture", "etancheite-toiture", "ligne-de-vie", "maintenance-batiment"]
+    },
+    {
+      "name": "Terrasses & Extérieurs",
+      "icon": "🏗️",
+      "services": ["terrasse-bois", "terrasse-composite", "terrasse-sur-plots"]
+    },
+    {
+      "name": "Traitements Thermiques & Réflectifs",
+      "icon": "🌡️",
+      "services": ["peinture-reflective", "cool-roof", "vernis-reflectif-vitrage", "film-solaire-vitrage", "nettoyage-vitrage-hauteur"]
+    },
+    {
+      "name": "Énergie & Photovoltaïque",
+      "icon": "☀️",
+      "services": ["panneaux-photovoltaiques", "installation-panneaux-solaires", "nettoyage-panneaux-solaires"]
+    },
+    {
+      "name": "Assainissement & Eaux Pluviales",
+      "icon": "💧",
+      "services": ["descente-eaux-pluviales", "colonne-assainissement", "gouttiere", "zinguerie"]
+    }
+  ]
+}

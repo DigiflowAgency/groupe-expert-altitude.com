@@ -172,7 +172,7 @@ export default function ParticuliersPage() {
               </div>
 
               {/* Badge flottant central */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl p-3 shadow-xl z-10 pointer-events-none">
+              <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl p-3 shadow-xl z-10 pointer-events-none">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-amber-400 rounded-lg flex items-center justify-center">
                     <span className="text-lg">⭐</span>

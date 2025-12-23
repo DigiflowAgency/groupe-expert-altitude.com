@@ -159,8 +159,8 @@ export default function PeinturesIsolantesParticuliers() {
                   <div className="text-sm text-gray-600">Réflexion infrarouge</div>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-orange-600">15 ans</div>
-                  <div className="text-sm text-gray-600">Durée de vie</div>
+                  <div className="text-2xl font-bold text-orange-600">20 ans</div>
+                  <div className="text-sm text-gray-600">Garantie</div>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-sm">
                   <div className="text-2xl font-bold text-orange-600">-30%</div>

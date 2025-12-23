@@ -295,7 +295,7 @@ export default function Home() {
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-[250px] md:h-[300px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23103.05843098!2d7.0785!3d43.5667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce97e3c2bf1697%3A0x406f69c2f411030!2s06160%20Juan-les-Pins!5e0!3m2!1sfr!2sfr!4v1703578200000!5m2!1sfr!2sfr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11551.529216!2d7.1023!3d43.5667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce9c1e1d9d0001%3A0x408ab2ae4bc64c0!2sJuan-les-Pins%2C%2006160%20Antibes!5e0!3m2!1sfr!2sfr!4v1703578200000!5m2!1sfr!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

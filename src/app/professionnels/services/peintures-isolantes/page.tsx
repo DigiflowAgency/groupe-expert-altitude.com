@@ -18,15 +18,17 @@ export default function PeinturesIsolantesPro() {
       color: 'from-orange-500 to-red-600',
       features: [
         'Isolation thermique haute performance',
-        'Etancheite garantie 10 ans',
+        'Etancheite garantie 20 ans',
         'Formule ecologique sans solvants',
         'Application sur tous supports',
+        'A partir de 40€/m²',
       ],
       benefits: [
         'Jusqu\'a -30% sur la climatisation',
         'Jusqu\'a -20% sur le chauffage',
         'Durabilite 15-20 ans',
       ],
+      pdfUrl: '/thermo-reflect-fiche-technique.pdf',
     },
     {
       name: 'Vitro-Reflect',
@@ -45,6 +47,7 @@ export default function PeinturesIsolantesPro() {
         'Protection du mobilier',
         'Economies de climatisation',
       ],
+      pdfUrl: '/vitro-reflect-fiche-technique.pdf',
     },
     {
       name: 'Zinco-Reflect',
@@ -166,6 +169,21 @@ export default function PeinturesIsolantesPro() {
                         </li>
                       ))}
                     </ul>
+
+                    {/* CTA Fiche technique */}
+                    {product.pdfUrl && (
+                      <a
+                        href={product.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gea-blue text-white rounded-lg font-semibold hover:bg-gea-blue/90 transition-all"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Voir la fiche technique
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

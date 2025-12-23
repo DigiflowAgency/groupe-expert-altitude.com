@@ -1,0 +1,45 @@
+{
+  "batchId": "38018727-f542-4c54-b7b7-25da466ddd84",
+  "batchName": "Photos2",
+  "createdAt": "2025-12-23T07:34:03.897Z",
+  "totalImages": 4,
+  "baseUrl": "https://image-flow.fr",
+  "images": [
+    {
+      "title": "Fuite-eau",
+      "url": "https://image-flow.fr/uploads/fuite-eau-f56de7e3-caa7-47e1-acb5-adba23df2393.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/fuite-eau-f56de7e3-caa7-47e1-acb5-adba23df2393_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 78102
+    },
+    {
+      "title": "Terrasse-plot2",
+      "url": "https://image-flow.fr/uploads/terrasse-plot2-412f887f-c29b-4f69-a9e0-47de99ef50fa.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/terrasse-plot2-412f887f-c29b-4f69-a9e0-47de99ef50fa_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 205038
+    },
+    {
+      "title": "Terrasse-plot",
+      "url": "https://image-flow.fr/uploads/terrasse-plot-642d1ae3-cb6c-42b7-b275-7603c5398fb3.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/terrasse-plot-642d1ae3-cb6c-42b7-b275-7603c5398fb3_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 196710
+    },
+    {
+      "title": "Fuite-toiture",
+      "url": "https://image-flow.fr/uploads/fuite-toiture-5753c8a1-96d8-4a4c-bf98-c470605dee21.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/fuite-toiture-5753c8a1-96d8-4a4c-bf98-c470605dee21_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 109200
+    }
+  ]
+}

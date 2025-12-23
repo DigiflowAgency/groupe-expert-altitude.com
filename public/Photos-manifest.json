@@ -1,0 +1,306 @@
+{
+  "batchId": "cfa9b3b8-1ff3-49b3-8340-e500d035a5fe",
+  "batchName": "Photos",
+  "createdAt": "2025-12-23T06:44:47.787Z",
+  "totalImages": 33,
+  "baseUrl": "https://image-flow.fr",
+  "images": [
+    {
+      "title": "Nettoyage-toiture3",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture3-b1f90a2e-0c64-4eaf-bb4b-b079ea68e782.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture3-b1f90a2e-0c64-4eaf-bb4b-b079ea68e782_thumb.webp",
+      "width": 747,
+      "height": 1024,
+      "format": "webp",
+      "size": 164946
+    },
+    {
+      "title": "Nettoyage-toiture-complete2",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture-complete2-b5a25d21-d569-4179-a657-8ba33c9b694c.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture-complete2-b5a25d21-d569-4179-a657-8ba33c9b694c_thumb.webp",
+      "width": 1632,
+      "height": 640,
+      "format": "webp",
+      "size": 278780
+    },
+    {
+      "title": "Nettoyage-toiture-complete3",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture-complete3-e2f1c8eb-e24f-4de6-bfb5-2b76cb3f0adc.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture-complete3-e2f1c8eb-e24f-4de6-bfb5-2b76cb3f0adc_thumb.webp",
+      "width": 2000,
+      "height": 819,
+      "format": "webp",
+      "size": 249194
+    },
+    {
+      "title": "Nettoyage-toiture2",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture2-636f3fe0-9291-47ae-92b4-4ffa6c652427.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture2-636f3fe0-9291-47ae-92b4-4ffa6c652427_thumb.webp",
+      "width": 1200,
+      "height": 1600,
+      "format": "webp",
+      "size": 412412
+    },
+    {
+      "title": "Nettoyage-toiture-complete1",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture-complete1-89397744-a954-4b85-b1ea-cd7f80cf5681.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture-complete1-89397744-a954-4b85-b1ea-cd7f80cf5681_thumb.webp",
+      "width": 1600,
+      "height": 1200,
+      "format": "webp",
+      "size": 378076
+    },
+    {
+      "title": "Nettoyage-toiture1",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture1-70fe512c-334e-4c46-ac49-cbafea10e029.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture1-70fe512c-334e-4c46-ac49-cbafea10e029_thumb.webp",
+      "width": 1200,
+      "height": 1600,
+      "format": "webp",
+      "size": 341304
+    },
+    {
+      "title": "Descente-eau-pluviale-individuelle",
+      "url": "https://image-flow.fr/uploads/descente-eau-pluviale-individuelle-2f54efc9-7447-4b4a-a07a-cd8249669fca.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/descente-eau-pluviale-individuelle-2f54efc9-7447-4b4a-a07a-cd8249669fca_thumb.webp",
+      "width": 1408,
+      "height": 768,
+      "format": "webp",
+      "size": 225954
+    },
+    {
+      "title": "Isolation-facade3",
+      "url": "https://image-flow.fr/uploads/isolation-facade3-84f2d2f9-60f8-4bd2-b5b1-3034fc7a2ff5.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/isolation-facade3-84f2d2f9-60f8-4bd2-b5b1-3034fc7a2ff5_thumb.webp",
+      "width": 1500,
+      "height": 2000,
+      "format": "webp",
+      "size": 248338
+    },
+    {
+      "title": "Isolation-facade",
+      "url": "https://image-flow.fr/uploads/isolation-facade-8f2737cf-ab98-4858-975f-f14c24adc39e.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/isolation-facade-8f2737cf-ab98-4858-975f-f14c24adc39e_thumb.webp",
+      "width": 2000,
+      "height": 1500,
+      "format": "webp",
+      "size": 283766
+    },
+    {
+      "title": "Isolation-facade2",
+      "url": "https://image-flow.fr/uploads/isolation-facade2-8ea080ba-2bd8-4919-b626-17f9344715ef.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/isolation-facade2-8ea080ba-2bd8-4919-b626-17f9344715ef_thumb.webp",
+      "width": 1500,
+      "height": 2000,
+      "format": "webp",
+      "size": 248338
+    },
+    {
+      "title": "Travaux-corde4",
+      "url": "https://image-flow.fr/uploads/travaux-corde4-d6551996-849a-405c-9016-0d0cad93be73.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/travaux-corde4-d6551996-849a-405c-9016-0d0cad93be73_thumb.webp",
+      "width": 1200,
+      "height": 1600,
+      "format": "webp",
+      "size": 125682
+    },
+    {
+      "title": "Toiture-individuelle-temp",
+      "url": "https://image-flow.fr/uploads/toiture-individuelle-temp-5a36def7-deb6-4207-8af1-e1c70e385c90.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/toiture-individuelle-temp-5a36def7-deb6-4207-8af1-e1c70e385c90_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 148734
+    },
+    {
+      "title": "Toiture-industrielle-temp",
+      "url": "https://image-flow.fr/uploads/toiture-industrielle-temp-942770af-9b3a-46fa-97ca-b41f06ad48f6.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/toiture-industrielle-temp-942770af-9b3a-46fa-97ca-b41f06ad48f6_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 86854
+    },
+    {
+      "title": "Panneau-solaire-toiture-individuelle",
+      "url": "https://image-flow.fr/uploads/panneau-solaire-toiture-individuelle-29b4ed30-6334-42bf-b0d0-db12475e1178.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/panneau-solaire-toiture-individuelle-29b4ed30-6334-42bf-b0d0-db12475e1178_thumb.webp",
+      "width": 1408,
+      "height": 768,
+      "format": "webp",
+      "size": 212370
+    },
+    {
+      "title": "Info-vitroreflect",
+      "url": "https://image-flow.fr/uploads/info-vitroreflect-54bc63dd-1b39-4105-b1bb-4fa8df7944be.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/info-vitroreflect-54bc63dd-1b39-4105-b1bb-4fa8df7944be_thumb.webp",
+      "width": 540,
+      "height": 1320,
+      "format": "webp",
+      "size": 73794
+    },
+    {
+      "title": "Info-vitroreflect2",
+      "url": "https://image-flow.fr/uploads/info-vitroreflect2-056f9fe9-2279-4ca9-824c-75eb2c9cf7c7.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/info-vitroreflect2-056f9fe9-2279-4ca9-824c-75eb2c9cf7c7_thumb.webp",
+      "width": 540,
+      "height": 1320,
+      "format": "webp",
+      "size": 53688
+    },
+    {
+      "title": "Toiture-industriel-panneau-solaire",
+      "url": "https://image-flow.fr/uploads/toiture-industriel-panneau-solaire-a09f3c0f-b14a-4585-bde6-88c62fcb8c12.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/toiture-industriel-panneau-solaire-a09f3c0f-b14a-4585-bde6-88c62fcb8c12_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 170760
+    },
+    {
+      "title": "Image-peinture-thermo",
+      "url": "https://image-flow.fr/uploads/image-peinture-thermo-ba173460-29dd-4f56-a927-51760e7cd43f.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/image-peinture-thermo-ba173460-29dd-4f56-a927-51760e7cd43f_thumb.webp",
+      "width": 828,
+      "height": 1130,
+      "format": "webp",
+      "size": 79726
+    },
+    {
+      "title": "Descente-eau-pluviale-batiment",
+      "url": "https://image-flow.fr/uploads/descente-eau-pluviale-batiment-c2678d42-f331-458a-a2a3-711d919e95d6.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/descente-eau-pluviale-batiment-c2678d42-f331-458a-a2a3-711d919e95d6_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 113598
+    },
+    {
+      "title": "Nettoyage-toiture-complete",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture-complete-8c784289-e029-4146-b3aa-50894cc8ef04.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture-complete-8c784289-e029-4146-b3aa-50894cc8ef04_thumb.webp",
+      "width": 1600,
+      "height": 655,
+      "format": "webp",
+      "size": 185784
+    },
+    {
+      "title": "Toiture-industrielle-temp2",
+      "url": "https://image-flow.fr/uploads/toiture-industrielle-temp2-cdb5600c-0337-4807-aa0e-380557cc4d85.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/toiture-industrielle-temp2-cdb5600c-0337-4807-aa0e-380557cc4d85_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 86388
+    },
+    {
+      "title": "Ravalement-facade-immeuble4",
+      "url": "https://image-flow.fr/uploads/ravalement-facade-immeuble4-c0b94a6a-ad22-4e4e-be76-d96b891dc8cf.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/ravalement-facade-immeuble4-c0b94a6a-ad22-4e4e-be76-d96b891dc8cf_thumb.webp",
+      "width": 1080,
+      "height": 1920,
+      "format": "webp",
+      "size": 434864
+    },
+    {
+      "title": "Nettoyage-toiture",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture-3c745f8d-d54d-4217-8b47-cd515843b9e2.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture-3c745f8d-d54d-4217-8b47-cd515843b9e2_thumb.webp",
+      "width": 1200,
+      "height": 1600,
+      "format": "webp",
+      "size": 332798
+    },
+    {
+      "title": "info-peinture-thermoreflect",
+      "url": "https://image-flow.fr/uploads/info-peinture-thermoreflect-9344f1e0-836d-4dfb-8b57-f8cf50e4df1b.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/info-peinture-thermoreflect-9344f1e0-836d-4dfb-8b57-f8cf50e4df1b_thumb.webp",
+      "width": 739,
+      "height": 1600,
+      "format": "webp",
+      "size": 103106
+    },
+    {
+      "title": "Ravalement-facade-immeuble2",
+      "url": "https://image-flow.fr/uploads/ravalement-facade-immeuble2-64ca90d6-19ff-4586-9d1e-82d65f08bd81.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/ravalement-facade-immeuble2-64ca90d6-19ff-4586-9d1e-82d65f08bd81_thumb.webp",
+      "width": 1500,
+      "height": 2000,
+      "format": "webp",
+      "size": 287162
+    },
+    {
+      "title": "Isolation-toiture-particulier",
+      "url": "https://image-flow.fr/uploads/isolation-toiture-particulier-8537186e-d1c8-4567-87e8-c68fc363f4b0.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/isolation-toiture-particulier-8537186e-d1c8-4567-87e8-c68fc363f4b0_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 155702
+    },
+    {
+      "title": "Ravalement-facade-immeuble3",
+      "url": "https://image-flow.fr/uploads/ravalement-facade-immeuble3-f8880022-a13b-4476-b46e-40dfc5e3e06f.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/ravalement-facade-immeuble3-f8880022-a13b-4476-b46e-40dfc5e3e06f_thumb.webp",
+      "width": 1080,
+      "height": 1920,
+      "format": "webp",
+      "size": 246130
+    },
+    {
+      "title": "Nettoyage-toiture-zinc",
+      "url": "https://image-flow.fr/uploads/nettoyage-toiture-zinc-221574f1-8898-4369-8a81-78477216010c.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/nettoyage-toiture-zinc-221574f1-8898-4369-8a81-78477216010c_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 163318
+    },
+    {
+      "title": "Panneau-solaire-individuelle-moderne",
+      "url": "https://image-flow.fr/uploads/panneau-solaire-individuelle-moderne-3d451505-ca4d-4996-ab7f-707c742728b2.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/panneau-solaire-individuelle-moderne-3d451505-ca4d-4996-ab7f-707c742728b2_thumb.webp",
+      "width": 1024,
+      "height": 1024,
+      "format": "webp",
+      "size": 151940
+    },
+    {
+      "title": "Isolation-toiture-pro2",
+      "url": "https://image-flow.fr/uploads/isolation-toiture-pro2-28d4295d-4f84-4943-bf58-1dd6041d4f17.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/isolation-toiture-pro2-28d4295d-4f84-4943-bf58-1dd6041d4f17_thumb.webp",
+      "width": 1536,
+      "height": 2048,
+      "format": "webp",
+      "size": 276500
+    },
+    {
+      "title": "Ravalement-facade-immeuble",
+      "url": "https://image-flow.fr/uploads/ravalement-facade-immeuble-5d11056b-4467-467c-b487-2cccabecdd1f.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/ravalement-facade-immeuble-5d11056b-4467-467c-b487-2cccabecdd1f_thumb.webp",
+      "width": 1080,
+      "height": 1920,
+      "format": "webp",
+      "size": 270496
+    },
+    {
+      "title": "Isolation-toiture-pro",
+      "url": "https://image-flow.fr/uploads/isolation-toiture-pro-3cfee5f5-737e-4ffa-9bf7-b4eafc88c5d9.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/isolation-toiture-pro-3cfee5f5-737e-4ffa-9bf7-b4eafc88c5d9_thumb.webp",
+      "width": 1536,
+      "height": 2048,
+      "format": "webp",
+      "size": 310714
+    },
+    {
+      "title": "Info-prime-cee",
+      "url": "https://image-flow.fr/uploads/info-prime-cee-700dc157-c0df-415c-a63b-5326836d2635.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/info-prime-cee-700dc157-c0df-415c-a63b-5326836d2635_thumb.webp",
+      "width": 828,
+      "height": 1107,
+      "format": "webp",
+      "size": 97436
+    }
+  ]
+}

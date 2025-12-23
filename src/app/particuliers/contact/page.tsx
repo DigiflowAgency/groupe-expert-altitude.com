@@ -1,0 +1,477 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+
+// Services pour les particuliers uniquement
+const serviceOptions = [
+  { slug: 'photovoltaique', title: 'Panneaux solaires', icon: '☀️' },
+  { slug: 'terrasses', title: 'Terrasses sur plot', icon: '🌿' },
+  { slug: 'eaux-pluviales', title: 'Gouttières & fuites', icon: '💧' },
+  { slug: 'peintures-isolantes', title: 'Peintures isolantes', icon: '🎨' },
+];
+
+export default function ContactParticuliersPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    city: '',
+    serviceType: '',
+    projectDetails: '',
+    preferredContact: 'phone',
+    message: '',
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          subject: `[Particulier] ${formData.serviceType} - ${formData.name}`,
+          source: 'particuliers',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage('Super ! Votre demande a bien été envoyée. On vous rappelle très vite !');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          city: '',
+          serviceType: '',
+          projectDetails: '',
+          preferredContact: 'phone',
+          message: '',
+        });
+      } else {
+        setSubmitMessage(
+          `Oups ! ${data.error || 'Une erreur est survenue. Appelez-nous directement au 09 72 14 30 65.'}`
+        );
+      }
+    } catch {
+      setSubmitMessage(
+        'Une erreur est survenue. Appelez-nous directement au 09 72 14 30 65, on répond tout de suite !'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <>
+      {/* Hero Section - Style chaleureux */}
+      <section className="relative py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden">
+        {/* Formes décoratives */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-orange-200/40 rounded-full blur-2xl" />
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-amber-200/40 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Breadcrumb */}
+          <Link
+            href="/particuliers"
+            className="inline-flex items-center gap-2 text-amber-700 hover:text-orange-600 mb-6 transition-colors group"
+          >
+            <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Retour aux services
+          </Link>
+
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-orange-600 text-sm font-medium px-4 py-2 rounded-full mb-6 shadow-sm">
+              <span className="text-xl">💬</span>
+              Parlons de votre projet
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              On est là pour vous
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500"> aider !</span>
+            </h1>
+
+            <p className="text-lg text-gray-600 mb-8">
+              Une question ? Un projet en tête ? Pas de stress, on vous répond rapidement
+              et sans vous embêter avec des relances commerciales.
+            </p>
+
+            {/* Quick contact */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a
+                href="tel:0972143065"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-orange-500/30 hover:-translate-y-1 transition-all"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                09 72 14 30 65
+              </a>
+            </div>
+
+            <p className="text-sm text-amber-700">
+              Ou remplissez le formulaire ci-dessous, on vous rappelle sous 24h max !
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Transition */}
+      <div className="relative h-16 bg-gradient-to-b from-yellow-50 to-white overflow-hidden">
+        <svg className="absolute bottom-0 w-full h-12" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path d="M0,30 Q300,50 600,30 T1200,40 L1200,60 L0,60 Z" fill="white" />
+        </svg>
+      </div>
+
+      {/* Form Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+            {/* Form */}
+            <div className="lg:col-span-3">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-3xl shadow-sm border border-orange-100">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                  Demandez votre devis gratuit
+                </h2>
+                <p className="text-amber-700 mb-6">
+                  Pas d&apos;engagement, pas de pression. On écoute, on conseille.
+                </p>
+
+                {submitMessage && (
+                  <div
+                    className={`px-4 py-3 rounded-xl mb-6 ${
+                      submitMessage.startsWith('Oups')
+                        ? 'bg-red-100 border border-red-300 text-red-700'
+                        : 'bg-green-100 border border-green-300 text-green-700'
+                    }`}
+                  >
+                    {submitMessage}
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Name & Phone */}
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Votre prénom *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-amber-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-transparent text-gray-900 bg-white"
+                        placeholder="Ex: Marie"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Téléphone *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-amber-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-transparent text-gray-900 bg-white"
+                        placeholder="06 12 34 56 78"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email & City */}
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-amber-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-transparent text-gray-900 bg-white"
+                        placeholder="marie@exemple.fr"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="city"
+                        className="block text-sm font-semibold text-gray-700 mb-2"
+                      >
+                        Ville *
+                      </label>
+                      <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-amber-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-transparent text-gray-900 bg-white"
+                        placeholder="Ex: Lyon"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Service Type - Cards */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                      Quel projet vous intéresse ? *
+                    </label>
+                    <div className="grid grid-cols-2 gap-3">
+                      {serviceOptions.map((service) => (
+                        <label
+                          key={service.slug}
+                          className={`relative flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
+                            formData.serviceType === service.slug
+                              ? 'border-orange-400 bg-orange-50'
+                              : 'border-amber-100 bg-white hover:border-orange-200'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="serviceType"
+                            value={service.slug}
+                            checked={formData.serviceType === service.slug}
+                            onChange={handleChange}
+                            className="sr-only"
+                            required
+                          />
+                          <span className="text-2xl">{service.icon}</span>
+                          <span className="text-sm font-medium text-gray-700">{service.title}</span>
+                          {formData.serviceType === service.slug && (
+                            <svg className="absolute top-2 right-2 w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          )}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Message */}
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
+                      Décrivez votre projet
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      className="w-full px-4 py-3 border border-amber-200 rounded-xl focus:ring-2 focus:ring-orange-400 focus:border-transparent resize-none text-gray-900 bg-white"
+                      placeholder="Dites-nous en quelques mots ce que vous avez en tête... (optionnel)"
+                    />
+                  </div>
+
+                  {/* Preferred contact */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Comment préférez-vous être contacté ?
+                    </label>
+                    <div className="flex gap-4">
+                      <label className={`flex items-center gap-2 px-4 py-2 rounded-full border cursor-pointer transition-all ${
+                        formData.preferredContact === 'phone'
+                          ? 'border-orange-400 bg-orange-50 text-orange-700'
+                          : 'border-amber-200 bg-white text-gray-600 hover:border-orange-200'
+                      }`}>
+                        <input
+                          type="radio"
+                          name="preferredContact"
+                          value="phone"
+                          checked={formData.preferredContact === 'phone'}
+                          onChange={handleChange}
+                          className="sr-only"
+                        />
+                        <span>📞</span>
+                        <span className="text-sm font-medium">Par téléphone</span>
+                      </label>
+                      <label className={`flex items-center gap-2 px-4 py-2 rounded-full border cursor-pointer transition-all ${
+                        formData.preferredContact === 'email'
+                          ? 'border-orange-400 bg-orange-50 text-orange-700'
+                          : 'border-amber-200 bg-white text-gray-600 hover:border-orange-200'
+                      }`}>
+                        <input
+                          type="radio"
+                          name="preferredContact"
+                          value="email"
+                          checked={formData.preferredContact === 'email'}
+                          onChange={handleChange}
+                          className="sr-only"
+                        />
+                        <span>✉️</span>
+                        <span className="text-sm font-medium">Par email</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-orange-500/30 hover:-translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                  >
+                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
+                  </button>
+
+                  <p className="text-xs text-center text-gray-500">
+                    * Champs obligatoires - Vos données restent confidentielles
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            {/* Sidebar - Contact Info */}
+            <div className="lg:col-span-2 space-y-6">
+              {/* Quick contact card */}
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-6 rounded-2xl">
+                <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                  <span className="text-xl">🤙</span> Envie de parler directement ?
+                </h3>
+                <a
+                  href="tel:0972143065"
+                  className="text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors"
+                >
+                  09 72 14 30 65
+                </a>
+                <p className="text-sm text-amber-700 mt-2">
+                  Lun-Ven : 8h-18h<br />
+                  On répond aussi aux SMS !
+                </p>
+              </div>
+
+              {/* Trust badges */}
+              <div className="bg-white p-6 rounded-2xl border border-amber-100">
+                <h3 className="font-bold text-gray-800 mb-4">Pourquoi nous faire confiance ?</h3>
+                <ul className="space-y-3">
+                  {[
+                    { icon: '✓', text: 'Devis 100% gratuit et sans engagement' },
+                    { icon: '✓', text: 'Artisans locaux qualifiés' },
+                    { icon: '✓', text: 'Pas de sous-traitance' },
+                    { icon: '✓', text: 'Garantie décennale' },
+                    { icon: '✓', text: 'On vous aide pour les aides financières' },
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                      <span className="text-green-500 font-bold">{item.icon}</span>
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Response time */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">⚡</span>
+                  <h3 className="font-bold text-gray-800">Réponse rapide</h3>
+                </div>
+                <p className="text-sm text-gray-600">
+                  On vous recontacte en moins de 24h.
+                  Pas de relances agressives, promis !
+                </p>
+              </div>
+
+              {/* Link to pro */}
+              <div className="bg-gray-50 p-6 rounded-2xl">
+                <p className="text-sm text-gray-600 mb-3">
+                  Vous êtes un professionnel ?
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-gea-blue font-semibold hover:underline"
+                >
+                  Accéder à l&apos;espace pro
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Zones d'intervention */}
+      <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              On intervient partout en France
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Paris, Lyon, Marseille, Toulouse, Bordeaux, Nantes, Montpellier...
+              et dans toutes les villes entre les deux !
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {['Île-de-France', 'Auvergne-Rhône-Alpes', 'PACA', 'Occitanie', 'Nouvelle-Aquitaine', 'Pays de la Loire', 'Bretagne'].map((region) => (
+                <span key={region} className="px-4 py-2 bg-white rounded-full text-sm text-amber-700 border border-amber-200">
+                  {region}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Back link */}
+      <section className="py-6 bg-white border-t border-amber-100">
+        <div className="container mx-auto px-4 text-center">
+          <Link
+            href="/particuliers"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-orange-500 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Retour aux services particuliers
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -2,7 +2,22 @@
 
 import { useState } from 'react';
 import Breadcrumb from '@/components/ui/Breadcrumb';
-import servicesData from '@/data/services.json';
+
+// Liste des services pour le formulaire
+const serviceOptions = [
+  { category: 'Professionnels', services: [
+    { slug: 'photovoltaique-pro', title: 'Panneaux photovoltaïques' },
+    { slug: 'travaux-hauteur', title: 'Travaux en hauteur / Cordistes' },
+    { slug: 'peintures-isolantes-pro', title: 'Peintures isolantes' },
+    { slug: 'eaux-pluviales-pro', title: 'Eaux pluviales & détection fuites' },
+  ]},
+  { category: 'Particuliers', services: [
+    { slug: 'photovoltaique-part', title: 'Panneaux solaires' },
+    { slug: 'terrasses', title: 'Terrasses sur plot' },
+    { slug: 'eaux-pluviales-part', title: 'Eaux pluviales & détection fuites' },
+    { slug: 'peintures-isolantes-part', title: 'Peintures isolantes' },
+  ]},
+];
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -350,7 +365,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gea-blue focus:border-transparent text-gray-900 bg-white"
                     >
                       <option value="" className="text-gray-500">Sélectionnez un service</option>
-                      {servicesData.flatMap((category) =>
+                      {serviceOptions.flatMap((category) =>
                         category.services.map((service) => (
                           <option key={service.slug} value={service.slug} className="text-gray-900">
                             {category.category} - {service.title}

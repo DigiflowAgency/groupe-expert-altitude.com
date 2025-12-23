@@ -1,568 +1,362 @@
-import Hero from '@/components/sections/Hero';
-import Reviews from '@/components/sections/Reviews';
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-import servicesData from '@/data/services.json';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  const [activeCard, setActiveCard] = useState<'pro' | 'particulier' | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <>
-      {/* Hero Section */}
-      <Hero
-        title="Groupe Expert Altitude"
-        subtitle="Solutions complètes pour vos bâtiments"
-        description="De la toiture aux terrasses, de l'énergie à l'assainissement : 5 pôles d'expertise au service des professionnels partout en France."
-        ctaPrimary={{
-          text: 'Demander un devis',
-          href: '/contact',
-        }}
-        ctaSecondary={{
-          text: 'Nos services',
-          href: '#services',
-        }}
-        backgroundVideo={true}
-      />
+    <div className="min-h-screen relative bg-gea-black">
+      {/* Video Background Fullscreen */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover scale-105"
+          poster="/images/hero-poster.jpg"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gea-black/60" />
+      </div>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Images Gallery */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <Image
-                  src="https://image-flow.fr/uploads/gea-cordiste-38c987c6-8d4b-40e7-85c0-d166c72d773a.webp"
-                  alt="Cordiste GEA en action"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow mt-8">
-                <Image
-                  src="https://image-flow.fr/uploads/gea-img-2-00001365-d4e6-4b75-8dcd-5edf7784ad00.webp"
-                  alt="Travaux en hauteur GEA"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow -mt-8">
-                <Image
-                  src="https://image-flow.fr/uploads/gea-img-3-2c017981-51c9-40a6-843b-585158d82244.webp"
-                  alt="Intervention façade GEA"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <Image
-                  src="https://image-flow.fr/uploads/firefly-vue-du-dessus-mettre-en-avant-les-panneaux-e80b17f9-24e4-4e76-8f95-966bbb6318f7.webp"
-                  alt="Panneaux photovoltaïques GEA"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+      {/* Grille animée en arrière-plan */}
+      <div className="fixed inset-0 z-[1] pointer-events-none opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 163, 224, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 163, 224, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '100px 100px',
+          animation: 'gridMove 20s linear infinite',
+        }} />
+      </div>
 
-            {/* Content */}
-            <div>
-              <h2 className="text-4xl font-bold text-gea-black mb-6">
-                Votre partenaire multi-services pour bâtiments professionnels
-              </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
-                  <strong>Groupe Expert Altitude (GEA)</strong> intervient sur l&apos;ensemble de vos projets : des{' '}
-                  <Link href="/services/travaux-en-hauteur" className="text-gea-blue hover:underline">
-                    travaux en hauteur
-                  </Link>{' '}
-                  à la{' '}
-                  <Link href="/services/construction-terrasses-bois-composite" className="text-gea-blue hover:underline">
-                    construction de terrasses
-                  </Link>
-                  , en passant par l&apos;
-                  <Link href="/services/optimisation-energetique-batiments" className="text-gea-blue hover:underline">
-                    optimisation énergétique
-                  </Link>
-                  ,{' '}
-                  <Link href="/services/installation-panneaux-photovoltaiques" className="text-gea-blue hover:underline">
-                    le photovoltaïque
-                  </Link>{' '}
-                  et l&apos;
-                  <Link href="/services/reseaux-assainissement" className="text-gea-blue hover:underline">
-                    assainissement
-                  </Link>
-                  .
-                </p>
-                <p>
-                  Nous intervenons sur tous types de structures : entrepôts, dépôts, bâtiments industriels, grandes surfaces commerciales, immeubles et copropriétés. De la{' '}
-                  <Link href="/services/couverture-toiture" className="text-gea-blue hover:underline">
-                    toiture
-                  </Link>{' '}
-                  aux{' '}
-                  <Link href="/services/descentes-eaux-pluviales" className="text-gea-blue hover:underline">
-                    descentes d&apos;eaux pluviales
-                  </Link>
-                  , nos équipes maîtrisent chaque aspect technique de vos bâtiments.
-                </p>
-                <p>
-                  Nos solutions incluent également les{' '}
-                  <Link href="/services/thermo-reflect-toiture" className="text-gea-blue hover:underline">
-                    traitements thermiques réflectifs
-                  </Link>{' '}
-                  pour réduire vos coûts énergétiques et améliorer le confort de vos espaces professionnels.
-                </p>
-              </div>
+      {/* Particules lumineuses animées */}
+      <div className="fixed inset-0 z-[2] pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gea-blue/20 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gea-light-blue/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gea-blue/10 rounded-full blur-[200px] animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                <div className="bg-gea-blue/10 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-gea-blue mb-1">+15 ans</div>
-                  <div className="text-sm text-gray-700">d'expertise</div>
-                </div>
-                <div className="bg-gea-blue/10 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-gea-blue mb-1">100%</div>
-                  <div className="text-sm text-gray-700">Certifiés</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Contenu principal */}
+      <div className="relative z-10 h-screen flex flex-col">
+        {/* Cards de sélection - Prend l'espace disponible */}
+        <div className={`flex-1 min-h-0 transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <div className="grid md:grid-cols-2 h-full">
 
-      {/* Interventions pour professionnels */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gea-black mb-4">
-              Interventions pour professionnels
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Nous accompagnons les professionnels dans l'entretien et la sécurisation de leurs bâtiments
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {/* Copropriétés & Immeubles */}
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
-                <Image
-                  src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
-                  alt="Copropriétés & Immeubles"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-lg font-bold text-gea-black mb-2">Copropriétés & Immeubles</h3>
-              <p className="text-gray-700 text-sm mb-4">
-                Ravalement de{' '}
-                <Link href="/services/enveloppe-batiment" className="text-gea-blue hover:underline">
-                  façades
-                </Link>
-                ,{' '}
-                <Link href="/services/vitro-reflect-vitrage" className="text-gea-blue hover:underline">
-                  traitement des vitrages
-                </Link>{' '}
-                et{' '}
-                <Link href="/services/colonnes-assainissement" className="text-gea-blue hover:underline">
-                  colonnes d&apos;assainissement
-                </Link>
-                .
-              </p>
-              <Link
-                href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
-              >
-                Nous contacter
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Hôtels & Tertiaire */}
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
-                <Image
-                  src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
-                  alt="Hôtels & Tertiaire"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-lg font-bold text-gea-black mb-2">Hôtels & Tertiaire</h3>
-              <p className="text-gray-700 text-sm mb-4">
-                Solutions{' '}
-                <Link href="/services/thermo-reflect-toiture" className="text-gea-blue hover:underline">
-                  thermiques
-                </Link>{' '}
-                et{' '}
-                <Link href="/services/vitro-reflect-vitrage" className="text-gea-blue hover:underline">
-                  traitement des vitrages
-                </Link>{' '}
-                pour le confort de vos clients.
-              </p>
-              <Link
-                href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
-              >
-                Demander un devis
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Bâtiments industriels */}
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
-                <Image
-                  src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
-                  alt="Bâtiments industriels"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-lg font-bold text-gea-black mb-2">Bâtiments industriels</h3>
-              <p className="text-gray-700 text-sm mb-4">
-                <Link href="/services/thermo-reflect-toiture" className="text-gea-blue hover:underline">
-                  Peinture réflective
-                </Link>{' '}
-                et{' '}
-                <Link href="/services/installation-panneaux-photovoltaiques" className="text-gea-blue hover:underline">
-                  panneaux photovoltaïques
-                </Link>{' '}
-                pour réduire vos coûts.
-              </p>
-              <Link
-                href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
-              >
-                Nous contacter
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Particuliers */}
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
-                <Image
-                  src="https://image-flow.fr/uploads/firefly-vue-du-dessus-mettre-en-avant-les-panneaux-e80b17f9-24e4-4e76-8f95-966bbb6318f7.webp"
-                  alt="Maisons individuelles"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  quality={80}
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-lg font-bold text-gea-black mb-2">Particuliers</h3>
-              <p className="text-gray-700 text-sm mb-4">
-                <Link href="/panneaux-photovoltaiques/particuliers" className="text-gea-blue hover:underline">
-                  Panneaux photovoltaïques
-                </Link>
-                ,{' '}
-                <Link href="/services/construction-terrasses-bois-composite" className="text-gea-blue hover:underline">
-                  terrasses
-                </Link>{' '}
-                et{' '}
-                <Link href="/services/descentes-eaux-pluviales" className="text-gea-blue hover:underline">
-                  assainissement
-                </Link>
-                .
-              </p>
-              <Link
-                href="/contact"
-                className="text-gea-blue hover:text-gea-blue/80 font-semibold text-sm inline-flex items-center gap-2"
-              >
-                Demander un devis
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center">
+            {/* Card Professionnel */}
             <Link
-              href="/contact"
-              className="inline-block bg-gea-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gea-blue/90 transition-all hover:scale-105"
+              href="/professionnels"
+              className="group relative block h-full"
+              onMouseEnter={() => setActiveCard('pro')}
+              onMouseLeave={() => setActiveCard(null)}
             >
-              Demander un devis gratuit
+              <div className={`relative h-full overflow-hidden transition-all duration-700 ${
+                activeCard === 'particulier' ? 'opacity-50' : 'opacity-100'
+              }`}>
+
+                {/* Image de fond */}
+                <div className="absolute inset-0">
+                  <Image
+                    src="https://image-flow.fr/uploads/firefly-large-industrial-building-exterior-modern--f4d7f00d-e039-4170-a6c4-297e2fe804e2.webp"
+                    alt="Bâtiments professionnels"
+                    fill
+                    className="object-cover transition-all duration-1000 group-hover:scale-110"
+                    priority
+                  />
+                  {/* Overlay dynamique */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gea-black via-gea-black/50 to-gea-black/20 group-hover:from-gea-blue/95 group-hover:via-gea-blue/40 group-hover:to-transparent transition-all duration-700" />
+                </div>
+
+                {/* Ligne de séparation centrale */}
+                <div className="absolute top-0 bottom-0 right-0 w-[1px] bg-white/20 md:block hidden" />
+
+                {/* Contenu */}
+                <div className="relative z-10 p-5 md:p-8 lg:p-12 xl:p-16 h-full flex flex-col justify-end">
+                  {/* Badge */}
+                  <div className="absolute top-5 left-5 md:top-8 md:left-8 lg:top-12 lg:left-12">
+                    <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-[10px] md:text-xs font-bold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-white/20 group-hover:bg-gea-blue group-hover:border-gea-blue transition-all duration-500">
+                      <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                      ESPACE B2B
+                    </span>
+                  </div>
+
+                  {/* Titre et description */}
+                  <div>
+                    <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white mb-2 md:mb-4 tracking-tighter group-hover:translate-x-2 transition-transform duration-500">
+                      PRO
+                    </h2>
+                    <p className="text-gray-300 text-sm md:text-lg lg:text-xl xl:text-2xl mb-4 md:mb-6 max-w-lg group-hover:text-white transition-colors duration-500">
+                      Copropriétés, industries, hôtels, entrepôts, commerces...
+                    </p>
+
+                    {/* Tags services */}
+                    <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
+                      {['Cordistes', 'Toiture', 'Étanchéité', 'Photovoltaïque', '+20'].map((tag, i) => (
+                        <span
+                          key={tag}
+                          className="text-sm md:text-base lg:text-lg bg-white/5 backdrop-blur-sm text-white/80 px-3 md:px-5 py-1.5 md:py-2.5 rounded-full border border-white/10 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"
+                          style={{ transitionDelay: `${i * 50}ms` }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="flex items-center gap-3 md:gap-4">
+                      <span className="text-white font-bold text-base md:text-xl lg:text-2xl">
+                        Accéder
+                      </span>
+                      <div className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-500">
+                        <svg className="w-5 h-5 md:w-7 md:h-7 text-white group-hover:text-gea-black group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Card Particulier */}
+            <Link
+              href="/particuliers"
+              className="group relative block h-full"
+              onMouseEnter={() => setActiveCard('particulier')}
+              onMouseLeave={() => setActiveCard(null)}
+            >
+              <div className={`relative h-full overflow-hidden transition-all duration-700 ${
+                activeCard === 'pro' ? 'opacity-50' : 'opacity-100'
+              }`}>
+
+                {/* Image de fond */}
+                <div className="absolute inset-0">
+                  <Image
+                    src="https://image-flow.fr/uploads/firefly-contemporary-residential-building-fac-ade--cfd6831b-ef5a-42e3-aa66-36c28ff20215.webp"
+                    alt="Maison particulier"
+                    fill
+                    className="object-cover transition-all duration-1000 group-hover:scale-110"
+                    priority
+                  />
+                  {/* Overlay dynamique */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gea-black via-gea-black/50 to-gea-black/20 group-hover:from-gea-blue/95 group-hover:via-gea-blue/40 group-hover:to-transparent transition-all duration-700" />
+                </div>
+
+                {/* Contenu */}
+                <div className="relative z-10 p-5 md:p-8 lg:p-12 xl:p-16 h-full flex flex-col justify-end">
+                  {/* Badge */}
+                  <div className="absolute top-5 left-5 md:top-8 md:left-8 lg:top-12 lg:left-12">
+                    <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-[10px] md:text-xs font-bold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-white/20 group-hover:bg-gea-blue group-hover:border-gea-blue transition-all duration-500">
+                      <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                      VOTRE MAISON
+                    </span>
+                  </div>
+
+                  {/* Titre et description */}
+                  <div>
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-2 md:mb-4 tracking-tighter group-hover:translate-x-2 transition-transform duration-500">
+                      PARTICULIER
+                    </h2>
+                    <p className="text-gray-300 text-sm md:text-lg lg:text-xl xl:text-2xl mb-4 md:mb-6 max-w-lg group-hover:text-white transition-colors duration-500">
+                      Maison individuelle, appartement, résidence...
+                    </p>
+
+                    {/* Tags services */}
+                    <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
+                      {['Isolation', 'Solaire', 'Terrasse', 'Façade', 'Gouttières'].map((tag, i) => (
+                        <span
+                          key={tag}
+                          className="text-sm md:text-base lg:text-lg bg-white/5 backdrop-blur-sm text-white/80 px-3 md:px-5 py-1.5 md:py-2.5 rounded-full border border-white/10 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"
+                          style={{ transitionDelay: `${i * 50}ms` }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="flex items-center gap-3 md:gap-4">
+                      <span className="text-white font-bold text-base md:text-xl lg:text-2xl">
+                        Découvrir
+                      </span>
+                      <div className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-500">
+                        <svg className="w-5 h-5 md:w-7 md:h-7 text-white group-hover:text-gea-black group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gea-black text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Nos Domaines d&apos;Expertise</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              5 pôles d&apos;excellence pour répondre à tous vos besoins professionnels
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.map((category) => (
-              <Link
-                key={category.slug}
-                href={`/categories/${category.slug}`}
-                className="bg-white/90 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-lg hover:shadow-2xl hover:bg-white hover:scale-105 transition-all duration-300 group"
-              >
-                {/* Icône de catégorie */}
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">
-                  {category.icon}
-                </div>
-
-                <h3 className="text-2xl font-bold mb-3 text-gea-black group-hover:text-gea-blue transition-colors">
-                  {category.category}
-                </h3>
-                <p className="text-gray-700 mb-6">{category.description}</p>
-
-                {/* Aperçu des services */}
-                <div className="mb-6 space-y-2">
-                  {category.services.slice(0, 3).map((service) => (
-                    <div key={service.slug} className="flex items-center gap-2 text-sm text-gray-600">
-                      <svg
-                        className="w-4 h-4 text-gea-blue flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="line-clamp-1">{service.title}</span>
-                    </div>
-                  ))}
-                  {category.services.length > 3 && (
-                    <div className="text-sm text-gea-blue pl-6 font-semibold">
-                      + {category.services.length - 3} autres services
-                    </div>
-                  )}
-                </div>
-
-                <div className="text-gea-blue group-hover:text-gea-blue/80 font-semibold inline-flex items-center gap-2">
-                  Découvrir
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        {/* Bandeau téléphone et footer - Sous les cartes */}
+        <div className={`relative z-30 bg-gradient-to-t from-gea-black via-gea-black/95 to-gea-black/80 transition-all duration-1000 delay-500 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
+          {/* Téléphone */}
+          <div className="flex justify-center py-3 md:py-4">
+            <a
+              href="tel:0972143065"
+              className="group relative inline-flex items-center gap-3 md:gap-4 bg-gea-black/90 hover:bg-gea-blue backdrop-blur-xl rounded-full px-4 md:px-6 py-2.5 md:py-3 border border-white/20 hover:border-gea-blue transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,163,224,0.5)]"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gea-blue rounded-full animate-ping opacity-20 group-hover:opacity-0" />
+                <div className="relative w-8 h-8 md:w-10 md:h-10 bg-gea-blue group-hover:bg-white rounded-full flex items-center justify-center transition-all duration-500">
+                  <svg className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-gea-blue transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-              </Link>
-            ))}
+              </div>
+              <span className="text-white text-base md:text-lg lg:text-xl font-bold">
+                09 72 14 30 65
+              </span>
+            </a>
           </div>
 
-          <div className="text-center mt-12">
-            <Link
-              href="/services"
-              className="inline-block bg-gea-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gea-blue/90 transition-all"
-            >
-              Voir tous nos services
+          {/* Footer minimal */}
+          <div className="flex items-center justify-center gap-3 md:gap-6 text-gray-500 text-[9px] md:text-xs pb-2 md:pb-3">
+            <span>© {new Date().getFullYear()} GEA</span>
+            <Link href="/mentions-legales" className="hover:text-gea-blue transition-colors cursor-pointer">
+              Mentions légales
+            </Link>
+            <Link href="/contact" className="hover:text-gea-blue transition-colors cursor-pointer">
+              Contact
             </Link>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Actualités Section - Google Sheets Integration Placeholder */}
-      <section className="py-20 bg-white">
+      {/* Section Où nous trouver */}
+      <section className="relative z-40 py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gea-black mb-4">Actualités</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Suivez nos dernières réalisations et actualités
+          <div className="text-center mb-10 md:mb-12">
+            <span className="inline-block px-4 py-2 bg-gea-blue/10 text-gea-blue rounded-full text-sm font-semibold mb-4">
+              NOS IMPLANTATIONS
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gea-black mb-4">Où nous trouver</h2>
+            <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              Présents à Paris et sur la Côte d&apos;Azur pour vous accompagner
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Placeholder articles */}
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-green-300 flex items-center justify-center text-sm font-mono text-green-800">
-                  [IMAGE ARTICLE {i}]
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-gea-blue font-semibold mb-2">
-                    {new Date().toLocaleDateString('fr-FR')}
-                  </div>
-                  <h3 className="text-xl font-bold text-gea-black mb-3">
-                    Article depuis Google Sheets #{i}
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Les articles seront automatiquement chargés depuis votre Google Sheet configuré.
-                  </p>
-                  <Link
-                    href="/blog"
-                    className="text-gea-blue hover:text-gea-blue/80 font-semibold inline-flex items-center gap-2"
-                  >
-                    Lire la suite
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {/* Paris */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="h-[250px] md:h-[300px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.5906758951937!2d2.3245471976101446!3d48.8660152974182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2e1a161985%3A0x262161d5a23b4d6c!2s229%20Rue%20Saint-Honor%C3%A9%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1763545286862!5m2!1sfr!2sfr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              href="/blog"
-              className="inline-block bg-gea-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gea-black/90 transition-all"
-            >
-              Voir toutes les actualités
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Instagram Widget Placeholder - Temporairement masqué */}
-      {/* <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gea-black mb-4">Suivez-nous</h2>
-            <p className="text-xl text-gray-700">
-              Découvrez nos réalisations sur Instagram
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
-            <div className="h-96 bg-green-300 rounded-lg flex items-center justify-center">
-              <div className="text-center text-green-800">
-                <div className="text-2xl font-bold mb-2">[WIDGET INSTAGRAM]</div>
-                <div className="text-sm font-mono">À intégrer plus tard</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Reviews Section */}
-      <Reviews />
-
-      {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gea-black mb-4">Contactez-nous</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Une question ? Un projet ? Notre équipe est à votre écoute
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div>
-              <div className="space-y-6">
+              <div className="p-5 md:p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-gea-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1 text-gea-black">Adresse</h3>
+                    <span className="inline-block px-3 py-1 bg-gea-blue/10 text-gea-blue text-xs font-semibold rounded-full mb-2">
+                      SIEGE SOCIAL
+                    </span>
+                    <h3 className="font-bold text-xl text-gea-black">Paris 1er</h3>
                     <p className="text-gray-700">
                       229 rue Saint-Honoré<br />
                       75001 Paris
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
 
+            {/* Juan-les-Pins */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="h-[250px] md:h-[300px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23103.05843098!2d7.0785!3d43.5667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce97e3c2bf1697%3A0x406f69c2f411030!2s06160%20Juan-les-Pins!5e0!3m2!1sfr!2sfr!4v1703578200000!5m2!1sfr!2sfr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="p-5 md:p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <div className="w-12 h-12 bg-gea-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1 text-gea-black">Téléphone</h3>
-                    <a href="tel:0972143065" className="text-gea-blue text-xl font-bold hover:underline">
-                      09 72 14 30 65
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1 text-gea-black">Email</h3>
-                    <a href="mailto:contact@groupe-expert-altitude.fr" className="text-gea-blue hover:underline">
-                      contact@groupe-expert-altitude.fr
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gea-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gea-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1 text-gea-black">Horaires</h3>
+                    <span className="inline-block px-3 py-1 bg-gea-blue/10 text-gea-blue text-xs font-semibold rounded-full mb-2">
+                      AGENCE SUD
+                    </span>
+                    <h3 className="font-bold text-xl text-gea-black">Juan-les-Pins</h3>
                     <p className="text-gray-700">
-                      Lundi - Vendredi<br />
-                      8h00 - 18h00
+                      Juan-les-Pins<br />
+                      06160 Antibes
                     </p>
                   </div>
                 </div>
               </div>
-
-              <Link
-                href="/contact"
-                className="mt-8 inline-block w-full bg-gea-blue text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-gea-blue/90 transition-all"
-              >
-                Demander un devis
-              </Link>
             </div>
+          </div>
 
-            {/* Google Maps */}
-            <div className="h-[500px] rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.5906758951937!2d2.3245471976101446!3d48.8660152974182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2e1a161985%3A0x262161d5a23b4d6c!2s229%20Rue%20Saint-Honor%C3%A9%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1763545286862!5m2!1sfr!2sfr"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+          {/* CTA */}
+          <div className="text-center mt-10 md:mt-12">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 bg-gea-blue text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-base md:text-lg hover:bg-gea-blue/90 transition-all hover:scale-105 shadow-lg shadow-gea-blue/30"
+            >
+              Nous contacter
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
-    </>
+
+      {/* Styles pour l'animation du gradient */}
+      <style jsx>{`
+        @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+          animation: gradient 3s ease infinite;
+        }
+        @keyframes gridMove {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(100px, 100px); }
+        }
+      `}</style>
+    </div>
   );
 }

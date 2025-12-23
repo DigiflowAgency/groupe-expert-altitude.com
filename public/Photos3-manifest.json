@@ -1,0 +1,18 @@
+{
+  "batchId": "19e6c928-24ff-4ae6-ab85-b50a2c1381ac",
+  "batchName": "Photos3",
+  "createdAt": "2025-12-23T11:24:11.052Z",
+  "totalImages": 1,
+  "baseUrl": "https://image-flow.fr",
+  "images": [
+    {
+      "title": "vitroreflect",
+      "url": "https://image-flow.fr/uploads/vitroreflect-0a5f0933-4b99-4459-8fef-76163244a982.webp",
+      "thumbnailUrl": "https://image-flow.fr/uploads/vitroreflect-0a5f0933-4b99-4459-8fef-76163244a982_thumb.webp",
+      "width": 800,
+      "height": 500,
+      "format": "webp",
+      "size": 28120
+    }
+  ]
+}

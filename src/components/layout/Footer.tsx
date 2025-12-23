@@ -1,27 +1,172 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
-  const services = [
-    { name: 'Travaux en hauteur', href: '/services/travaux-en-hauteur' },
-    { name: 'Enveloppe du bâtiment', href: '/services/enveloppe-batiment' },
-    { name: 'Couverture & Toiture', href: '/services/couverture-toiture' },
-    { name: 'Cordistes professionnels', href: '/services/cordistes' },
-    { name: 'Sécurisation', href: '/services/securisation' },
-    { name: 'Maintenance technique', href: '/services/maintenance-technique' },
+  const pathname = usePathname();
+  const isParticuliers = pathname.startsWith('/particuliers');
+
+  const servicesPro = [
+    { name: 'Espace Professionnels', href: '/professionnels' },
+    { name: 'Photovoltaïque', href: '/professionnels/services/photovoltaique' },
+    { name: 'Travaux en hauteur', href: '/professionnels/services/travaux-en-hauteur' },
+    { name: 'Peintures isolantes', href: '/professionnels/services/peintures-isolantes' },
+    { name: 'Eaux pluviales & fuites', href: '/professionnels/services/eaux-pluviales' },
   ];
 
-  const cities = [
-    { name: 'Paris', href: '/gea-paris' },
-    { name: 'Île-de-France', href: '/gea-ile-de-france' },
-    { name: 'Lyon', href: '/gea-lyon' },
-    { name: 'Marseille', href: '/gea-marseille' },
-    { name: 'Toulouse', href: '/gea-toulouse' },
-    { name: 'Bordeaux', href: '/gea-bordeaux' },
+  const servicesParticuliers = [
+    { name: 'Espace Particuliers', href: '/particuliers' },
+    { name: 'Panneaux solaires', href: '/particuliers/services/photovoltaique' },
+    { name: 'Eaux pluviales & fuites', href: '/particuliers/services/eaux-pluviales' },
+    { name: 'Terrasses sur plot', href: '/particuliers/services/terrasses' },
+    { name: 'Peintures isolantes', href: '/particuliers/services/peintures-isolantes' },
   ];
 
+  // Footer Particuliers - Style chaleureux
+  if (isParticuliers) {
+    return (
+      <footer className="bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative z-50">
+        {/* Main Footer */}
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div>
+              <div className="mb-4">
+                <Image
+                  src="/logo-gea-carre-simple-transparent.png"
+                  alt="Groupe Expert Altitude"
+                  width={100}
+                  height={100}
+                  className="h-24 w-auto"
+                />
+              </div>
+              <p className="text-amber-800 text-sm mb-4 leading-relaxed">
+                Experts en rénovation et amélioration de l&apos;habitat.
+                On s&apos;occupe de tout, du devis à la réalisation !
+              </p>
+              <div className="space-y-3 text-sm">
+                <p className="flex items-start gap-3 text-amber-700">
+                  <span className="text-xl">📍</span>
+                  <span>229 rue Saint-Honoré<br />75001 Paris</span>
+                </p>
+                <a
+                  href="tel:0972143065"
+                  className="flex items-center gap-3 text-amber-700 hover:text-orange-600 transition-colors group"
+                >
+                  <span className="text-xl group-hover:scale-110 transition-transform">📞</span>
+                  <span className="font-semibold">09 72 14 30 65</span>
+                </a>
+                <a
+                  href="mailto:contact@groupe-expert-altitude.fr"
+                  className="flex items-center gap-3 text-amber-700 hover:text-orange-600 transition-colors group"
+                >
+                  <span className="text-xl group-hover:scale-110 transition-transform">✉️</span>
+                  <span>contact@groupe-expert-altitude.fr</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Services Particuliers */}
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-amber-900">Nos services</h3>
+              <ul className="space-y-2 text-sm">
+                {servicesParticuliers.slice(1).map((service) => (
+                  <li key={service.href}>
+                    <Link
+                      href={service.href}
+                      className="text-amber-700 hover:text-orange-600 transition-colors flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-orange-400 rounded-full group-hover:scale-150 transition-transform" />
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Espace Pro */}
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-amber-900">Vous êtes professionnel ?</h3>
+              <p className="text-amber-700 text-sm mb-4">
+                Nous intervenons aussi sur les bâtiments professionnels et industriels.
+              </p>
+              <Link
+                href="/professionnels"
+                className="inline-flex items-center gap-2 bg-gea-blue/10 text-gea-blue px-4 py-2 rounded-full text-sm font-semibold hover:bg-gea-blue/20 transition-colors"
+              >
+                Espace Pro
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Trust & Contact */}
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-amber-900">Pourquoi nous ?</h3>
+              <ul className="space-y-3 text-sm text-amber-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Devis gratuit et sans engagement
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Artisans qualifiés et certifiés
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Garantie décennale
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  Accompagnement aides financières
+                </li>
+              </ul>
+
+              <h4 className="font-semibold mt-6 mb-2 text-amber-900">On intervient partout</h4>
+              <p className="text-sm text-amber-700">
+                Paris, Lyon, Marseille, Toulouse, Bordeaux, Nantes et toute la France
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div className="border-t border-amber-200">
+          <div className="container mx-auto px-4 py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-amber-700">
+              <p>
+                © {new Date().getFullYear()} Groupe Expert Altitude (GEA SAS) - SIRET 942 173 972
+              </p>
+              <div className="flex items-center gap-4">
+                <Link href="/mentions-legales" className="hover:text-orange-600 transition-colors">
+                  Mentions légales
+                </Link>
+                <span className="text-amber-300">•</span>
+                <p>
+                  Réalisé par{' '}
+                  <a
+                    href="https://digiflow-agency.fr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-500 font-semibold hover:text-orange-600 transition-colors"
+                  >
+                    DIGIFLOW AGENCY
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+
+  // Footer Professionnels - Style corporate (original)
   return (
-    <footer className="bg-gea-black text-white">
+    <footer className="bg-gea-black text-white relative z-50">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -109,11 +254,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services Pro */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Nos Services</h3>
+            <h3 className="font-bold text-lg mb-4">Professionnels</h3>
             <ul className="space-y-2 text-sm">
-              {services.map((service) => (
+              {servicesPro.map((service) => (
                 <li key={service.href}>
                   <Link
                     href={service.href}
@@ -126,48 +271,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Zones d'intervention */}
+          {/* Services Particuliers */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Zones d'intervention</h3>
+            <h3 className="font-bold text-lg mb-4">Particuliers</h3>
             <ul className="space-y-2 text-sm">
-              {cities.map((city) => (
-                <li key={city.href}>
+              {servicesParticuliers.map((service) => (
+                <li key={service.href}>
                   <Link
-                    href={city.href}
+                    href={service.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    GEA {city.name}
+                    {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/gea-lille"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  GEA Lille
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gea-strasbourg"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  GEA Strasbourg
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gea-nantes"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  GEA Nantes
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Informations */}
+          {/* Infos */}
           <div>
             <h3 className="font-bold text-lg mb-4">Informations</h3>
             <ul className="space-y-2 text-sm">
@@ -189,13 +310,10 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6">
-              <h4 className="font-semibold mb-2">Horaires</h4>
-              <p className="text-gray-300 text-sm">
-                Lundi - Vendredi<br />
-                8h00 - 18h00
-              </p>
-            </div>
+            <h4 className="font-semibold mt-6 mb-2">Zones d&apos;intervention</h4>
+            <p className="text-sm text-gray-300">
+              Paris, Lyon, Marseille, Toulouse, Bordeaux, Nantes et toute la France
+            </p>
           </div>
         </div>
 
@@ -203,103 +321,52 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-300">
             <div>
-              <h4 className="text-white font-semibold mb-3">Expertises techniques</h4>
+              <h4 className="text-white font-semibold mb-3">Services Professionnels</h4>
               <p className="leading-relaxed">
                 Spécialistes des{' '}
-                <Link href="/services/travaux-en-hauteur" className="text-gea-light-blue hover:text-white transition-colors">
-                  travaux en hauteur
+                <Link href="/professionnels/services/travaux-en-hauteur" className="text-gea-light-blue hover:text-white transition-colors">
+                  travaux en hauteur sur corde
                 </Link>
-                , nous intervenons sur{' '}
-                <Link href="/services/couverture-toiture" className="text-gea-light-blue hover:text-white transition-colors">
-                  couverture et toiture
+                , nous proposons également l&apos;installation de{' '}
+                <Link href="/professionnels/services/photovoltaique" className="text-gea-light-blue hover:text-white transition-colors">
+                  panneaux photovoltaïques
                 </Link>
-                , l&apos;{' '}
-                <Link href="/services/enveloppe-batiment" className="text-gea-light-blue hover:text-white transition-colors">
-                  enveloppe du bâtiment
+                , les{' '}
+                <Link href="/professionnels/services/peintures-isolantes" className="text-gea-light-blue hover:text-white transition-colors">
+                  peintures isolantes
                 </Link>{' '}
-                et la{' '}
-                <Link href="/services/maintenance-technique" className="text-gea-light-blue hover:text-white transition-colors">
-                  maintenance technique
+                et la gestion des{' '}
+                <Link href="/professionnels/services/eaux-pluviales" className="text-gea-light-blue hover:text-white transition-colors">
+                  eaux pluviales
                 </Link>
-                . Nos{' '}
-                <Link href="/services/cordistes" className="text-gea-light-blue hover:text-white transition-colors">
-                  cordistes professionnels
-                </Link>{' '}
-                assurent la{' '}
-                <Link href="/services/securisation" className="text-gea-light-blue hover:text-white transition-colors">
-                  sécurisation
-                </Link>{' '}
-                de vos installations.
+                {' '}pour bâtiments industriels et hôtels.
               </p>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-3">Interventions géographiques</h4>
+              <h4 className="text-white font-semibold mb-3">Services Particuliers</h4>
               <p className="leading-relaxed">
-                Nous intervenons à{' '}
-                <Link href="/gea-paris" className="text-gea-light-blue hover:text-white transition-colors">
-                  Paris
+                Pour les particuliers, nous installons des{' '}
+                <Link href="/particuliers/services/photovoltaique" className="text-gea-light-blue hover:text-white transition-colors">
+                  panneaux solaires
                 </Link>
-                , en{' '}
-                <Link href="/gea-ile-de-france" className="text-gea-light-blue hover:text-white transition-colors">
-                  Île-de-France
+                , des{' '}
+                <Link href="/particuliers/services/terrasses" className="text-gea-light-blue hover:text-white transition-colors">
+                  terrasses sur plot
                 </Link>
-                , à{' '}
-                <Link href="/gea-lyon" className="text-gea-light-blue hover:text-white transition-colors">
-                  Lyon
-                </Link>
-                ,{' '}
-                <Link href="/gea-marseille" className="text-gea-light-blue hover:text-white transition-colors">
-                  Marseille
-                </Link>
-                ,{' '}
-                <Link href="/gea-toulouse" className="text-gea-light-blue hover:text-white transition-colors">
-                  Toulouse
-                </Link>
-                ,{' '}
-                <Link href="/gea-bordeaux" className="text-gea-light-blue hover:text-white transition-colors">
-                  Bordeaux
+                , et proposons des solutions de{' '}
+                <Link href="/particuliers/services/peintures-isolantes" className="text-gea-light-blue hover:text-white transition-colors">
+                  peintures isolantes
                 </Link>{' '}
-                et dans toute la France pour vos travaux en hauteur sur bâtiments professionnels, entrepôts et immeubles.
+                et de{' '}
+                <Link href="/particuliers/services/eaux-pluviales" className="text-gea-light-blue hover:text-white transition-colors">
+                  gestion des eaux pluviales
+                </Link>
+                .
               </p>
             </div>
           </div>
         </div>
 
-        {/* SEO Links Section - Services par ville (compact) */}
-        <div className="mt-8 pt-6 border-t border-gray-800 text-xs text-gray-500 space-y-2">
-          <p>
-            <span className="text-gray-400">Cordiste :</span>{' '}
-            <Link href="/cordiste-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/cordiste-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/cordiste-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/cordiste-nice" className="hover:text-gea-light-blue">Nice</Link> • <Link href="/cordiste-toulouse" className="hover:text-gea-light-blue">Toulouse</Link> • <Link href="/cordiste-bordeaux" className="hover:text-gea-light-blue">Bordeaux</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Ravalement façade :</span>{' '}
-            <Link href="/ravalement-facade-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/ravalement-facade-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/ravalement-facade-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/ravalement-facade-nice" className="hover:text-gea-light-blue">Nice</Link> • <Link href="/ravalement-facade-bordeaux" className="hover:text-gea-light-blue">Bordeaux</Link> • <Link href="/ravalement-facade-lille" className="hover:text-gea-light-blue">Lille</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Étanchéité toiture :</span>{' '}
-            <Link href="/etancheite-toiture-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/etancheite-toiture-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/etancheite-toiture-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/etancheite-toiture-toulouse" className="hover:text-gea-light-blue">Toulouse</Link> • <Link href="/etancheite-toiture-nantes" className="hover:text-gea-light-blue">Nantes</Link> • <Link href="/etancheite-toiture-nice" className="hover:text-gea-light-blue">Nice</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Photovoltaïque :</span>{' '}
-            <Link href="/panneaux-photovoltaiques-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/panneaux-photovoltaiques-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/panneaux-photovoltaiques-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/panneaux-photovoltaiques-nice" className="hover:text-gea-light-blue">Nice</Link> • <Link href="/panneaux-photovoltaiques-bordeaux" className="hover:text-gea-light-blue">Bordeaux</Link> • <Link href="/panneaux-photovoltaiques-toulouse" className="hover:text-gea-light-blue">Toulouse</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Cool Roof :</span>{' '}
-            <Link href="/cool-roof-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/cool-roof-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/cool-roof-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/cool-roof-nice" className="hover:text-gea-light-blue">Nice</Link> • <Link href="/cool-roof-toulouse" className="hover:text-gea-light-blue">Toulouse</Link> • <Link href="/cool-roof-bordeaux" className="hover:text-gea-light-blue">Bordeaux</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Terrasse bois :</span>{' '}
-            <Link href="/terrasse-bois-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/terrasse-bois-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/terrasse-bois-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/terrasse-bois-nice" className="hover:text-gea-light-blue">Nice</Link> • <Link href="/terrasse-bois-bordeaux" className="hover:text-gea-light-blue">Bordeaux</Link> • <Link href="/terrasse-bois-nantes" className="hover:text-gea-light-blue">Nantes</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Ligne de vie :</span>{' '}
-            <Link href="/ligne-de-vie-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/ligne-de-vie-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/ligne-de-vie-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/ligne-de-vie-lille" className="hover:text-gea-light-blue">Lille</Link> • <Link href="/ligne-de-vie-toulouse" className="hover:text-gea-light-blue">Toulouse</Link> • <Link href="/ligne-de-vie-nantes" className="hover:text-gea-light-blue">Nantes</Link>
-          </p>
-          <p>
-            <span className="text-gray-400">Gouttière :</span>{' '}
-            <Link href="/gouttiere-paris" className="hover:text-gea-light-blue">Paris</Link> • <Link href="/gouttiere-lyon" className="hover:text-gea-light-blue">Lyon</Link> • <Link href="/gouttiere-marseille" className="hover:text-gea-light-blue">Marseille</Link> • <Link href="/gouttiere-bordeaux" className="hover:text-gea-light-blue">Bordeaux</Link> • <Link href="/gouttiere-nice" className="hover:text-gea-light-blue">Nice</Link> • <Link href="/gouttiere-toulouse" className="hover:text-gea-light-blue">Toulouse</Link>
-          </p>
-        </div>
       </div>
 
       {/* Bottom Footer */}

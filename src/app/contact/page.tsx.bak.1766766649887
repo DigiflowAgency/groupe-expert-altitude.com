@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 // Liste des services pour le formulaire
 const serviceOptions = [
   { category: 'Professionnels', services: [
-    { slug: 'photovoltaique-pro', title: 'Contact & devis gratuit - 09 72 14 30 65 | Groupe Expert Altitude' },
+    { slug: 'photovoltaique-pro', title: 'Panneaux photovoltaïques' },
     { slug: 'travaux-hauteur', title: 'Travaux en hauteur / Cordistes' },
     { slug: 'peintures-isolantes-pro', title: 'Peintures isolantes' },
     { slug: 'eaux-pluviales-pro', title: 'Eaux pluviales & détection fuites' },

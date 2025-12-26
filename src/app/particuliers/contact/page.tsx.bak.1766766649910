@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 // Services pour les particuliers uniquement
 const serviceOptions = [
-  { slug: 'photovoltaique', title: 'Contact particuliers : votre projet maison | Groupe Expert Altitude', icon: '☀️' },
+  { slug: 'photovoltaique', title: 'Panneaux solaires', icon: '☀️' },
   { slug: 'terrasses', title: 'Terrasses sur plot', icon: '🌿' },
   { slug: 'eaux-pluviales', title: 'Gouttières & fuites', icon: '💧' },
   { slug: 'peintures-isolantes', title: 'Peintures isolantes', icon: '🎨' },

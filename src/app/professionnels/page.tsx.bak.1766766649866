@@ -32,7 +32,7 @@ const servicesCategories = [
     category: 'Photovoltaïque',
     description: 'Installation et maintenance de panneaux solaires pour vos bâtiments professionnels',
     services: [
-      { slug: 'panneaux-photovoltaiques', title: 'Services pros : cordistes, photovoltaïque, toiture | Groupe Expert Altitude' },
+      { slug: 'panneaux-photovoltaiques', title: 'Panneaux photovoltaïques' },
       { slug: 'nettoyage-panneaux-solaires', title: 'Nettoyage panneaux solaires' },
     ],
   },

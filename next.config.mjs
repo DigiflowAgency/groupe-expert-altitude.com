@@ -173,6 +173,37 @@ const nextConfig = {
         destination: '/particuliers/services/terrasse-bois/nice',
         permanent: true,
       },
+      // Anciennes URLs SEO (Google Search Console 404)
+      {
+        source: '/categories/traitements-thermiques',
+        destination: '/professionnels/services/peintures-isolantes',
+        permanent: true,
+      },
+      {
+        source: '/services/colonnes-assainissement',
+        destination: '/professionnels/services/eaux-pluviales',
+        permanent: true,
+      },
+      {
+        source: '/services/etudes-techniques-securisation-photovoltaique',
+        destination: '/professionnels/services/photovoltaique',
+        permanent: true,
+      },
+      {
+        source: '/services/reseaux-assainissement',
+        destination: '/professionnels/services/eaux-pluviales',
+        permanent: true,
+      },
+      {
+        source: '/gouttiere-:ville',
+        destination: '/professionnels/services/gouttiere/:ville',
+        permanent: true,
+      },
+      {
+        source: '/cool-roof-toulouse',
+        destination: '/professionnels/services/cool-roof/toulouse',
+        permanent: true,
+      },
     ];
   },
 };

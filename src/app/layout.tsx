@@ -25,6 +25,16 @@ export const metadata: Metadata = {
   description: "5 pôles d'expertise : travaux en hauteur, terrasses & extérieurs, traitements thermiques, photovoltaïque, assainissement. Interventions partout en France. Devis gratuit.",
   keywords: "travaux en hauteur, cordistes, terrasses bois, thermo reflect, photovoltaïque, assainissement, couverture, toiture, façades, enveloppe bâtiment, Paris, Île-de-France",
   authors: [{ name: "Groupe Expert Altitude" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",

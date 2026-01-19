@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://groupe-expert-altitude.fr",
+    url: "https://groupe-expert-altitude.com",
     siteName: "Groupe Expert Altitude",
     title: "Groupe Expert Altitude | Solutions complètes pour bâtiments professionnels",
     description: "5 pôles d'expertise pour tous vos projets : travaux en hauteur, terrasses, énergie, photovoltaïque et assainissement.",

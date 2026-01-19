@@ -79,7 +79,7 @@ export default function MentionsLegalesPage() {
                   2. Hébergement
                 </h2>
                 <p className="text-gray-900 leading-relaxed">
-                  Le site <strong>groupe-expert-altitude.fr</strong> est hébergé par :
+                  Le site <strong>groupe-expert-altitude.com</strong> est hébergé par :
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg mt-4 text-gray-900">
                   <p>

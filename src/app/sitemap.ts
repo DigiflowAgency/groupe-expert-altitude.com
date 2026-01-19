@@ -3,7 +3,7 @@ import { villes, servicesPro, servicesParticuliers } from '@/data/seo-locations'
 import { getAllBlogPosts } from '@/lib/googleSheets/blog';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://groupe-expert-altitude.fr';
+  const baseUrl = 'https://groupe-expert-altitude.com';
   const currentDate = new Date();
 
   // Pages statiques principales

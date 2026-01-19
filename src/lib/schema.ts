@@ -4,13 +4,13 @@ export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://groupe-expert-altitude.fr/#organization',
+    '@id': 'https://groupe-expert-altitude.com/#organization',
     name: 'Groupe Expert Altitude',
     legalName: 'GEA SAS',
     description: 'Expert des travaux en hauteur, enveloppe du bâtiment, couverture et interventions spécialisées. Cordistes professionnels pour bâtiments industriels, entrepôts et immeubles.',
-    url: 'https://groupe-expert-altitude.fr',
-    logo: 'https://groupe-expert-altitude.fr/logo.png',
-    image: 'https://groupe-expert-altitude.fr/og-image.jpg',
+    url: 'https://groupe-expert-altitude.com',
+    logo: 'https://groupe-expert-altitude.com/logo.png',
+    image: 'https://groupe-expert-altitude.com/og-image.jpg',
     telephone: '+33972143065',
     email: 'contact@groupe-expert-altitude.fr',
     address: {
@@ -58,7 +58,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      item: `https://groupe-expert-altitude.fr${item.href}`
+      item: `https://groupe-expert-altitude.com${item.href}`
     }))
   };
 }
@@ -77,7 +77,7 @@ export function generateServiceSchema(service: {
     provider: {
       '@type': 'Organization',
       name: service.provider || 'Groupe Expert Altitude',
-      url: 'https://groupe-expert-altitude.fr'
+      url: 'https://groupe-expert-altitude.com'
     },
     areaServed: service.areaServed || 'Île-de-France',
     serviceType: 'Travaux en hauteur'
@@ -123,9 +123,9 @@ export function generateArticleSchema(article: {
       name: 'Groupe Expert Altitude',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://groupe-expert-altitude.fr/logo.png'
+        url: 'https://groupe-expert-altitude.com/logo.png'
       }
     },
-    image: article.image || 'https://groupe-expert-altitude.fr/og-image.jpg'
+    image: article.image || 'https://groupe-expert-altitude.com/og-image.jpg'
   };
 }
